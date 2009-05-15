@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<serialization xmlns="urn:tibco.com/v3.0" jsxversion="3.6">
+  <name>Block - 100%</name>
+  <icon>images/prototypes/block.gif</icon>
+  <description>Simple block, relatively positioned with overflow=scroll.</description>
+  <onBeforeDeserialize/>
+  <onAfterDeserialize/>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"/>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxtextalign="center"/>
+    <dynamics jsxpadding="@Block Padding"/>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="right"/>
+      <dynamics jsxbgcolor="@Blk Top Color" jsxbg="@Bevel TopDown" jsxborder="@Blk Border" jsxmargin="@Top Block Margin" jsxpadding="@Top Block Padding"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="13"/>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxpadding="1 0 0 0" jsxtextalign="center" jsxfontweight="bold" jsxfontname="arial" jsxstyleoverride="float:left"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="13"/>
+        <strings jsxname="label" jsxtext="&amp;nbsp-商品回收站" jsxcolor="#869590" jsxtextalign="left" jsxstyleoverride="float:left"/>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0"/>
+        <strings jsxname="btnShowGoodsList" jsxtext="商品列表" jsxmargin="0 10 0 0"/>
+        <dynamics jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxwidth="@Btn Width" jsxpadding="@@Btn Padding" jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight" jsxcolor="@Btn Color" jsxheight="@Btn Height"/>
+        <events jsxexecute="alert('hello');"/>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxpadding="5 0 0 10" jsxtextalign="left" jsxmargin="0 0 12 0"/>
+      <dynamics jsxborder="@Blk Border" jsxbgcolor="@Blk Top Color" jsxbg="@Bevel TopDown"/>
+      <object type="jsx3.gui.Image">
+        <variants jsxoverflow="2" jsxrelativeposition="1" jsxtop="20" jsxwidth="20"/>
+        <strings jsxname="image" jsxsrc="images/icon_search.gif"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="12"/>
+        <strings jsxname="label" jsxtext="关键字" jsxfontname="Arial" jsxtextalign="left" jsxpadding="4 0 0 0" jsxcolor="#AFABAB"/>
+      </object>
+      <object type="jsx3.gui.TextBox">
+        <variants jsxwidth="185"/>
+        <strings jsxname="txtSearchKeyWord" jsxmargin="0 4 0 0"/>
+        <dynamics jsxfontname="@lbl Font Name" jsxborder="@txtBox Border " jsxheight="@txtBox Height "/>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0"/>
+        <strings jsxname="btnSearchGoods" jsxtext="搜索"/>
+        <dynamics jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxpadding="@@Btn Padding" jsxheight="@Btn Height" jsxwidth="@Btn Width" jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight" jsxcolor="@Btn Color"/>
+        <events jsxexecute="alert('hello');"/>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="250" jsxoverflow="1"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxborder=""/>
+      <object type="jsx3.gui.LayoutGrid">
+        <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+        <strings jsxname="layout (--)" jsxrows="220,*" jsxwidth="100%" jsxheight="100%"/>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="2"/>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxbgcolor="#fff"/>
+          <dynamics jsxborder="@No jsxborder"/>
+          <object type="jsx3.gui.Matrix">
+            <variants jsxpagingmodel="1" jsxselectionmodel="0" jsxjsxxmlasync="1"/>
+            <strings jsxname="goodsRecyclebinList" jsxsorttype="text" jsxsortdirection="ascending" jsxxmlurl="xml/goodslist.xml" jsxsortpath="number"/>
+            <dynamics jsxrowheight="@Matrix RowHeight " jsxbgcolor="@MatrixC BGColor " jsxheaderborder="@Matrix HeaderBorder " jsxbodyborder="@Matrix BodyBorder " jsxfocusstyle="@Matrix Focus Style " jsxspystyle="@Matrix Spy Style " jsxheaderheight="@Matrix HeaderHeight " jsxbg="@MatrixC BackGround "/>
+            <properties start="5" end="15"/>
+            <xslparameters jsx_rowbg1="#ffffff" jsx_rowbg2="#ffffff" jsx_min_exclusive="0" jsx_max_exclusive="6" pagingminexclusive="-6" pagingmaxexclusive="5"/>
+            <object type="jsx3.gui.Matrix.Column">
+              <variants jsxwidth="95"/>
+              <strings jsxname="number" jsxtext="编号" jsxpath="number" jsxcelltextalign="center" jsxpadding="1 7 0 7" jsxcellpadding="1" jsxvaluetemplate="" jsxtextalign="center" jsxcellborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+              <dynamics jsxborder="@Matrix Cell Header Boder" jsxbgcolor="@MatrixC BGColor " jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxbg="@Matrix Header Bg"/>
+              <object type="jsx3.gui.CheckBox">
+                <variants jsxchecked="0" jsxenabled="1"/>
+                <strings jsxname="checkboxMask" jsxtext=""/>
+              </object>
+            </object>
+            <object type="jsx3.gui.Matrix.Column">
+              <variants jsxwidth="110"/>
+              <strings jsxname="goodsname" jsxtext="商品名称" jsxpadding="1 7 0 7" jsxcellpadding="3" jsxpath="name" jsxcellborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxtextalign="center"/>
+              <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxbgcolor="@MatrixC BGColor " jsxbg="@Matrix Header Bg"/>
+              <object type="jsx3.gui.TextBox">
+                <variants jsxrelativeposition="0" jsxleft="95" jsxtop="0" jsxwidth="100" jsxheight="20" jsxzindex="10"/>
+                <strings jsxname="tb1" jsxdisplay="none" jsxvalue="US"/>
+                <events jsxkeydown="1;"/>
+              </object>
+            </object>
+            <object type="jsx3.gui.Matrix.Column">
+              <variants jsxwidth="100"/>
+              <strings jsxname="articlenumber" jsxtext="货号" jsxpadding="1 7 0 7" jsxcellpadding="3" jsxpath="articlenumber" jsxcellborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxtextalign="center"/>
+              <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxbgcolor="@MatrixC BGColor " jsxbg="@Matrix Header Bg"/>
+              <object type="jsx3.gui.TextBox">
+                <variants jsxrelativeposition="0" jsxleft="205" jsxtop="40" jsxwidth="100" jsxheight="20" jsxzindex="10"/>
+                <strings jsxname="tb1" jsxdisplay="none" jsxvalue="UnitedStates"/>
+                <events jsxkeydown="1;"/>
+              </object>
+            </object>
+            <object type="jsx3.gui.Matrix.Column">
+              <variants jsxwidth="80"/>
+              <strings jsxname="price" jsxtext="价格" jsxpadding="1 7 0 7" jsxcellpadding="3" jsxpath="price" jsxcellborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxtextalign="center" jsxcelltextalign="center" jsxvaluetemplate="&lt;xsl:template xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;    &lt;xsl:choose&gt;     &lt;xsl:when test=&quot;@price=0&quot;&gt;       &lt;span style=&quot;color:red&quot;&gt;      &lt;xsl:value-of select=&quot;@price&quot;&gt;       &lt;/xsl:value-of&gt;   &lt;/span&gt;     &lt;/xsl:when&gt;     &lt;xsl:otherwise&gt;        &lt;xsl:value-of select=&quot;@price&quot;&gt;&lt;/xsl:value-of&gt; &lt;/xsl:otherwise&gt;&lt;/xsl:choose&gt;&lt;/xsl:template&gt;"/>
+              <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxbgcolor="@MatrixC BGColor " jsxbg="@Matrix Header Bg"/>
+              <object type="jsx3.gui.TextBox">
+                <variants jsxrelativeposition="0" jsxleft="305" jsxtop="80" jsxwidth="80" jsxheight="20" jsxzindex="10"/>
+                <strings jsxname="tb1" jsxdisplay="none" jsxvalue="10" jsxtextalign="center"/>
+                <events jsxkeydown="1;"/>
+              </object>
+            </object>
+            <object type="jsx3.gui.Matrix.Column">
+              <variants jsxwidth="55"/>
+              <strings jsxname="storage" jsxtext="库存" jsxpadding="1 7 0 7" jsxcellpadding="3" jsxpath="storage" jsxcellborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxtextalign="center" jsxcelltextalign="center"/>
+              <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxbgcolor="@MatrixC BGColor " jsxbg="@Matrix Header Bg"/>
+              <object type="jsx3.gui.TextBox">
+                <variants jsxrelativeposition="0" jsxleft="585" jsxtop="20" jsxwidth="50" jsxheight="20" jsxzindex="10"/>
+                <strings jsxname="tb1" jsxdisplay="none" jsxvalue="1" jsxtextalign="center"/>
+                <events jsxkeydown="1;"/>
+              </object>
+            </object>
+            <object type="jsx3.gui.Matrix.Column">
+              <variants/>
+              <strings jsxname="operation" jsxtext="操作" jsxpadding="1 7 0 7" jsxcellpadding="" jsxcellborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxtextalign="center" jsxwidth="*" jsxvaluetemplate="" jsxcelltextalign="center"/>
+              <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxbgcolor="@MatrixC BGColor " jsxbg="@Matrix Header Bg"/>
+            </object>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="1"/>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="left" jsxpadding="5 0 0 0"/>
+          <dynamics jsxborder="@No jsxborder"/>
+          <object type="jsx3.gui.Select">
+            <variants jsxwidth="185" jsxxmlasync="1"/>
+            <strings jsxname="selOperationType" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0" jsxborder="1px solid #555555"/>
+            <dynamics jsxheight="@Select Height"/>
+          </object>
+          <object type="jsx3.gui.Button">
+            <variants jsxindex="0"/>
+            <strings jsxname="btnDoOperation" jsxtext="确定" jsxmargin="0 10 0 0"/>
+            <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxwidth="@Btn Width" jsxpadding="@@Btn Padding" jsxheight="@Btn Height" jsxstyleoverride="@Btn css"/>
+            <events jsxexecute="alert('hello');"/>
+          </object>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="50" jsxoverflow="1"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxpadding="9 0 0 3" jsxtextalign="left" jsxmargin="15 0 0"/>
+      <dynamics jsxbgcolor="@Blk Top Color" jsxborder="@Blk Border"/>
+    </object>
+  </object>
+</serialization>

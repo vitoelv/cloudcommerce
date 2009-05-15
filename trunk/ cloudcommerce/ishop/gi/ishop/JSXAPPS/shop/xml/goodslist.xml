@@ -1,0 +1,5 @@
+ <data jsxid="jsxroot">
+   <record jsxid="a" goodsid="1" goodsname="asdf" goodsnumber="107" imageon="on" imagenice="nice" imagenew="new" imagehot="hot" goodsprice="120" goodsstorage="0" checked="0"  jsxstyle="color:red"/>
+    <record jsxid="b" goodsid="1" goodsname="asdf" goodsnumber="107" imageon="down" imagenice="soso" imagenew="old" imagehot="nothot" goodsprice="120" goodsstorage="0" checked="0"/>
+ </data>
+    

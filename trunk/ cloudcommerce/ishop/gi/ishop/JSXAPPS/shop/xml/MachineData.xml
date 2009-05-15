@@ -1,0 +1,18 @@
+<data jsxid="jsxroot">
+	<record jsxid="1" name="Machine1" tibcoHome="c:\tibco" enable="yes">
+		<record jsxid="2" tibcoHome="c:\tibco\amx\2.0">
+			<record jsxid="3" softwareType="TIBCO ActiveMatrix Adapter Building Engine Runtime" version="1.0" ArcPath="image/hello.gif"></record>
+			<record jsxid="4" softwareType="TIBCO ActiveMatrix Adapter Building Engine Runtime" version="1.0"></record>
+			<record jsxid="5" softwareType="TIBCO ActiveMatrix Adapter Building Engine Runtime" version="1.0"></record>
+			<record jsxid="6" softwareType="TIBCO ActiveMatrix Adapter Building Engine Runtime" version="1.0"></record>	
+		</record>
+	</record>
+	<record jsxid="11" name="Machine1" tibcoHome="c:\tibco" enable="no">
+		<record jsxid="12" tibcoHome="c:\tibco\amx\2.0">
+			<record jsxid="13" softwareType="TIBCO ActiveMatrix Adapter Building Engine Runtime" version="1.0"/>
+			<record jsxid="14" softwareType="TIBCO ActiveMatrix Adapter Building Engine Runtime" version="1.0"/>
+			<record jsxid="15" softwareType="TIBCO ActiveMatrix Adapter Building Engine Runtime" version="1.0"/>
+			<record jsxid="16" softwareType="TIBCO ActiveMatrix Adapter Building Engine Runtime" version="1.0"/>	
+		</record>
+	</record>
+</data>

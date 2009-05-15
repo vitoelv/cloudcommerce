@@ -1,0 +1,10 @@
+<data jsxid="jsxroot">
+ <record jsxid="a" jsxtext="all"/>
+ <record jsxid="b" jsxtext="1"/> 
+ <record jsxid="c" jsxtext="2">
+    <record jsxid="c1"  jsxtext="        Best Effort"/>
+    <record jsxid="c2"  jsxtext="        At Least Once"/>
+    <record jsxid="c3"  jsxtext="        At Most Once"/>
+ </record>
+</data>
+

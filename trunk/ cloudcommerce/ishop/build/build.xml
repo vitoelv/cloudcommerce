@@ -1,0 +1,415 @@
+<?xml version="1.0"?>
+<project name="ishop" basedir="." default="help">
+    <property file="build.properties"/>
+
+    <property name="core.src.dir" value="../core/src"/>
+    <property name="web.src.dir" value="../web/src"/>
+    <property name="war.dir" value="../web/war"/>
+    <property name="test.src" value="test"/>
+    <property name="dist.dir" value="dist"/>
+    <property name="dist.lib" value="lib"/>
+    <property name="build.dir" value=".."/>
+    <property name="classes.dir" value="${build.dir}/classes"/>
+    <property name="test.dir" value="build/test"/>
+    <property name="webapp.name" value="jcommerce"/>
+
+    <property environment="env"/>
+    <property name="tomcat.home" value="${CATALINA_HOME}"/>
+    
+    <!--compile WS soap part-->
+    <property name="axis2.home" value="../jars/axis2"/>
+    <property name="tomcat.home" value="${CATALINA_HOME}"/>
+    <property name="maven.class.path" value=""/>
+    <property name="ws.name" value="JCommerceWS"/>
+    <property name="ws.src" value="../ws/src"/>
+	  <property name="ws.externaljar" value="../ws/ExternalJars"/>
+    <property name="ws.test" value="../ws/test"/>
+    <property name="ws.build" value=".."/>
+    <property name="ws.classes" value="${ws.build}/classes"/>
+    <property name="ws.lib" value="${ws.build}/ws/lib"/>
+    <property name="ws.resources" value="../ws/resources"/>
+    <property value="" name="jars.ok"/>
+    
+    <path id="axis2.class.path">
+        <pathelement path="${java.class.path}"/>
+        <pathelement path="${maven.class.path}"/>
+        <fileset dir="${axis2.home}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+    <path id="tomcat.class.path">
+        <pathelement path="${java.class.path}"/>
+        <pathelement path="${maven.class.path}"/>
+        <fileset dir="${tomcat.home}">
+            <include name="common/lib/*.jar"/>
+        </fileset>
+    </path>    
+    <!--compile WS soap part-->
+
+    <path id="core.classpath">
+        <fileset dir="${core.src.dir}/WEB-INF/lib">
+            <include name="*.jar"/>
+      	   <include name="*.zip"/>
+        </fileset>
+        <pathelement path="${build.dir}"/>
+    </path>
+
+    <path id="web.classpath">
+        <fileset dir="${dist.lib}">
+            <include name="*.jar"/>
+        </fileset>
+        <fileset dir="${core.src.dir}/WEB-INF/lib">
+            <include name="*.jar"/>
+      	   <include name="*.zip"/>
+        </fileset>
+        <fileset dir="${war.dir}/WEB-INF/lib">
+            <include name="*.jar"/>
+      	   <include name="*.zip"/>
+        </fileset>
+        <fileset dir="${tomcat.home}/common/lib">
+            <include name="servlet*.jar"/>
+        </fileset>
+        <pathelement path="${build.dir}"/>
+    </path>
+
+    <target name="help">
+        <echo message=""/>
+        <echo message="${webapp.name} build file"/>
+        <echo message="-----------------------------------"/>
+        <echo message=""/>
+        <echo message="Available targets are:"/>
+        <echo message=""/>
+        <echo message="compilecore   --> Compile core Java files"/>
+        <echo message="compileweb   --> Compile web Java files"/>
+        <echo message="compile   --> Compile all Java files"/>
+        <echo message="war       --> Package as WAR file"/>
+        <echo message="deploy    --> Deploy application as directory"/>
+        <echo message="deploywar --> Deploy application as a WAR file"/>
+        <echo message=""/>
+        <echo message="install   --> Install application in Tomcat"/>
+        <echo message="remove    --> Remove application from Tomcat"/>
+        <echo message="reload    --> Reload application in Tomcat"/>
+        <echo message="start     --> Start Tomcat application"/>
+        <echo message="stop      --> Stop Tomcat application"/>
+        <echo message="list      --> List Tomcat applications"/>
+        <echo message=""/>
+        <echo message="clean     --> Deletes compiled classes and WAR"/>
+    </target>
+
+    <target name="compilecore" description="Compile core source tree java files">
+    	<delete dir="${classes.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <javac destdir="${classes.dir}" target="1.5" debug="true"  deprecation="false" optimize="false" failonerror="true" encoding="UTF-8">
+            <src path="${core.src.dir}"/>
+            <include name="**/*.java"/>
+            <classpath refid="core.classpath"/>
+        </javac>
+    	
+        <!-- Copy hibernate mapping files to ${classes.dir} -->
+        <copy todir="${classes.dir}">
+            <fileset dir="${core.src.dir}" includes="**/*.hbm.xml"/>
+            <fileset dir="${core.src.dir}" includes="**/*.dtd"/>
+        </copy>
+    	
+        <copy todir="${classes.dir}/WEB-INF">
+            <fileset dir="${core.src.dir}/WEB-INF" includes="**/*.xml"/>
+        </copy>
+    	
+        <mkdir dir="${dist.lib}"/>
+
+    	<jar jarfile="${dist.lib}/jcommerce-core.jar" basedir="${classes.dir}"/>
+    </target>
+
+    <target name="compileweb" depends="compilecore" description="Compile web source tree java files">
+    	<delete dir="${classes.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <copy todir="${classes.dir}" preservelastmodified="true">
+            <fileset dir="${web.src.dir}">
+                <include name="**/beans.properties"/>
+            </fileset>
+        </copy>
+    	<javac destdir="${classes.dir}" target="1.5" debug="true"
+            deprecation="false" optimize="false" failonerror="true" encoding="UTF-8">
+            <src path="${web.src.dir}"/>
+            <include name="**/*.java"/>
+        	<exclude name="com/jcommerce/gwt/client/**/*.java"/>
+            <classpath refid="web.classpath"/>
+        </javac>
+
+    </target>
+
+    <target name="compile" depends="compileweb" description="Compile all source tree java files">
+    </target>
+
+    <target name="war" depends="compileweb" description="Packages app as WAR">
+        <mkdir dir="${dist.dir}"/>
+        <war destfile="${dist.dir}/${webapp.name}.war"
+            webxml="${war.dir}/WEB-INF/web.xml">
+            <classes dir="${build.dir}/classes"/>
+            <fileset dir="${war.dir}">
+                <include name="**/*.*"/>
+                <exclude name="**/web.xml"/>
+                <exclude name="**/junit.jar"/>
+                <exclude name="**/*mock.jar"/>
+                <exclude name="**/strutstestcase*.jar"/>
+            </fileset>
+            <fileset dir="${dist.lib}">
+                <include name="**/*.*"/>
+            </fileset>
+        </war>
+    </target>
+
+    <target name="deploy" depends="compileweb" description="Deploy application">
+        <copy todir="${tomcat.home}/webapps/${webapp.name}" preservelastmodified="true">
+            <fileset dir="${war.dir}">
+                <include name="**/*.*"/>
+                <exclude name="**/junit.jar"/>
+                <exclude name="**/*mock.jar"/>
+                <exclude name="**/strutstestcase*.jar"/>
+            </fileset>
+        </copy>
+        <copy todir="${tomcat.home}/webapps/${webapp.name}/WEB-INF" preservelastmodified="true">
+        	<fileset dir="${core.src.dir}/WEB-INF">
+                <include name="**/*.*"/>
+        	</fileset>
+        </copy>
+        <copy todir="${tomcat.home}/webapps/${webapp.name}/WEB-INF/lib"
+            preservelastmodified="true">
+        	
+        	<fileset dir="${dist.lib}">
+        	   <include name="*.jar"/>
+        	</fileset>
+        	<fileset dir="${war.dir}/WEB-INF/lib">
+        	   <include name="*.jar"/>
+          	   <include name="*.zip"/>
+        	</fileset>        
+        </copy>
+        <copy todir="${tomcat.home}/webapps/${webapp.name}/WEB-INF/classes"
+            preservelastmodified="true">
+            <fileset dir="${build.dir}/classes"/>
+        </copy>
+    </target>
+
+    <target name="deploywar" depends="war" description="Deploy application as a WAR file">
+        <copy todir="${tomcat.home}/webapps" preservelastmodified="true">
+            <fileset dir=".">
+                <include name="${dist.dir}/*.war"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="clean" description="Clean output directories">
+        <delete dir="build"/>
+        <delete dir="${dist.dir}"/>
+        <delete dir="${dist.lib}"/>
+    </target>
+
+    <!-- Tomcat Ant Tasks -->
+    <taskdef file="tomcatTasks.properties">
+        <classpath>
+            <pathelement path="${tomcat.home}/server/lib/catalina-ant.jar"/>
+        </classpath>
+    </taskdef>
+
+    <target name="install" description="Install application in Tomcat"
+        depends="war">
+        <deploy url="${tomcat.manager.url}"
+            username="${tomcat.manager.username}"
+            password="${tomcat.manager.password}"
+            path="/${webapp.name}"
+            war="file:${dist.dir}/${webapp.name}.war"/>
+    </target>
+
+    <target name="remove" description="Remove application from Tomcat">
+        <undeploy url="${tomcat.manager.url}"
+            username="${tomcat.manager.username}"
+            password="${tomcat.manager.password}"
+            path="/${webapp.name}"/>
+    </target>
+
+    <target name="reload" description="Reload application in Tomcat">
+        <reload url="${tomcat.manager.url}"
+            username="${tomcat.manager.username}"
+            password="${tomcat.manager.password}"
+            path="/${webapp.name}"/>
+    </target>
+
+    <target name="start" description="Start Tomcat application">
+        <start url="${tomcat.manager.url}"
+            username="${tomcat.manager.username}"
+            password="${tomcat.manager.password}"
+            path="/${webapp.name}"/>
+    </target>
+
+    <target name="stop" description="Stop Tomcat application">
+        <stop url="${tomcat.manager.url}"
+            username="${tomcat.manager.username}"
+            password="${tomcat.manager.password}"
+            path="/${webapp.name}"/>
+    </target>
+
+    <target name="list" description="List Tomcat applications">
+        <list url="${tomcat.manager.url}"
+            username="${tomcat.manager.username}"
+            password="${tomcat.manager.password}"/>
+    </target>
+
+    <!-- Creates release (source) distribution -->
+    <target name="dist" depends="clean"
+        description="create zip and tar.gz of ${webapp.name} for distribution">
+        <property name="archive.name"
+            value="${webapp.name}-${webapp.version}"/>
+        <mkdir dir="${dist.dir}"/>
+        <property name="archive.target" value="${dist.dir}/${archive.name}"/>
+        <zip zipfile="${archive.target}.zip">
+            <zipfileset prefix="${webapp.name}" dir="${basedir}">
+                <patternset id="srcfiles">
+                    <exclude name="*.log"/>
+                    <exclude name="junit*.properties"/>
+                    <exclude name="**/*~"/>
+                    <exclude name="**/*.bak"/>
+                    <exclude name="*/**.java.txt"/>
+                    <exclude name="${build.dir}/**"/>
+                    <exclude name="${dist.dir}/**"/>
+                    <exclude name="db/**"/>
+                    <exclude name="sandbox/**"/>
+                    <exclude name=".#**"/>
+                    <include name="**"/>
+                </patternset>
+            </zipfileset>
+        </zip>
+        <tar tarfile="${archive.target}.tar">
+            <tarfileset dir="${basedir}" mode="644"
+                prefix="${webapp.name}"
+                username="ant" group="ant">
+                <patternset refid="srcfiles"/>
+            </tarfileset>
+        </tar>
+        <gzip zipfile="${archive.target}.tar.gz" src="${archive.target}.tar"/>
+        <delete file="${archive.target}.tar"/>
+    </target>
+    
+    <!-- compile ws soap -->
+    <target name="init">
+        <mkdir dir="${ws.build}"/>
+        <mkdir dir="${ws.classes}"/>
+        <mkdir dir="${ws.lib}"/>
+    </target>
+    <target depends="init" name="pre.compile.test">
+        <!--Test the classpath for the availability of necesary classes-->
+        <available classpathref="axis2.class.path" property="stax.available" classname="javax.xml.stream.XMLStreamReader"/>
+        <available classpathref="axis2.class.path" property="axis2.available" classname="org.apache.axis2.engine.AxisEngine"/>
+        <condition property="jars.ok">
+            <and>
+                <isset property="stax.available"/>
+                <isset property="axis2.available"/>
+            </and>
+        </condition>
+        <!--Print out the availabilities-->
+        <echo message="Stax Availability= ${stax.available}"/>
+        <echo message="Axis2 Availability= ${axis2.available}"/>
+    </target>
+
+    <target depends="compilecore, pre.compile.test" name="compilews" if="jars.ok">
+        <javac debug="on" memoryMaximumSize="256m" memoryInitialSize="256m" fork="true" destdir="${ws.classes}" srcdir="${ws.src}">
+            <classpath refid="axis2.class.path"/>
+            <classpath refid="tomcat.class.path"/>
+            <classpath refid="core.classpath"/>
+        </javac>
+    </target>
+    <target depends="compilews" name="compile.test" if="jars.ok">
+        <javac debug="on" memoryMaximumSize="256m" memoryInitialSize="256m" fork="true" destdir="${ws.classes}">
+            <src path="${ws.test}"/>
+            <classpath refid="axis2.class.path"/>
+        </javac>
+    </target>
+    <target depends="pre.compile.test" name="echo.classpath.problem" unless="jars.ok">
+        <echo message="The class path is not set right!  Please make sure the following classes are in the classpath  1. XmlBeans 2. Stax 3. Axis2 "/>
+    </target>
+	<target depends="init" name="cleanws" >
+		<delete dir="${tomcat.home}/webapps/axis2/WEB-INF/classes/com" />
+		<delete file="${tomcat.home}/webapps/axis2/WEB-INF/lib/jcommerce-core.jar" />
+		<delete file="${tomcat.home}/webapps/axis2/WEB-INF/services/${ws.name}.aar" />
+	</target>
+	<target depends="cleanws, jar.wsserver, jar.wsclient" name="deployws" description="deploy ws service" >
+		<copy todir="${tomcat.home}/webapps/axis2/WEB-INF/services" >
+			<fileset dir="${ws.lib}" >
+				<include name="${ws.name}.aar" />
+				<include name="services.list" />
+			</fileset>
+		</copy>
+		<copy todir="${tomcat.home}/webapps/axis2/WEB-INF/classes" >
+			<fileset dir="${core.src.dir}/WEB-INF" includes="applicationContext.xml"/>
+		</copy>		
+		<mkdir dir="${tomcat.home}/webapps/axis2/WEB-INF/classes/com/jcommerce/ws/server" />
+		<copy todir="${tomcat.home}/webapps/axis2/WEB-INF/classes/com/jcommerce/ws/server" >
+			<fileset dir="${ws.classes}/com/jcommerce/ws/server" includes="UploadFileServlet.class" >
+			</fileset>
+		</copy>
+		<copy file="${dist.lib}/jcommerce-core.jar" todir="${tomcat.home}/webapps/axis2/WEB-INF/lib" />
+		<copy todir="${tomcat.home}/webapps/axis2/WEB-INF/lib" >
+			<fileset dir="${ws.externaljar}" includes="**/*.jar" />
+		</copy>
+		<copy file="${ws.src}/WEB-INF/web.xml" todir="${tomcat.home}/webapps/axis2/WEB-INF/" >
+		</copy>
+	</target>
+	
+    <target depends="jar.wsserver, jar.wsclient" name="jar.all" description="Compile ws source tree java files"/>
+    <target depends="compilews,echo.classpath.problem" name="jar.wsserver" if="jars.ok">
+    	  <copy todir="${ws.classes}">
+            <fileset dir="${ws.src}" includes="**/*.xml"/>
+            <fileset dir="${ws.src}" includes="**/*.properties"/>
+            <fileset dir="${ws.src}" includes="**/*.dtd"/>
+        </copy>
+        <copy toDir="${ws.classes}/META-INF" failonerror="false">
+            <fileset dir="${ws.resources}">
+                <include name="*.xml"/>
+                <include name="*.wsdl"/>
+                <include name="*.xsd"/>
+            </fileset>
+        </copy>
+        <jar destfile="${ws.lib}/${ws.name}.aar">
+            <fileset excludes="**/Test.class" dir="${ws.classes}"/>
+        </jar>
+    </target>
+    <target if="jars.ok" name="jar.wsclient" depends="compilews">
+        <jar destfile="${ws.lib}/${ws.name}-test-client.jar">
+            <fileset dir="${ws.classes}">
+                <exclude name="**/META-INF/*.*"/>
+                <exclude name="**/lib/*.*"/>
+                <exclude name="**/*MessageReceiver.class"/>
+                <exclude name="**/*Skeleton.class"/>
+            </fileset>
+        </jar>
+    </target>
+    <target if="jars.ok" depends="jar.wsserver" name="make.repo">
+        <mkdir dir="${ws.build}/repo/"/>
+        <mkdir dir="${ws.build}/repo/services"/>
+        <copy file="${ws.build}/lib/${ws.name}.aar" toDir="${ws.build}/repo/services/"/>
+    </target>
+    <target if="jars.ok" depends="make.repo" name="start.server">
+        <java fork="true" classname="org.apache.axis2.transport.http.SimpleHTTPServer">
+            <arg value="${ws.build}/repo"/>
+            <classpath refid="axis2.class.path"/>
+        </java>
+    </target>
+    <target if="jars.ok" depends="compile.test" name="run.test">
+        <path id="test.class.path">
+            <pathelement location="${ws.lib}/${ws.name}-test-client.jar"/>
+            <path refid="axis2.class.path"/>
+            <pathelement location="${ws.classes}"/>
+        </path>
+        <mkdir dir="${ws.build}/test-reports/"/>
+        <junit haltonfailure="yes" printsummary="yes">
+            <classpath refid="test.class.path"/>
+            <formatter type="plain"/>
+            <batchtest fork="yes" toDir="${ws.build}/test-reports/">
+                <fileset dir="${ws.test}">
+                    <include name="**/*Test*.java"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+    <!-- compile ws soap -->
+
+</project>

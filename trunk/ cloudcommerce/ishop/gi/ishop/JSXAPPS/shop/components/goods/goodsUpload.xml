@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<serialization xmlns="urn:tibco.com/v3.0" jsxversion="3.6">
+  <name>Block - 100%</name>
+  <icon>images/prototypes/block.gif</icon>
+  <description>Simple block, relatively positioned with overflow=scroll.</description>
+  <onBeforeDeserialize/>
+  <onAfterDeserialize/>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"/>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxtextalign="center"/>
+    <dynamics jsxpadding="@Block Padding"/>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxpadding="5 0 0 10" jsxtextalign="right" jsxmargin="0 0 12 0"/>
+      <dynamics jsxborder="@Blk Border" jsxbgcolor="@Blk Top Color" jsxbg="@Bevel TopDown"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"/>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxpadding="1 0 0 0" jsxtextalign="center" jsxstyleoverride="float:left"/>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"/>
+        <strings jsxname="label" jsxtext="&amp;nbsp-商品批量上传" jsxcolor="#869590" jsxtextalign="left" jsxstyleoverride="float:left"/>
+        <dynamics jsxfontname="@lbl Font Name"/>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="360" jsxoverflow="1"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"/>
+      <dynamics jsxborder="@Blk Border"/>
+      <object type="jsx3.gui.LayoutGrid">
+        <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+        <strings jsxname="layout (--)" jsxrows="52%,*" jsxwidth="100%" jsxheight="100%"/>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="2"/>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxheight="25" jsxoverflow="1"/>
+            <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="所属分类" jsxtextalign="right"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxwidth="@Label Width" jsxheight="@Label Height" jsxpadding="@Label Padding" jsxcolor="@Label Color"/>
+            </object>
+            <object type="jsx3.gui.Select">
+              <variants jsxxmlasync="1"/>
+              <strings jsxname="sel" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0"/>
+              <dynamics jsxheight="@Select Height" jsxborder="@Select Border" jsxwidth="@Select Width"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxheight="25" jsxoverflow="1"/>
+            <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="文件编码" jsxtextalign="right"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxwidth="@Label Width" jsxheight="@Label Height" jsxpadding="@Label Padding" jsxcolor="@Label Color"/>
+            </object>
+            <object type="jsx3.gui.Select">
+              <variants jsxxmlasync="1"/>
+              <strings jsxname="selFileEncode" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0"/>
+              <dynamics jsxheight="@Select Height" jsxborder="@Select Border" jsxwidth="@Select Width"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxheight="20" jsxoverflow="1"/>
+            <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"/>
+            <object type="jsx3.gui.LayoutGrid">
+              <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+              <strings jsxname="layout ( | )" jsxcols="100,120,350" jsxwidth="100%" jsxheight="100%"/>
+              <object type="jsx3.gui.Block">
+                <variants jsxoverflow="2"/>
+                <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="right" jsxpadding="2 0 0 0"/>
+                <dynamics jsxborder="@No jsxborder"/>
+                <object type="jsx3.gui.ImageButton">
+                  <variants jsxwidth="16" jsxheight="16" jsxtype="0" jsxprefetch="1" jsxstate="0"/>
+                  <strings jsxname="imagebutton" jsxtext="[button text]" jsximage="images/help.gif"/>
+                  <events jsxexecute="alert('Execute');"/>
+                </object>
+              </object>
+              <object type="jsx3.gui.Block">
+                <variants jsxoverflow="2"/>
+                <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtext="上传批量csv文件" jsxtextalign="right"/>
+                <dynamics jsxborder="@No jsxborder" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxcolor="@Label Color" jsxpadding="@Label Padding"/>
+              </object>
+              <object type="jsx3.gui.Block">
+                <variants jsxoverflow="1"/>
+                <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="left"/>
+                <dynamics jsxborder="@No jsxborder"/>
+                <object type="jsx3.gui.TextBox">
+                  <variants/>
+                  <strings jsxname="txtCSVFilePath" jsxmargin="0 4 0 0" jsxvalue=""/>
+                  <dynamics jsxheight="@txtBox Height " jsxwidth="@txtBox Width" jsxborder="@txtBox Border "/>
+                </object>
+                <object type="jsx3.gui.Button">
+                  <variants jsxindex="0"/>
+                  <strings jsxname="btnDoBrowseCVSFile" jsxtext="浏览..."/>
+                  <dynamics jsxwidth="@Btn Width" jsxheight="@Btn Height" jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight" jsxcolor="@Btn Color" jsxpadding="@@Btn Padding" jsxborder="@Btn Border " jsxstyleoverride="@Btn css"/>
+                  <events jsxexecute="alert('hello');"/>
+                </object>
+              </object>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="3 0 0 220" jsxdisplay="" jsxmargin="0 0  3 0" jsxtextalign="left"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="（CSV文件中一次上传商品数量最好不要超过1000，CSV文件大小最好不要超过500K.）"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxcolor="@Label Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxheight="20" jsxoverflow="1"/>
+            <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="3 0 0 220" jsxdisplay="" jsxtextalign="left" jsxmargin="0 0 3 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="15" jsxwidth="180"/>
+              <strings jsxname="label" jsxtext="下载批量CSV文件（简体中文）" jsxcolor="#A9A3A3" jsxtextalign="left" jsxmargin=""/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxheight="25" jsxoverflow="1"/>
+            <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="3 0 0 0" jsxdisplay="" jsxtextalign="center"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0"/>
+              <strings jsxname="btnDoUploadFile" jsxtext="确定" jsxmargin="1 4 0 0"/>
+              <dynamics jsxwidth="@Btn Width" jsxheight="@Btn Height" jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight" jsxcolor="@Btn Color" jsxpadding="@@Btn Padding" jsxborder="@Btn Border " jsxstyleoverride="@Btn css"/>
+              <events jsxexecute="alert('hello');"/>
+            </object>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="1"/>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtext="使用说明：&lt;br&gt;&lt;ol&gt;&lt;li&gt;根据使用习惯，下载相应语言的csv文件，例如中国内地用户下载简体中文语言的文件，港台用户下载繁体语言的文件；&lt;/li&gt;&lt;li&gt;填写csv文件，可以使用excel或文本编辑器打开csv文件；&lt;br&gt; 碰到“是否精品”之类，填写数字0或者1，0代表“否”，1代表“是”；&lt;br&gt; 商品图片和商品缩略图请填写带路径的图片文件名，其中路径是相对于 [根目录]/images/ 的路径，例如图片路径为[根目录]/images/200610/abc.jpg，只要填写 200610/abc.jpg 即可；&lt;/li&gt;&lt;li&gt;将填写的商品图片和商品缩略图上传到相应目录，例如：[根目录]/images/200610/；&lt;/li&gt;&lt;li&gt;选择所上传商品的分类以及文件编码，上传csv文件&lt;/li&gt;&lt;/ol&gt;" jsxtextalign="left"/>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="50" jsxoverflow="1"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left" jsxmargin="15 0 0 0"/>
+      <dynamics jsxborder="@Blk Border"/>
+    </object>
+  </object>
+</serialization>

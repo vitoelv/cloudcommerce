@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<serialization xmlns="urn:tibco.com/v3.0" jsxversion="3.6">
+  <name/>
+  <icon/>
+  <description/>
+  <onBeforeDeserialize/>
+  <onAfterDeserialize/>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"/>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="10 0 0 0" jsxdisplay=""/>
+    <object type="jsx3.gui.Block">
+      <variants jsxoverflow="1" jsxheight="25"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3"/>
+        <strings jsxname="label" jsxtext="图片描述" jsxtextalign="right" jsxmargin=""/>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxheight="@Label Height" jsxwidth="@Label Width" jsxcolor="@Label Color" jsxpadding="@Label Padding"/>
+      </object>
+      <object type="jsx3.gui.TextBox">
+        <variants/>
+        <strings jsxname="textbox" jsxvalue=""/>
+        <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxheight="@txtBox Height " jsxwidth="@txtBox Width"/>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxoverflow="1" jsxheight="25"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3"/>
+        <strings jsxname="label" jsxtext="上传文件" jsxtextalign="right" jsxmargin=""/>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxcolor="@Label Color" jsxwidth="@Label Width" jsxheight="@Label Height" jsxpadding="@Label Padding"/>
+      </object>
+      <object type="jsx3.gui.TextBox">
+        <variants/>
+        <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue=""/>
+        <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxheight="@txtBox Height " jsxwidth="@txtBox Width"/>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0"/>
+        <strings jsxname="button" jsxtext="浏览..." jsxmargin="0 4 0 0"/>
+        <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxwidth="@Btn Width" jsxpadding="@@Btn Padding" jsxheight="@Btn Height"/>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0"/>
+        <strings jsxname="button" jsxtext="继续添加图片"/>
+        <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxwidth="@Btn Width" jsxpadding="@@Btn Padding" jsxheight="@Btn Height"/>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxoverflow="1" jsxheight="25"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="10 0 0 0" jsxpadding="5 0 0 220"/>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0" jsxheight="18"/>
+        <strings jsxname="button" jsxtext="确定" jsxmargin="0 4 0 0"/>
+        <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxwidth="@Btn Width" jsxpadding="@@Btn Padding"/>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0" jsxheight="18"/>
+        <strings jsxname="button" jsxtext="重置"/>
+        <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxwidth="@Btn Width" jsxpadding="@@Btn Padding"/>
+      </object>
+    </object>
+  </object>
+</serialization>

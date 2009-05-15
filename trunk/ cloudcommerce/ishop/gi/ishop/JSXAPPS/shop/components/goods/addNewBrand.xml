@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<serialization jsxversion="3.6" xmlns="urn:tibco.com/v3.0">
+  <name><![CDATA[Block - 100%]]></name>
+  <icon><![CDATA[images/prototypes/block.gif]]></icon>
+  <description><![CDATA[Simple block, relatively positioned with overflow=scroll.]]></description>
+  <onBeforeDeserialize></onBeforeDeserialize>
+  <onAfterDeserialize><![CDATA[//jsx3.require("com.tibco.ishop.Brand");
+objJSX.getChild(1).init();]]></onAfterDeserialize>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"></variants>
+    <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtextalign="center"></strings>
+    <dynamics jsxpadding="@Block Padding"></dynamics>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="right"></strings>
+      <dynamics jsxbgcolor="@Blk Top Color" jsxbg="@Bevel TopDown Light" jsxborder="@Blk Border" jsxpadding="@Top Block Padding" jsxmargin="@Top Block Margin"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxstyleoverride="float:left"></strings>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight"></dynamics>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="&amp;nbsp;-添加品牌" jsxcolor="#869590" jsxtextalign="left" jsxstyleoverride="float:left"></strings>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0"></variants>
+        <strings jsxname="btnShowBrandList" jsxtext="商品品牌" jsxmargin="0 10 0 0"></strings>
+        <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxpadding="@@Btn Padding" jsxheight="@Btn Height" jsxwidth="@Btn Width"></dynamics>
+        <events jsxexecute="service.onMenuClick(&quot;a5&quot;);"></events>
+      </object>
+    </object>
+    <object type="com.tibco.ishop.BrandEditBlock">
+      <variants jsxoverflow="1"></variants>
+      <strings jsxname="blkEdit" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left" jsxpadding="10 0 0 0"></strings>
+      <dynamics jsxborder="@Blk Border"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="1" jsxheight="25"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="label" jsxtext="品牌名称" jsxtextalign="right" jsxmargin=""></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxwidth="@Label Width" jsxheight="@Label Height" jsxpadding="@Label Padding" jsxcolor="@Label Color"></dynamics>
+        </object>
+        <object type="jsx3.gui.TextBox">
+          <variants></variants>
+          <strings jsxname="txtBrandName" jsxvalue=""></strings>
+          <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxheight="@txtBox Height " jsxwidth="@txtBox Width"></dynamics>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="20" jsxfontsize="13" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="*" jsxcolor="red" jsxtextalign="center"></strings>
+          <dynamics jsxfontname="@lbl Font Name"></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="1" jsxheight="25"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="label" jsxtext="品牌网址" jsxtextalign="right" jsxmargin=""></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxwidth="@Label Width" jsxheight="@Label Height" jsxpadding="@Label Padding" jsxcolor="@Label Color"></dynamics>
+        </object>
+        <object type="jsx3.gui.TextBox">
+          <variants></variants>
+          <strings jsxname="txtBrandUrl" jsxvalue=""></strings>
+          <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxheight="@txtBox Height " jsxwidth="@txtBox Width"></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="1" jsxheight="22"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="&lt;input type=&quot;file&quot; style=&quot;display:none&quot; id=&quot;brandBrowse&quot;&gt;"></strings>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+          <strings jsxname="layout ( | )" jsxcols="140,80,*" jsxwidth="100%" jsxheight="100%"></strings>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="right" jsxpadding="2 0 0 0"></strings>
+            <dynamics jsxborder="@No jsxborder"></dynamics>
+            <object type="jsx3.gui.ImageButton">
+              <variants jsxwidth="16" jsxheight="16" jsxtype="0" jsxprefetch="1" jsxstate="0"></variants>
+              <strings jsxname="btnShowAboutBrandLogo" jsxtext="[button text]" jsximage="images/help.gif"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+              <events jsxexecute="alert('Execute');"></events>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="left" jsxtext="品牌LOGO" jsxpadding="3 20 0 0"></strings>
+            <dynamics jsxborder="@No jsxborder" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxcolor="@Label Color"></dynamics>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+            <dynamics jsxborder="@No jsxborder"></dynamics>
+            <object type="jsx3.gui.TextBox">
+              <variants></variants>
+              <strings jsxname="txtBrandLogoPath" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+              <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxheight="@txtBox Height " jsxwidth="@txtBox Width"></dynamics>
+            </object>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0"></variants>
+              <strings jsxname="btnDoBrowseBrandLogo" jsxtext="浏览..." jsxmargin="0 4 0 0"></strings>
+              <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxpadding="@@Btn Padding" jsxheight="@Btn Height" jsxwidth="@Btn Width"></dynamics>
+              <events jsxexecute="service.doBrowse(&quot;brandBrowse&quot;,&quot;txtBrandLogoPath&quot;);"></events>
+            </object>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0"></variants>
+              <strings jsxname="btnDoBrowseBrandLogo" jsxtext="删除图标"></strings>
+              <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxpadding="@@Btn Padding" jsxheight="@Btn Height" jsxwidth="@Btn Width"></dynamics>
+              <events jsxexecute="service.doBrowse(&quot;brandBrowse&quot;,&quot;txtBrandLogoPath&quot;);"></events>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="1" jsxfontsize="11"></variants>
+        <strings jsxname="blkAboutBrandLogo" jsxrelativeposition="1" jsxtext="" jsxfontname="arial" jsxpadding="0 0 0 220" jsxwidth="100%"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="lblAboutBrandLogo" jsxtext="请上传图片，做为品牌的LOGO!"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="1"></variants>
+        <strings jsxname="blkAlertLogo" jsxrelativeposition="1" jsxtext="" jsxpadding="0 0 0 220" jsxwidth="100%" jsxdisplay="none"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="lblAboutBrandLogo" jsxtext="你已经上传过图片。再次上传时将覆盖原图片！"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="1" jsxheight="85"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="label" jsxtext="品牌描述" jsxtextalign="right" jsxpadding="0 20 0 0" jsxmargin=""></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxcolor="@Label Color" jsxwidth="@Label Width" jsxheight="@Label Height"></dynamics>
+        </object>
+        <object type="jsx3.gui.TextBox">
+          <variants jsxheight="80" jsxtype="1"></variants>
+          <strings jsxname="txtBrandDescription" jsxvalue="" jsxdisabledbgcolor="" jsxoverflow="auto"></strings>
+          <dynamics jsxborder="@txtBox Border " jsxwidth="@txtBox Width" jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size "></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="1" jsxheight="25"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="label" jsxtext="排序" jsxtextalign="right" jsxmargin=""></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxpadding="@Label Padding" jsxcolor="@Label Color" jsxwidth="@Label Width" jsxheight="@Label Height"></dynamics>
+        </object>
+        <object type="jsx3.gui.TextBox">
+          <variants jsxwidth="250"></variants>
+          <strings jsxname="txtOrder" jsxvalue=""></strings>
+          <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxheight="@txtBox Height "></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220"></variants>
+          <strings jsxname="label" jsxtext="是否显示" jsxtextalign="right" jsxpadding="5 20 0 0" jsxmargin="" jsxcolor="#2f525d"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+        </object>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="1" jsxrelativeposition="1"></variants>
+          <strings jsxname="radShow" jsxtext="是" jsxgroupname="group1" jsxmargin="3 4 0 0"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+          <events jsxselect=""></events>
+        </object>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1" jsxwidth="425"></variants>
+          <strings jsxname="radNotShow" jsxtext="否 (当品牌下还没有商品的时候，首页及分类页的品牌区将不会显示该品牌)" jsxgroupname="group1" jsxmargin="3 4 0 0"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+          <events jsxselect=""></events>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="1" jsxheight="25"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="10 0 20 0" jsxpadding="5 0 0 220"></strings>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0"></variants>
+          <strings jsxname="btnDoAddBrand" jsxtext="确定" jsxmargin="0 5 0 0"></strings>
+          <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxwidth="@Btn Width" jsxpadding="@@Btn Padding" jsxheight="@Btn Height"></dynamics>
+          <events jsxexecute="shop.getJSXByName(&quot;blkEdit&quot;).onOkButtonClick();"></events>
+        </object>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0"></variants>
+          <strings jsxname="btnDoResetBrandInfo" jsxtext="重置"></strings>
+          <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxwidth="@Btn Width" jsxpadding="@@Btn Padding" jsxheight="@Btn Height"></dynamics>
+          <events jsxexecute="service.getServer().getJSXByName(&quot;blkEdit&quot;).rSetEditArea();"></events>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="50" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left" jsxmargin="15 0 0 0"></strings>
+      <dynamics jsxborder="@Blk Border"></dynamics>
+    </object>
+  </object>
+</serialization>

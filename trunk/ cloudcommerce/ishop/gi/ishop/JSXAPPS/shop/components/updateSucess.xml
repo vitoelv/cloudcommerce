@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<serialization jsxversion="3.6" xmlns="urn:tibco.com/v3.0">
+  <name><![CDATA[Block - 100%]]></name>
+  <icon><![CDATA[images/prototypes/block.gif]]></icon>
+  <description><![CDATA[Simple block, relatively positioned with overflow=scroll.]]></description>
+  <onBeforeDeserialize></onBeforeDeserialize>
+  <onAfterDeserialize><![CDATA[//objJSX.getChild(1).init();]]></onAfterDeserialize>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"></variants>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxtextalign="center"></strings>
+    <dynamics jsxpadding="@Block Padding"></dynamics>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxpadding="5 0 0 10" jsxtextalign="right" jsxmargin="0 0 12 0"></strings>
+      <dynamics jsxbgcolor="@Blk Top Color" jsxbg="@Bevel TopDown" jsxborder="@Blk Border"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxpadding="1 0 0 0" jsxtextalign="center" jsxfontweight="bold" jsxfontname="arial" jsxstyleoverride="float:left"></strings>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="&amp;nbsp-系统信息" jsxcolor="#869590" jsxtextalign="left" jsxstyleoverride="float:left"></strings>
+      </object>
+    </object>
+    <object type="com.tibco.ishop.UpdateOperationSucess">
+      <variants jsxheight="150" jsxoverflow="1"></variants>
+      <strings jsxname="blkUpdateSucess" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="0 0 15 0" jsxtextalign="left"></strings>
+      <dynamics jsxborder="@Blk Border"></dynamics>
+      <object type="jsx3.gui.LayoutGrid">
+        <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+        <strings jsxname="layout (--)" jsxrows="30,35,*" jsxwidth="100%" jsxheight="100%"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="2"></variants>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+          <dynamics jsxborder="@No jsxborder"></dynamics>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="2"></variants>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxpadding="0 0 0 50"></strings>
+          <dynamics jsxborder="@No jsxborder"></dynamics>
+          <object type="jsx3.gui.Image">
+            <variants jsxoverflow="2" jsxrelativeposition="1"></variants>
+            <strings jsxname="image" jsxsrc="images/information.gif" jsxmargin="0 20 0 0"></strings>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="32" jsxfontsize="15"></variants>
+            <strings jsxname="lbTargetType" jsxtext="" jsxpadding="8 0 0 0" jsxfontname="arial" jsxfontweight="bold"></strings>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="32" jsxfontsize="15"></variants>
+            <strings jsxname="label" jsxtext="" jsxpadding="8 0 0 0" jsxfontname="arial" jsxfontweight="bold"></strings>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="32" jsxfontsize="15"></variants>
+            <strings jsxname="label" jsxtext="修改成功！" jsxpadding="8 0 0 0" jsxfontname="arial" jsxfontweight="bold"></strings>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="1"></variants>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxpadding="0 0 0 100"></strings>
+          <dynamics jsxborder="@No jsxborder"></dynamics>
+          <object type="jsx3.gui.LayoutGrid">
+            <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+            <strings jsxname="layout (--)" jsxrows="25,25,*" jsxwidth="100%" jsxheight="100%"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="2"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="12"></variants>
+                <strings jsxname="label" jsxtext="如果您不作出选择，将在" jsxfontname="Arial"></strings>
+              </object>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="12"></variants>
+                <strings jsxname="label" jsxtext="2" jsxfontname="Arial"></strings>
+              </object>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="12"></variants>
+                <strings jsxname="label" jsxtext="秒后回到第一个链接！" jsxfontname="Arial"></strings>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="2"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+              <object type="jsx3.gui.Image">
+                <variants jsxoverflow="2" jsxrelativeposition="1"></variants>
+                <strings jsxname="image" jsxsrc="images/arrow.gif" jsxmargin="0 15 0 0"></strings>
+              </object>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="12"></variants>
+                <strings jsxname="lbListLink" jsxtext="" jsxfontname="arial" jsxcursor="hand"></strings>
+                <events jsxclick="service.getServer().getJSXByName(&quot;blkUpdateSucess&quot;).onListLinkClick();"></events>
+              </object>
+            </object>
+          </object>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="50" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left"></strings>
+      <dynamics jsxborder="@Blk Border"></dynamics>
+    </object>
+  </object>
+</serialization>

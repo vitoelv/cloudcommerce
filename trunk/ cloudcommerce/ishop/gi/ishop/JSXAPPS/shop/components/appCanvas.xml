@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<serialization xmlns="urn:tibco.com/v3.0" jsxversion="3.6">
+  <name/>
+  <icon/>
+  <description/>
+  <onBeforeDeserialize/>
+  <onAfterDeserialize/>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"/>
+    <strings jsxname="MainArea" jsxwidth="100%" jsxheight="100%"/>
+    <object type="jsx3.gui.LayoutGrid">
+      <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+      <strings jsxname="layout (--)" jsxrows="50,25,*" jsxwidth="100%" jsxheight="100%"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="1"/>
+        <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="solid 1px #ACCCD7; solid 1px #71A4B5; solid 1px #ACCCD7; solid 1px #71A4B5" jsxstyleoverride=""/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="130,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"/>
+            <dynamics jsxborder="@No jsxborder" jsxbg="@Header BG"/>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxbgcolor="#278296" jsxcursor="help"/>
+            <dynamics jsxborder="@No jsxborder"/>
+            <object type="jsx3.gui.LayoutGrid">
+              <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+              <strings jsxname="layout (--)" jsxrows="45%,*" jsxwidth="100%" jsxheight="100%" jsxstyleoverride="cursor:pointer;" jsxtip=""/>
+              <object type="jsx3.gui.Block">
+                <variants jsxoverflow="2"/>
+                <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxpadding="5 0 0 0" jsxstyleoverride="" jsxtextalign="right"/>
+                <dynamics jsxborder="@No jsxborder" jsxcursor="@Default"/>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="lbGuide" jsxtext="开店向导" jsxcolor="#BDE0EA"/>
+                  <dynamics jsxcursor="@Hand" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                  <properties onmouseover="service.onMouseOver(&quot;lbGuide&quot;);" onmouseout="service.onMouseOut(&quot;lbGuide&quot;);"/>
+                  <events jsxspy="&lt;a href=&quot;www.baidu.com&quot;&gt;adf&lt;/a&gt;" jsxclick=""/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="split" jsxtext="&amp;nbsp | &amp;nbsp" jsxcolor="#BDE0EA"/>
+                  <dynamics jsxcursor="@Default" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="lbNoteBook" jsxtext="记事本" jsxcolor="#BDE0EA"/>
+                  <dynamics jsxcursor="@Hand" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                  <properties onmouseover="service.onMouseOver(&quot;lbNoteBook&quot;);" onmouseout="service.onMouseOut(&quot;lbNoteBook&quot;);"/>
+                  <events jsxspy="" jsxclick="service.loadNote();"/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="split" jsxtext="&amp;nbsp | &amp;nbsp" jsxcolor="#BDE0EA"/>
+                  <dynamics jsxcursor="@Default" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="lbReflash" jsxtext="刷新" jsxcolor="#BDE0EA"/>
+                  <dynamics jsxcursor="@Hand" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                  <properties onmouseover="service.onMouseOver(&quot;lbReflash&quot;);" onmouseout="service.onMouseOut(&quot;lbReflash&quot;);"/>
+                  <events jsxspy="ecshop.onMouseOn(this);" jsxclick=""/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="split" jsxtext="&amp;nbsp | &amp;nbsp" jsxcolor="#BDE0EA"/>
+                  <dynamics jsxcursor="@Default" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="lbPensonalSetting" jsxtext="个人设置" jsxcolor="#BDE0EA"/>
+                  <dynamics jsxcursor="@Hand" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                  <properties onmouseover="service.onMouseOver(&quot;lbPensonalSetting&quot;);" onmouseout="service.onMouseOut(&quot;lbPensonalSetting&quot;);"/>
+                  <events jsxspy="ecshop.onMouseOn(this);" jsxclick=""/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="split" jsxtext="&amp;nbsp | &amp;nbsp" jsxcolor="#BDE0EA"/>
+                  <dynamics jsxcursor="@Default" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="lbManagerLeftWord" jsxtext="管理员留言" jsxcolor="#BDE0EA"/>
+                  <dynamics jsxcursor="@Hand" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                  <properties onmouseover="service.onMouseOver(&quot;lbManagerLeftWord&quot;);" onmouseout="service.onMouseOut(&quot;lbManagerLeftWord&quot;);"/>
+                  <events jsxspy="ecshop.onMouseOn(this);" jsxclick=""/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="split" jsxtext="&amp;nbsp | &amp;nbsp" jsxcolor="#BDE0EA"/>
+                  <dynamics jsxcursor="@Default" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="lbCheckWebsite" jsxtext="查看网站" jsxcolor="#BDE0EA"/>
+                  <dynamics jsxcursor="@Hand" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                  <properties onmouseover="service.onMouseOver(&quot;lbCheckWebsite&quot;);" onmouseout="service.onMouseOut(&quot;lbCheckWebsite&quot;);"/>
+                  <events jsxspy="ecshop.onMouseOn(this);" jsxclick=""/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="split" jsxtext="&amp;nbsp | &amp;nbsp" jsxcolor="#BDE0EA"/>
+                  <dynamics jsxcursor="@Default" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="lbCaculater" jsxtext="计算器" jsxcolor="#BDE0EA"/>
+                  <dynamics jsxcursor="@Hand" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                  <properties onmouseover="service.onMouseOver(&quot;lbCaculater&quot;);" onmouseout="service.onMouseOut(&quot;lbCaculater&quot;);"/>
+                  <events jsxspy="ecshop.onMouseOn(this);" jsxclick=""/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="split" jsxtext="&amp;nbsp | &amp;nbsp" jsxcolor="#BDE0EA"/>
+                  <dynamics jsxcursor="@Default" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="lbAbout" jsxtext="关于ECSHOP" jsxcolor="#BDE0EA" jsxstyleoverride="letter-spacing:1" jsxmargin="0 10 0 0"/>
+                  <dynamics jsxcursor="@Hand" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                  <properties onmouseover="service.onMouseOver(&quot;lbAbout&quot;);" onmouseout="service.onMouseOut(&quot;lbAbout&quot;);"/>
+                  <events jsxspy="ecshop.onMouseOn(this);" jsxclick=""/>
+                </object>
+              </object>
+              <object type="jsx3.gui.Block">
+                <variants jsxoverflow="1"/>
+                <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="right" jsxpadding="5 0 0 0"/>
+                <dynamics jsxborder="@No jsxborder" jsxcursor="@Default"/>
+                <object type="jsx3.gui.ImageButton">
+                  <variants jsxwidth="16" jsxheight="16" jsxprefetch="1" jsxtype="0" jsxstate="0"/>
+                  <strings jsxname="imagebutton" jsxtext="[button text]" jsximage="images/working_icon_anim2.gif"/>
+                  <events jsxexecute="alert('Execute');"/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="lbTip" jsxtext="正在处理...." jsxmargin="0 320 0 5" jsxcolor="#B7BE6F" jsxdisplay=""/>
+                  <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="lbClearCache" jsxtext="清楚缓存" jsxcolor="#BDE0EA" jsxstyleoverride="text-decoration:underline;" jsxcursor="hand"/>
+                  <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                  <properties onmouseover="service.onMouseOver(&quot;lbClearCache&quot;);" onmouseout="service.onMouseOut(&quot;lbClearCache&quot;);"/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="12"/>
+                  <strings jsxname="split" jsxtext="&amp;nbsp | &amp;nbsp" jsxcolor="#BDE0EA" jsxfontname="Arial"/>
+                  <dynamics jsxcursor="@Default"/>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3"/>
+                  <strings jsxname="lbLoginout" jsxtext="退出" jsxcolor="#BDE0EA" jsxstyleoverride="text-decoration:underline;" jsxmargin="0 10 0 0" jsxcursor="hand"/>
+                  <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+                  <properties onmouseover="service.onMouseOver(&quot;lbLoginout&quot;);" onmouseout="service.onMouseOut(&quot;lbLoginout&quot;);"/>
+                </object>
+              </object>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="3"/>
+        <strings jsxname="statusBar" jsxwidth="100%" jsxheight="100%" jsxbgcolor="#396570" jsxpadding="5 0 0 10"/>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"/>
+          <strings jsxname="lbStartPage" jsxtext="起始页" jsxtextalign="left" jsxcolor="#BDE0EA" jsxcursor="hand" jsxstyleoverride=""/>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxpadding="@Navigation Label Padding"/>
+          <events jsxclick="service.loadPage(&quot;components/start/startPage.xml&quot;);"/>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"/>
+          <strings jsxname="lbNavigationBar" jsxtext="设置导航栏" jsxtextalign="left" jsxcolor="#BDE0EA" jsxcursor="hand"/>
+          <dynamics jsxfontsize="@lbl Font Size" jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight" jsxpadding="@Navigation Label Padding"/>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"/>
+          <strings jsxname="lbGoodsList" jsxtext="商品列表" jsxcolor="#F9DB6D" jsxcursor="hand" jsxtextalign="left"/>
+          <dynamics jsxfontsize="@lbl Font Size" jsxbg="@Navigation Label Bg" jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight" jsxpadding="@Navigation Label Padding"/>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"/>
+          <strings jsxname="lbGoodsClassDefine" jsxtext="商品分类" jsxcolor="#BDE0EA" jsxcursor="hand" jsxtextalign="left"/>
+          <dynamics jsxfontsize="@lbl Font Size" jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight" jsxpadding="@Navigation Label Padding"/>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"/>
+          <strings jsxname="lbGoodsBrand" jsxtext="商品品牌" jsxcolor="#BDE0EA" jsxcursor="hand" jsxtextalign="left"/>
+          <dynamics jsxfontsize="@lbl Font Size" jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight" jsxpadding="@Navigation Label Padding"/>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="1"/>
+        <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"/>
+        <dynamics jsxborder="@No jsxborder"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="5,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"/>
+            <dynamics jsxborder="@No jsxborder"/>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"/>
+            <dynamics jsxborder="@No jsxborder"/>
+            <object type="jsx3.gui.Splitter">
+              <variants jsxleft="0" jsxtop="0"/>
+              <strings jsxname="splitter ( | )" jsxsubcontainer1pct="23.16%" jsxbgcolor="#ffffff"/>
+              <dynamics jsxhsplitimage="@Spliiter V Imange"/>
+              <object type="jsx3.gui.Block">
+                <variants jsxoverflow="1"/>
+                <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxbgcolor="#ffffff" jsxpadding="0 5 0 0"/>
+                <object type="jsx3.gui.LayoutGrid">
+                  <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+                  <strings jsxname="layout (--)" jsxrows="20,*" jsxwidth="100%" jsxheight="100%"/>
+                  <object type="jsx3.gui.Block">
+                    <variants jsxoverflow="2"/>
+                    <strings jsxname="pane1" jsxwidth="100%" jsxheight="100%" jsxbgcolor="#fffff" jsxpadding="0 0 0 10" jsxtextalign="left"/>
+                    <dynamics jsxbg="@Tab Panel Bg"/>
+                    <object type="jsx3.gui.Button">
+                      <variants jsxindex="0" jsxheight="20"/>
+                      <strings jsxname="tabMenu" jsxtext="菜单" jsxmargin="0 4 0 0" jsxborder="0px solid #7b797a; 1px solid #7b797a; 0px solid #7b797a; 1px solid #7b797a;" jsxpadding="4 9 0 9" jsxbgcolor=""/>
+                      <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxfontweight="@Btn Font Weight" jsxbg="@Tab Unselecte CSS" jsxstyleoverride="@Tab Selected CSS" jsxwidth="@Btn Width"/>
+                      <events jsxexecute="service.onTabMenuClick();"/>
+                    </object>
+                    <object type="jsx3.gui.Button">
+                      <variants jsxindex="0" jsxheight="20"/>
+                      <strings jsxname="tabHelp" jsxtext="帮助" jsxmargin="0 4 0 0" jsxborder="0px solid #7b797a; 1px solid #7b797a; 0px solid #7b797a; 1px solid #7b797a;" jsxpadding="4 9 0 9"/>
+                      <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxfontweight="@Btn Font Weight" jsxbg="@Tab Selected CSS" jsxstyleoverride="@Tab Unselecte CSS" jsxwidth="@Btn Width"/>
+                      <events jsxexecute="service.onTabHelpClick();"/>
+                    </object>
+                    <object type="jsx3.gui.Image">
+                      <variants jsxoverflow="2" jsxrelativeposition="1" jsxwidth="9" jsxheight="9"/>
+                      <strings jsxname="imgOpen" jsxsrc="images/menu_plus.gif" jsxmargin="" jsxtip="展开" jsxdisplay="none"/>
+                    </object>
+                    <object type="jsx3.gui.Image">
+                      <variants jsxoverflow="2" jsxrelativeposition="1" jsxheight="9" jsxwidth="9"/>
+                      <strings jsxname="imgClose" jsxsrc="images/menu_minus.gif" jsxmargin="" jsxtip="收拢"/>
+                    </object>
+                  </object>
+                  <object type="jsx3.gui.Block">
+                    <variants jsxoverflow="1"/>
+                    <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxbgcolor="#fffff"/>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxoverflow="1"/>
+                      <strings jsxname="blkMenu" jsxwidth="100%" jsxrelativeposition="1" jsxdisplay="" jsxborder="0px solid #7b797a; 1px solid #7b797a; 1px solid #7b797a; 1px solid #7b797a;" jsxheight="100%"/>
+                      <object type="jsx3.gui.Tree">
+                        <variants jsxxmlasync="0" jsxuseroot="0" jsxfontsize="12" jsxoverflow="1" jsxmultiselect="0" jsxdrag="1"/>
+                        <strings jsxname="treeMenu" jsxwidth="100%" jsxheight="100%" jsxvalue="1" jsxxmlurl="xml/menudata.xml" jsxfontname="Arial" jsxfontweight="normal" jsxcolor="#2F525D" jsxdisabledbgcolor="" jsxdisplay=""/>
+                        <events jsxexecute="" jsxselect="service.onMenuClick(strRECORDID);"/>
+                        <xslparameters jsx_image=""/>
+                      </object>
+                    </object>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxoverflow="1"/>
+                      <strings jsxname="blkHelp" jsxwidth="100%" jsxrelativeposition="1" jsxdisplay="none" jsxborder="0px solid #7b797a; 1px solid #7b797a; 1px solid #7b797a; 1px solid #7b797a;" jsxheight="100%"/>
+                    </object>
+                  </object>
+                </object>
+              </object>
+              <object type="jsx3.gui.Block">
+                <variants jsxoverflow="1" jsxdrop="1"/>
+                <strings jsxname="detailPage" jsxwidth="100%" jsxheight="100%" jsxtextalign="left"/>
+                <dynamics jsxborder="@No jsxborder"/>
+                <events jsxdrop="service.onDetailPageDropOn(strDRAGID);"/>
+              </object>
+            </object>
+          </object>
+        </object>
+      </object>
+    </object>
+  </object>
+</serialization>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<serialization jsxversion="3.6" xmlns="urn:tibco.com/v3.0">
+  <name></name>
+  <icon></icon>
+  <description></description>
+  <onBeforeDeserialize></onBeforeDeserialize>
+  <onAfterDeserialize><![CDATA[com.tibco.ishop.GoodAttributeEditBlock.init();
+com.tibco.ishop.GoodAttributeEditBlock.generalTypeSelect();]]></onAfterDeserialize>
+  <object type="com.tibco.ishop.GoodAttributeEditBlock">
+    <variants jsxoverflow="1"></variants>
+    <strings jsxname="GoodAttributMain" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="10 0 0 0" jsxdisplay=""></strings>
+    <object type="jsx3.gui.Block">
+      <variants jsxoverflow="1" jsxheight="25"></variants>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtextalign="left" jsxpadding="0 0 0 220"></strings>
+      <object type="com.tibco.ishop.SelectData">
+        <variants jsxxmlasync="1" _isfocusing="true"></variants>
+        <strings jsxname="selGoodsType" jsxxmlid="typeselectdata" jsxvalue="13"></strings>
+        <dynamics jsxborder="@Select Border" jsxwidth="@Select Width" jsxheight="@Select Height" jsxfontname="@Select Font Name" jsxfontsize="@Select Font Size"></dynamics>
+        <events jsxselect="com.tibco.ishop.GoodAttributeEditBlock.getTypeAttribute(strRECORDID);"></events>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxoverflow="1"></variants>
+      <strings jsxname="blkAttributeEdit" jsxwidth="100%" jsxrelativeposition="1"></strings>
+    </object>
+  </object>
+</serialization>

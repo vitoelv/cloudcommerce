@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+<hibernate-mapping>
+ <class name="com.jcommerce.core.model.Shipping" table="tis_shipping" >
+  <id name="id" column="shipping_id" type="int">
+   <generator class="native"/>
+  </id>
+
+  <property name="name" column="shipping_name" length="120"/>
+  <property name="code" column="pack_img" length="20"/>
+  <property name="supportCod" column="support_cod" />
+  <property name="insure" length="10"/>
+  <property name="description" column="shipping_desc" length="255"/>
+  <property name="enabled" />
+
+ </class>
+</hibernate-mapping>

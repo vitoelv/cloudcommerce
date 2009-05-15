@@ -1,0 +1,882 @@
+<?xml version="1.0" encoding="utf-8"?>
+<serialization xmlns="urn:tibco.com/v3.0" jsxversion="3.6">
+  <name>Block - 100%</name>
+  <icon>images/prototypes/block.gif</icon>
+  <description>Simple block, relatively positioned with overflow=scroll.</description>
+  <onBeforeDeserialize/>
+  <onAfterDeserialize/>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"/>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1"/>
+    <dynamics jsxpadding="@Block Padding"/>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="25" jsxoverflow="3"/>
+      <strings jsxname="block" jsxwidth="98%" jsxrelativeposition="1" jsxcolor="" jsxtextalign="left" jsxpadding="4 0 0 3" jsxmargin="0 0 10 0" jsxstyleoverride="background-image:url(/ecshop/JSXAPPS/shop/image/tableheader.jpg); background-repeat:repeat;" jsxborder="1px solid #555555"/>
+      <dynamics jsxbg="@Bevel TopDown"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"/>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxtextalign="left"/>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight" jsxcolor="@lbl Color"/>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="95" jsxoverflow="2"/>
+      <strings jsxname="block" jsxwidth="98%" jsxrelativeposition="1" jsxmargin="0 0 10 0" jsxborder="1px solid #555555"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="3" jsxfontsize="12"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxcolor="#2f525d" jsxtext="订单统计信息" jsxfontname="Arial" jsxtextalign="left" jsxfontweight="bold" jsxpadding="5 0 0 3" jsxmargin="" jsxborder="0px;0px;1px solid #555555;0px" jsxstyleoverride="background-image:url(/ecshop/JSXAPPS/shop/image/tableheader.jpg); background-repeat:repeat;"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18"/>
+              <strings jsxname="btnReadyForSend" jsxtext="代发货订单:" jsxbgcolor="#ffffff" jsxpadding="6 0 0 3" jsxborder="0px;0px;0px;0px;" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击查看代发货订单"/>
+              <dynamics jsxfontsize="@lbl Font Size" jsxfontname="@Btn Font Name "/>
+              <events jsxexecute=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18" jsxfontsize="11"/>
+              <strings jsxname="button" jsxtext="未确认订单:" jsxmargin="" jsxbgcolor="#fff" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击产看未确认订单"/>
+              <dynamics jsxborder="@No jsxborder"/>
+              <events jsxexecute="alert('hello');"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18"/>
+              <strings jsxname="btnReadyForSend" jsxtext="代发货订单:" jsxbgcolor="#ffffff" jsxpadding="6 0 0 3" jsxborder="0px;0px;0px;0px;" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击查看代发货订单"/>
+              <dynamics jsxfontsize="@lbl Font Size" jsxfontname="@Btn Font Name "/>
+              <events jsxexecute=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18" jsxfontsize="11"/>
+              <strings jsxname="button" jsxtext="未确认订单:" jsxmargin="" jsxbgcolor="#fff" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击产看未确认订单"/>
+              <dynamics jsxborder="@No jsxborder"/>
+              <events jsxexecute="alert('hello');"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18"/>
+              <strings jsxname="btnReadyForSend" jsxtext="代发货订单:" jsxbgcolor="#ffffff" jsxpadding="6 0 0 3" jsxborder="0px;0px;0px;0px;" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击查看代发货订单"/>
+              <dynamics jsxfontsize="@lbl Font Size" jsxfontname="@Btn Font Name "/>
+              <events jsxexecute=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18" jsxfontsize="11"/>
+              <strings jsxname="button" jsxtext="未确认订单:" jsxmargin="" jsxbgcolor="#fff" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击产看未确认订单"/>
+              <dynamics jsxborder="@No jsxborder"/>
+              <events jsxexecute="alert('hello');"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="95" jsxoverflow="2"/>
+      <strings jsxname="block" jsxwidth="98%" jsxrelativeposition="1" jsxmargin="0 0 10 0" jsxborder="1px solid #555555"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="3" jsxfontsize="12"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxcolor="#2f525d" jsxtext="订单统计信息" jsxfontname="Arial" jsxtextalign="left" jsxfontweight="bold" jsxpadding="5 0 0 3" jsxmargin="" jsxborder="0px;0px;1px solid #555555;0px" jsxstyleoverride="background-image:url(/ecshop/JSXAPPS/shop/image/tableheader.jpg); background-repeat:repeat;"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18"/>
+              <strings jsxname="btnReadyForSend" jsxtext="代发货订单:" jsxbgcolor="#ffffff" jsxpadding="6 0 0 3" jsxborder="0px;0px;0px;0px;" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击查看代发货订单"/>
+              <dynamics jsxfontsize="@lbl Font Size" jsxfontname="@Btn Font Name "/>
+              <events jsxexecute=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18" jsxfontsize="11"/>
+              <strings jsxname="button" jsxtext="未确认订单:" jsxmargin="" jsxbgcolor="#fff" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击产看未确认订单"/>
+              <dynamics jsxborder="@No jsxborder"/>
+              <events jsxexecute="alert('hello');"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18"/>
+              <strings jsxname="btnReadyForSend" jsxtext="代发货订单:" jsxbgcolor="#ffffff" jsxpadding="6 0 0 3" jsxborder="0px;0px;0px;0px;" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击查看代发货订单"/>
+              <dynamics jsxfontsize="@lbl Font Size" jsxfontname="@Btn Font Name "/>
+              <events jsxexecute=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18" jsxfontsize="11"/>
+              <strings jsxname="button" jsxtext="未确认订单:" jsxmargin="" jsxbgcolor="#fff" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击产看未确认订单"/>
+              <dynamics jsxborder="@No jsxborder"/>
+              <events jsxexecute="alert('hello');"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18"/>
+              <strings jsxname="btnReadyForSend" jsxtext="代发货订单:" jsxbgcolor="#ffffff" jsxpadding="6 0 0 3" jsxborder="0px;0px;0px;0px;" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击查看代发货订单"/>
+              <dynamics jsxfontsize="@lbl Font Size" jsxfontname="@Btn Font Name "/>
+              <events jsxexecute=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18" jsxfontsize="11"/>
+              <strings jsxname="button" jsxtext="未确认订单:" jsxmargin="" jsxbgcolor="#fff" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击产看未确认订单"/>
+              <dynamics jsxborder="@No jsxborder"/>
+              <events jsxexecute="alert('hello');"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="95" jsxoverflow="2"/>
+      <strings jsxname="block" jsxwidth="98%" jsxrelativeposition="1" jsxmargin="0 0 10 0" jsxborder="1px solid #555555"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="3" jsxfontsize="12"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxcolor="#2f525d" jsxtext="实体商品统计信息" jsxfontname="Arial" jsxtextalign="left" jsxfontweight="bold" jsxpadding="5 0 0 3" jsxmargin="" jsxborder="0px;0px;1px solid #555555;0px"/>
+        <dynamics jsxbgcolor="@Table Header Color"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18"/>
+              <strings jsxname="btnReadyForSend" jsxtext="代发货订单:" jsxbgcolor="#ffffff" jsxpadding="6 0 0 3" jsxborder="0px;0px;0px;0px;" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击查看代发货订单"/>
+              <dynamics jsxfontsize="@lbl Font Size" jsxfontname="@Btn Font Name "/>
+              <events jsxexecute=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18" jsxfontsize="11"/>
+              <strings jsxname="button" jsxtext="未确认订单:" jsxmargin="" jsxbgcolor="#fff" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击产看未确认订单"/>
+              <dynamics jsxborder="@No jsxborder"/>
+              <events jsxexecute="alert('hello');"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18"/>
+              <strings jsxname="btnReadyForSend" jsxtext="代发货订单:" jsxbgcolor="#ffffff" jsxpadding="6 0 0 3" jsxborder="0px;0px;0px;0px;" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击查看代发货订单"/>
+              <dynamics jsxfontsize="@lbl Font Size" jsxfontname="@Btn Font Name "/>
+              <events jsxexecute=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18" jsxfontsize="11"/>
+              <strings jsxname="button" jsxtext="未确认订单:" jsxmargin="" jsxbgcolor="#fff" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击产看未确认订单"/>
+              <dynamics jsxborder="@No jsxborder"/>
+              <events jsxexecute="alert('hello');"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18"/>
+              <strings jsxname="btnReadyForSend" jsxtext="代发货订单:" jsxbgcolor="#ffffff" jsxpadding="6 0 0 3" jsxborder="0px;0px;0px;0px;" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击查看代发货订单"/>
+              <dynamics jsxfontsize="@lbl Font Size" jsxfontname="@Btn Font Name "/>
+              <events jsxexecute=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="18" jsxfontsize="11"/>
+              <strings jsxname="button" jsxtext="未确认订单:" jsxmargin="" jsxbgcolor="#fff" jsxfontname="Arial" jsxpadding="6 0 0 3" jsxstyleoverride="text-decoration: underline" jsxtextalign="left" jsxtip="点击产看未确认订单"/>
+              <dynamics jsxborder="@No jsxborder"/>
+              <events jsxexecute="alert('hello');"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="70" jsxoverflow="2"/>
+      <strings jsxname="block" jsxwidth="98%" jsxrelativeposition="1" jsxmargin="0 0 10 0" jsxborder="1px solid #555555;"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="3" jsxfontsize="12"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxcolor="#2f525d" jsxtext="访问统计" jsxfontname="Arial" jsxtextalign="left" jsxfontweight="bold" jsxpadding="5 0 0 3" jsxmargin="" jsxborder="0px;0px;1px solid #555555;0px;"/>
+        <dynamics jsxbgcolor="@Table Header Color"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="220" jsxoverflow="2"/>
+      <strings jsxname="block" jsxwidth="98%" jsxrelativeposition="1" jsxmargin="0 0 10 0" jsxborder="1px solid #555555;"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="3" jsxfontsize="12"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxcolor="#2f525d" jsxtext="访问统计" jsxfontname="Arial" jsxtextalign="left" jsxfontweight="bold" jsxpadding="5 0 0 3" jsxmargin="" jsxborder="0px;0px;1px solid #555555;0px;"/>
+        <dynamics jsxbgcolor="@Table Header Color"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2" jsxheight="25"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left"/>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+          <strings jsxname="layout ( | )" jsxcols="25%,25%,25%,*" jsxwidth="100%" jsxheight="100%"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3" jsxcolor=""/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5" jsxpadding="8 0 0 0"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3"/>
+              <strings jsxname="label" jsxtext="今日访问" jsxpadding="0 0 0 3"/>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@lbl Color"/>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"/>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"/>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="11" jsxheight="20"/>
+              <strings jsxname="label" jsxtext="0" jsxfontname="Arial" jsxwidth="25%" jsxpadding="6 0 0 3"/>
+            </object>
+          </object>
+        </object>
+      </object>
+    </object>
+  </object>
+</serialization>

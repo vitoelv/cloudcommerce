@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>     
+    <bean id="cartTimerTask" class="com.jcommerce.web.action.CartTimerTask"/>
+    <bean id="timerTaskSchedule" class="com.jcommerce.web.action.TimerTaskSchedule">
+        <property name="cartTimerTask">
+            <ref bean="cartTimerTask"/>
+        </property>
+    </bean> 
+    <bean id="scheduledReportTask" class="org.springframework.scheduling.timer.ScheduledTimerTask">
+        <property name="timerTask">
+            <ref bean="timerTaskSchedule"/>
+        </property>
+        <property name="period">
+            <value>86400000</value><!--24小时运行一次-->
+        </property>
+        <property name="delay">
+            <value>5000</value>
+        </property>
+    </bean>   
+    <bean class="org.springframework.scheduling.timer.TimerFactoryBean">
+        <property name="scheduledTimerTasks">
+            <list>
+                <ref bean="scheduledReportTask"/>
+            </list>
+        </property>
+    </bean> 
+</beans>  

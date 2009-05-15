@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<serialization xmlns="urn:tibco.com/v3.0" jsxversion="3.6">
+  <name/>
+  <icon/>
+  <description/>
+  <onBeforeDeserialize/>
+  <onAfterDeserialize/>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1" jsxheight="25"/>
+    <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"/>
+    <object type="jsx3.gui.Block">
+      <variants jsxrelativeposition="1" jsxoverflow="3"/>
+      <strings jsxname="label" jsxtext="库存商品数量" jsxtextalign="right" jsxmargin=""/>
+      <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxwidth="@Label Width" jsxheight="@Label Height" jsxpadding="@Label Padding" jsxcolor="@Label Color"/>
+    </object>
+    <object type="jsx3.gui.TextBox">
+      <variants/>
+      <strings jsxname="textbox" jsxvalue=""/>
+      <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxheight="@txtBox Height " jsxwidth="@txtBox Width" jsxfontweight="@txtBox Font Weight "/>
+    </object>
+  </object>
+</serialization>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+    "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+    <!-- ======================================== Form Bean Definitions -->
+
+    <form-beans>
+    </form-beans>
+
+    <!-- =================================== Global Forward Definitions -->
+
+    <global-forwards>
+    </global-forwards>
+
+    <!-- =================================== Action Mapping Definitions -->
+
+    <action-mappings>
+		<action path="/dispatch" type="org.springframework.web.struts.DelegatingActionProxy"
+				scope="request" parameter="page">
+			<forward name="home" path="/WEB-INF/freemarker/index.ftl"/>
+			<forward name="goods" path="/WEB-INF/freemarker/goods.ftl"/>
+			<forward name="cart" path="/WEB-INF/freemarker/cart.ftl"/>
+			<forward name="category" path="/WEB-INF/freemarker/category.ftl"/>
+			<forward name="cart_login" path="/WEB-INF/freemarker/cart_login.ftl"/>
+			<forward name="cart_consignee" path="/WEB-INF/freemarker/cart_consignee.ftl"/>
+			<forward name="cart_checkout" path="/WEB-INF/freemarker/cart_checkout.ftl"/>
+			<forward name="cart_success" path="/WEB-INF/freemarker/cart_success.ftl"/>
+			<forward name="register" path="/WEB-INF/freemarker/register.ftl"/>
+			<forward name="register_success" path="/WEB-INF/freemarker/register_success.ftl"/>
+			<forward name="user" path="/WEB-INF/freemarker/user.ftl"/>
+			<forward name="get_password" path="/WEB-INF/freemarker/get_password.ftl"/>
+			<forward name="get_passwordPrompted" path="/WEB-INF/freemarker/get_passwordPrompted.ftl"/>
+			<forward name="brand" path="/WEB-INF/freemarker/brand.ftl"/>
+			<forward name="search" path="/WEB-INF/freemarker/search.ftl"/>
+			<forward name="advanced_search" path="/WEB-INF/freemarker/advanced_search.ftl"/>
+			<forward name="goodsList" path="/WEB-INF/freemarker/goodsList.ftl"/>
+			<forward name="article" path="/WEB-INF/freemarker/article.ftl"/>
+			
+			<forward name="checkout_demo" path="/WEB-INF/freemarker/checkout_demo.ftl"/>
+									
+		</action>
+		<action path="/respond" type="org.springframework.web.struts.DelegatingActionProxy"
+				scope="request" parameter="code">
+			<forward name="success" path="/WEB-INF/freemarker/payment_success.ftl"/>
+			<forward name="fail" path="/WEB-INF/freemarker/payment_failure.ftl"/>
+		</action>
+	</action-mappings>
+
+
+    <!-- ================================ Message Resources Definitions -->
+
+    <message-resources parameter="messages"/>
+
+    <!-- ======================================= Plug Ins Configuration -->
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation" value="/WEB-INF/applicationContext.xml, /WEB-INF/action-servlet.xml" />
+	</plug-in>
+</struts-config>
+
+

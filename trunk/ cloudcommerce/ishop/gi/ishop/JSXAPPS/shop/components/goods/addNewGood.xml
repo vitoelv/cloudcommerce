@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<serialization jsxversion="3.6" xmlns="urn:tibco.com/v3.0">
+  <name><![CDATA[Block - 100%]]></name>
+  <icon><![CDATA[images/prototypes/block.gif]]></icon>
+  <description><![CDATA[Simple block, relatively positioned with overflow=scroll.]]></description>
+  <onBeforeDeserialize></onBeforeDeserialize>
+  <onAfterDeserialize><![CDATA[objJSX.getChild(1).init();
+shop.getJSXByName("generalinfomation").load("components/goods/newGoodsGenetalInfo.xml");]]></onAfterDeserialize>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"></variants>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxtextalign="center"></strings>
+    <dynamics jsxpadding="@Block Padding"></dynamics>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="right"></strings>
+      <dynamics jsxbgcolor="@Blk Top Color" jsxborder="@Blk Border" jsxbg="@Bevel TopDown" jsxpadding="@Top Block Padding" jsxmargin="@Top Block Margin"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxstyleoverride="float:left"></strings>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight"></dynamics>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="&amp;nbsp;-添加新商品" jsxcolor="#869590" jsxstyleoverride="float:left"></strings>
+        <dynamics jsxfontname="@lbl Font Name"></dynamics>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0"></variants>
+        <strings jsxname="btnGoodList" jsxtext="商品列表" jsxmargin="0 10 0 0"></strings>
+        <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxheight="@Btn Height" jsxwidth="@Btn Width" jsxpadding="@@Btn Padding"></dynamics>
+        <events jsxexecute="service.onMenuClick(&quot;a1&quot;);"></events>
+      </object>
+    </object>
+    <object type="com.tibco.ishop.GoodEditBlock">
+      <variants jsxheight="540" jsxoverflow="1"></variants>
+      <strings jsxname="goodEdit" jsxwidth="100%" jsxrelativeposition="1" jsxbgcolor="#ffffff" jsxinstanceof="jsx3.app.Model"></strings>
+      <object type="jsx3.gui.LayoutGrid">
+        <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+        <strings jsxname="layout (--)" jsxrows="20,*" jsxwidth="100%" jsxheight="100%"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="2"></variants>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxstyleoverride="" jsxtextalign="left"></strings>
+          <dynamics jsxbg="@Tab Panel Bg"></dynamics>
+          <object type="jsx3.gui.Button">
+            <variants jsxwidth="80" jsxindex="0" jsxheight="20"></variants>
+            <strings jsxname="tabGeneralInfomation" jsxtext="通用信息" jsxmargin="0 4 0 0" jsxtextalign="center" jsxborder="0px solid #7b797a; 1px solid #7b797a; 0px solid #7b797a; 1px solid #7b797a;" jsxpadding="3 0 0 0" jsxdisplay=""></strings>
+            <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxfontweight="@Btn Font Weight " jsxstyleoverride="@Tab Selected CSS"></dynamics>
+            <events jsxexecute="service.getServer().getJSXByName(&quot;goodEdit&quot;).onTabButtonClick(this,&quot;generalinfomation&quot;,&quot;components/goods/newGoodsGenetalInfo.xml&quot;);"></events>
+          </object>
+          <object type="jsx3.gui.Button">
+            <variants jsxwidth="80" jsxindex="1" jsxheight="20"></variants>
+            <strings jsxname="tabDetailInfomation" jsxtext="详细描述" jsxmargin="0 4 0 0" jsxtextalign="center" jsxborder="0px solid #7b797a; 1px solid #7b797a; 0px solid #7b797a; 1px solid #7b797a;" jsxbgcolor="" jsxdisabledcolor="" jsxpadding="3 0 0 0" jsxdisabledbgcolor=""></strings>
+            <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxfontweight="@Btn Font Weight " jsxstyleoverride="@Tab Unselecte CSS"></dynamics>
+            <events jsxexecute="service.getServer().getJSXByName(&quot;goodEdit&quot;).onTabButtonClick(this,&quot;otherinfomation&quot;,&quot;components/goods/newGoodsDetailInfo.xml&quot;);"></events>
+          </object>
+          <object type="jsx3.gui.Button">
+            <variants jsxwidth="80" jsxindex="2" jsxheight="20"></variants>
+            <strings jsxname="tabOtherInfomation" jsxtext="其他信息" jsxmargin="0 4 0 0" jsxtextalign="center" jsxborder="0px solid #7b797a; 1px solid #7b797a; 0px solid #7b797a; 1px solid #7b797a;" jsxbgcolor="" jsxdisabledcolor="" jsxpadding="3 0 0 0"></strings>
+            <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxfontweight="@Btn Font Weight " jsxstyleoverride="@Tab Unselecte CSS"></dynamics>
+            <events jsxexecute="service.getServer().getJSXByName(&quot;goodEdit&quot;).onTabButtonClick(this,&quot;otherinfomation&quot;,&quot;components/goods/newGoodOtherInfo.xml&quot;);"></events>
+          </object>
+          <object type="jsx3.gui.Button">
+            <variants jsxwidth="80" jsxindex="3" jsxheight="20"></variants>
+            <strings jsxname="tabGoodsAttribute" jsxtext="商品属性" jsxmargin="0 4 0 0" jsxtextalign="center" jsxborder="0px solid #7b797a; 1px solid #7b797a; 0px solid #7b797a; 1px solid #7b797a;" jsxbgcolor="" jsxdisabledcolor="" jsxpadding="3 0 0 0"></strings>
+            <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxfontweight="@Btn Font Weight " jsxstyleoverride="@Tab Unselecte CSS"></dynamics>
+            <events jsxexecute="service.getServer().getJSXByName(&quot;goodEdit&quot;).onTabButtonClick(this,&quot;goodsattribute&quot;,&quot;components/goods/newGoodsAttribute.xml&quot;);"></events>
+          </object>
+          <object type="jsx3.gui.Button">
+            <variants jsxwidth="80" jsxindex="4" jsxheight="20"></variants>
+            <strings jsxname="tabGoodsPhoto" jsxtext="商品相册" jsxmargin="0 4 0 0" jsxtextalign="center" jsxborder="0px solid #7b797a; 1px solid #7b797a; 0px solid #7b797a; 1px solid #7b797a;" jsxbgcolor="" jsxdisabledcolor="" jsxpadding="3 0 0 0"></strings>
+            <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxfontweight="@Btn Font Weight " jsxstyleoverride="@Tab Unselecte CSS"></dynamics>
+            <events jsxexecute="service.getServer().getJSXByName(&quot;goodEdit&quot;).onTabButtonClick(this,&quot;goodsphoto&quot;,&quot;components/goods/newGoodPhoto.xml&quot;);"></events>
+          </object>
+          <object type="jsx3.gui.Button">
+            <variants jsxwidth="80" jsxindex="5" jsxheight="20"></variants>
+            <strings jsxname="tabRelatedGoods" jsxtext="并联商品" jsxmargin="0 4 0 0" jsxtextalign="center" jsxborder="0px solid #7b797a; 1px solid #7b797a; 0px solid #7b797a; 1px solid #7b797a;" jsxbgcolor="" jsxdisabledcolor="" jsxpadding="3 0 0 0"></strings>
+            <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxfontweight="@Btn Font Weight " jsxstyleoverride="@Tab Unselecte CSS"></dynamics>
+            <events jsxexecute="service.getServer().getJSXByName(&quot;goodEdit&quot;).onTabButtonClick(this,&quot;relatedgoods&quot;,&quot;components/goods/newGoodRelatedGoods.xml&quot;);"></events>
+          </object>
+          <object type="jsx3.gui.Button">
+            <variants jsxwidth="80" jsxindex="6" jsxheight="20"></variants>
+            <strings jsxname="tabGoodsAchments" jsxtext="商品配件" jsxmargin="0 4 0 0" jsxtextalign="center" jsxborder="0px solid #7b797a; 1px solid #7b797a; 0px solid #7b797a; 1px solid #7b797a;" jsxbgcolor="" jsxdisabledcolor="" jsxpadding="3 0 0 0"></strings>
+            <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxfontweight="@Btn Font Weight " jsxstyleoverride="@Tab Unselecte CSS"></dynamics>
+            <events jsxexecute="service.getServer().getJSXByName(&quot;goodEdit&quot;).onTabButtonClick(this,&quot;goodsattachments&quot;,&quot;components/goods/newGoodAttachment.xml&quot;);"></events>
+          </object>
+          <object type="jsx3.gui.Button">
+            <variants jsxwidth="80" jsxindex="7" jsxheight="20"></variants>
+            <strings jsxname="tabRelatedArticles" jsxtext="并联文章" jsxmargin="0 4 0 0" jsxtextalign="center" jsxborder="0px solid #7b797a; 1px solid #7b797a; 0px solid #7b797a; 1px solid #7b797a;" jsxbgcolor="" jsxdisabledcolor="" jsxpadding="3 0 0 0"></strings>
+            <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxfontweight="@Btn Font Weight " jsxstyleoverride="@Tab Unselecte CSS"></dynamics>
+            <events jsxexecute="service.getServer().getJSXByName(&quot;goodEdit&quot;).onTabButtonClick(this,&quot;relatedarticles&quot;,&quot;components/goods/newGoodRelatedArctile.xml&quot;);"></events>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="1"></variants>
+          <strings jsxname="newGoodInfo" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #7b797a; 1px solid #7b797a; 1px solid #7b797a; 1px solid #7b797a;" jsxtextalign="left"></strings>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="generalinfomation" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="10 0 0 0" jsxdisplay=""></strings>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="otherinfomation" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="10 0 0 0" jsxdisplay="none"></strings>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="goodsattribute" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="10 0 0 0" jsxdisplay="none"></strings>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="relatedgoods" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="10 0 0 0" jsxdisplay="none"></strings>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="relatedarticles" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="10 0 0 0" jsxdisplay="none"></strings>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="goodsattachments" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="10 0 0 0" jsxdisplay="none"></strings>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="goodsphoto" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="10 0 0 0" jsxdisplay="none"></strings>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="detailinfomation" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="10 0 0 0" jsxdisplay="none"></strings>
+          </object>
+        </object>
+      </object>
+    </object>
+  </object>
+</serialization>

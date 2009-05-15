@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<serialization xmlns="urn:tibco.com/v3.0" jsxversion="3.6">
+  <name>Block - 100%</name>
+  <icon>images/prototypes/block.gif</icon>
+  <description>Simple block, relatively positioned with overflow=scroll.</description>
+  <onBeforeDeserialize/>
+  <onAfterDeserialize>jsx3.require("com.tibco.ishop.Type");
+com.tibco.ishop.Attribute.init();
+com.tibco.ishop.SelectData.getGoodsTypeSelect(0);
+com.tibco.ishop.Attribute.initPage();</onAfterDeserialize>
+  <object type="com.tibco.ishop.Attribute">
+    <variants jsxoverflow="1"/>
+    <strings jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxtextalign="center" jsxinstanceof="jsx3.app.Model" jsxleft="attributeList" jsxname="blkAttributeMain"/>
+    <dynamics jsxpadding="@Block Padding"/>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="right"/>
+      <dynamics jsxbgcolor="@Blk Top Color" jsxborder="@Blk Border" jsxbg="@Bevel TopDown" jsxpadding="@Top Block Padding" jsxmargin="@Top Block Margin"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"/>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxstyleoverride="float:left"/>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"/>
+        <strings jsxname="label" jsxtext="&amp;nbsp;-商品属性" jsxcolor="#869590" jsxstyleoverride="float:left"/>
+        <dynamics jsxfontname="@lbl Font Name"/>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0"/>
+        <strings jsxname="btnAddAttribute" jsxtext="添加属性" jsxmargin="0 10 0 0"/>
+        <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxheight="@Btn Height" jsxwidth="@Btn Width" jsxpadding="@@Btn Padding"/>
+        <events jsxexecute="service.onMenuClick(&quot;a22&quot;);"/>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"/>
+      <strings jsxname="block1" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left"/>
+      <dynamics jsxborder="@Blk Border" jsxbg="@Bevel TopDown Light" jsxbgcolor="@Blk Top Color" jsxmargin="@Top Block Margin"/>
+      <object type="jsx3.gui.LayoutGrid">
+        <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+        <strings jsxname="layout ( | )" jsxcols="40,85,*" jsxwidth="100%" jsxheight="100%"/>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="2"/>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxpadding="3 0 0 10"/>
+          <object type="jsx3.gui.Image">
+            <variants jsxoverflow="2" jsxrelativeposition="1"/>
+            <strings jsxname="image" jsxsrc="images/icon_search.gif" jsxmargin="5 0 0 0"/>
+            <events jsxclick="eg.service.generateSelData();"/>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="2"/>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxpadding="7 0 0 0"/>
+          <object type="jsx3.gui.Block">
+            <variants jsxrelativeposition="1" jsxoverflow="3"/>
+            <strings jsxname="label" jsxtext="按商品类型显示" jsxcolor="#AFABAB"/>
+            <dynamics jsxheight="@Label Height" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="1"/>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxpadding="0 0 0 4"/>
+          <object type="com.tibco.ishop.SelectData">
+            <variants jsxwidth="150" jsxxmlasync="1" _isfocusing="true"/>
+            <strings jsxname="selGoodsType" jsxmargin="5 4 0 0" jsxxmlid="typeselectdata" jsxvalue="0"/>
+            <dynamics jsxheight="@Select Height" jsxborder="@Select Border" jsxfontname="@Select Font Name" jsxfontsize="@Select Font Size"/>
+            <events jsxselect="com.tibco.ishop.Attribute.getAttributeByType(strRECORDID);"/>
+          </object>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="315" jsxoverflow="2"/>
+      <strings jsxname="pane" jsxwidth="100%" jsxbgcolor="#fff"/>
+      <dynamics jsxborder="@No jsxborder"/>
+      <object type="jsx3.gui.Matrix">
+        <variants jsxpagingmodel="1" jsxselectionmodel="1" jsxjsxxmlasync="1" jsxsuppressvscroll="1"/>
+        <strings jsxname="attributeList" jsxsorttype="text" jsxsortdirection="ascending" jsxxml="" jsxxmlid="attributelist" jsxselectionbg="null"/>
+        <dynamics jsxrowheight="@Matrix RowHeight " jsxbgcolor="@MatrixC BGColor " jsxheaderborder="@Matrix HeaderBorder " jsxbodyborder="@Matrix BodyBorder " jsxfocusstyle="@Matrix Focus Style " jsxspystyle="@Matrix Spy Style " jsxheaderheight="@Matrix HeaderHeight " jsxbg="@MatrixC BackGround "/>
+        <properties start="5" end="15"/>
+        <events jsxaftercommit="com.tibco.ishop.Attribute.updateAttribute(&quot;updateAttributeOnMatrix_xml&quot;);"/>
+        <xslparameters jsx_rowbg1="#ffffff" jsx_rowbg2="#ffffff"/>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="95"/>
+          <strings jsxname="attributeId" jsxtext="编号" jsxpath="id" jsxcelltextalign="center" jsxpadding="1 7 0 7" jsxcellpadding="1" jsxvaluetemplate="" jsxtextalign="center"/>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxbgcolor="@MatrixC BGColor " jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxbg="@Matrix Header Bg" jsxcolor="@MatrixC Color " jsxcellborder="@MatrixC Border "/>
+          <object type="jsx3.gui.CheckBox">
+            <variants jsxchecked="0" jsxenabled="1"/>
+            <strings jsxname="checkboxMask" jsxtext=""/>
+          </object>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="140"/>
+          <strings jsxname="attributeName" jsxtext="属性名称" jsxpadding="1 7 0 7" jsxcellpadding="3" jsxpath="name" jsxtextalign="center" jsxcelltextalign="center"/>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxcellbgcolor="@MatrixCell BGColor " jsxbg="@Matrix Header Bg" jsxcolor="@MatrixC Color " jsxbgcolor="@MatrixC BGColor " jsxcellborder="@MatrixC Border "/>
+          <object type="jsx3.gui.TextBox">
+            <variants jsxrelativeposition="0" jsxleft="95" jsxtop="20" jsxwidth="140" jsxheight="20" jsxzindex="10"/>
+            <strings jsxname="txtGoodsName" jsxdisplay="none" jsxvalue="111"/>
+            <events jsxkeydown="1;"/>
+          </object>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="163"/>
+          <strings jsxname="goodstype" jsxtext="商品类型" jsxpadding="1 7 0 7" jsxpath="goodstypename" jsxtextalign="center" jsxcelltextalign="center"/>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxbg="@Matrix Header Bg" jsxbgcolor="@MatrixC BGColor " jsxcellborder="@MatrixC Border "/>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="193"/>
+          <strings jsxname="inputtype" jsxtext="属性只录入方式" jsxpadding="1 7 0 7" jsxcellpadding="2 0 0 0" jsxtextalign="center" jsxcelltextalign="center" jsxpath="inputtype"/>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxbg="@Matrix Header Bg" jsxvaluetemplate="@Attribute InputType Template" jsxbgcolor="@MatrixC BGColor " jsxcellborder="@MatrixC Border "/>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="100"/>
+          <strings jsxname="valueList" jsxtext="可选值列表" jsxpadding="1 7 0 7" jsxcellpadding="2 0 0 0" jsxpath="valuelist" jsxtextalign="center" jsxcelltextalign="center"/>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxbg="@Matrix Header Bg" jsxvaluetemplate="Goods Nice Template" jsxbgcolor="@MatrixC BGColor " jsxcellborder="@MatrixC Border "/>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="137"/>
+          <strings jsxname="attributeOrder" jsxtext="排序" jsxpadding="1 7 0 7" jsxpath="order" jsxtextalign="center" jsxcelltextalign="center"/>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxbg="@Matrix Header Bg" jsxcolor="@MatrixC Color " jsxbgcolor="@MatrixC BGColor " jsxcellborder="@MatrixC Border "/>
+          <object type="jsx3.gui.TextBox">
+            <variants jsxrelativeposition="0" jsxleft="691" jsxtop="140" jsxwidth="50" jsxheight="20" jsxzindex="10"/>
+            <strings jsxname="txtGoodsStorage" jsxdisplay="none" jsxvalue="" jsxtextalign="center"/>
+            <events jsxkeydown="1;"/>
+          </object>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants/>
+          <strings jsxname="attributeOperation" jsxtext="操作" jsxpadding="1 7 0 7" jsxcellpadding="" jsxtextalign="center" jsxwidth="*" jsxcelltextalign="center" jsxpath="operation"/>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxbg="@Matrix Header Bg" jsxcolor="@MatrixC Color " jsxbgcolor="@MatrixC BGColor " jsxcellborder="@MatrixC Border " jsxvaluetemplate="@Attribute Operation Template"/>
+        </object>
+      </object>
+    </object>
+    <object type="com.tibco.ishop.Pagation">
+      <variants jsxheight="28" jsxoverflow="1"/>
+      <strings jsxname="blkPagation" jsxwidth="100%" jsxborder="0px solid #737373;1px solid #737373;1px solid #737373;1px solid #737373" jsxtextalign="right"/>
+      <dynamics jsxmargin="@Top Block Margin"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3"/>
+        <strings jsxname="label" jsxtext="总计"/>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@txtBox Font Weight " jsxcolor="@Label Color"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3"/>
+        <strings jsxname="lblTotalRecord" jsxtext="0"/>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontweight="@txtBox Font Weight " jsxcolor="@Label Color" jsxfontsize="@lbl Font Size"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3"/>
+        <strings jsxname="label" jsxtext="个记录,当前第"/>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@txtBox Font Weight " jsxcolor="@Label Color"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxtext="1"/>
+        <strings jsxname="lblNowPage"/>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontweight="@txtBox Font Weight " jsxcolor="@Label Color" jsxfontsize="@lbl Font Size"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3"/>
+        <strings jsxname="label" jsxtext="页，每页"/>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@txtBox Font Weight " jsxcolor="@Label Color"/>
+      </object>
+      <object type="jsx3.gui.TextBox">
+        <variants jsxheight="18" jsxwidth="30"/>
+        <strings jsxname="txtShowNumber" jsxvalue="3"/>
+        <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxfontweight="@txtBox Font Weight " jsxborder="@txtBox Border "/>
+        <events jsxchange="com.tibco.ishop.Attribute.onShowRecoreNumberChange();"/>
+      </object>
+      <object type="jsx3.gui.Image">
+        <variants jsxoverflow="2" jsxrelativeposition="1" jsxwidth="10"/>
+        <strings jsxname="imgPrevious" jsxsrc="images/spin_left.gif" jsxborder="1px solid #cccccc"/>
+        <events jsxclick="com.tibco.ishop.Attribute.onPageImgClick(this);"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3"/>
+        <strings jsxname="lblPage" jsxtext="1"/>
+        <dynamics jsxfontname="@lbl Font Name" jsxcolor="@Label Color" jsxfontsize="@lbl Font Size" jsxfontweight="@txtBox Font Weight "/>
+      </object>
+      <object type="jsx3.gui.TextBox">
+        <variants jsxheight="18" jsxwidth="30"/>
+        <strings jsxname="txtShowPage" jsxvalue="2" jsxtext=""/>
+        <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxfontweight="@txtBox Font Weight " jsxborder="@txtBox Border "/>
+        <events jsxexecute="" jsxchange="com.tibco.ishop.Attribute.onShowPageNumberchange(this,strVALUE)"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxtext="1" jsxrelativeposition="1" jsxoverflow="3"/>
+        <strings jsxname="lblTotalPage"/>
+        <dynamics jsxfontname="@lbl Font Name" jsxcolor="@Label Color" jsxfontsize="@lbl Font Size" jsxfontweight="@txtBox Font Weight "/>
+      </object>
+      <object type="jsx3.gui.Image">
+        <variants jsxoverflow="2" jsxrelativeposition="1" jsxwidth="10"/>
+        <strings jsxname="imgNext" jsxsrc="images/spin_right.gif" jsxborder="1px solid #cccccc"/>
+        <events jsxclick="com.tibco.ishop.Attribute.onPageImgClick(this);"/>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="50" jsxoverflow="1"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left"/>
+      <dynamics jsxborder="@Blk Border"/>
+    </object>
+  </object>
+</serialization>
