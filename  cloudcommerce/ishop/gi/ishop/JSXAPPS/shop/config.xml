@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <record jsxid="version" type="string">1.0</record>
+  <record jsxid="jsxversion" type="string">3.2</record>
+  <record jsxid="caption" type="string">SHOP</record>
+  <record jsxid="mode" type="boolean">true</record>
+  <record jsxid="namespace" type="string">shop</record>
+  <record jsxid="cancelerror" type="boolean">true</record>
+  <record jsxid="cancelrightclick" type="boolean">true</record>
+  <record jsxid="left" type="number">0</record>
+  <record jsxid="top" type="number">0</record>
+  <record jsxid="width" type="string">100%</record>
+  <record jsxid="height" type="string">100%</record>
+  <record jsxid="position" type="number">0</record>
+  <record jsxid="overflow" type="string">3</record>
+  <record jsxid="eventsvers" type="number">3.1</record>
+  <record jsxid="default_locale" type="string">en_US</record>
+  <record jsxid="onload" type="string"></record>
+  <record jsxid="objectseturl" type="string">components/appCanvas.xml</record>
+  <record jsxid="includes" type="array">
+    <record jsxid="0" type="map">
+      <record jsxid="id" type="string">logic_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">1</record>
+      <record jsxid="src" type="string">js/logic.js</record>
+    </record>
+    <record jsxid="1" type="map">
+      <record jsxid="id" type="string">style_xml</record>
+      <record jsxid="type" type="string">jss</record>
+      <record jsxid="load" type="number">1</record>
+      <record jsxid="src" type="string">jss/style.xml</record>
+    </record>
+    <record jsxid="2" type="map">
+      <record jsxid="id" type="string">appCanvas_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/appCanvas.xml</record>
+    </record>
+    <record jsxid="3" type="map">
+      <record jsxid="id" type="string">goodsList_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/goodsList.xml</record>
+    </record>
+    <record jsxid="4" type="map">
+      <record jsxid="id" type="string">addNewBrand_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">NaN</record>
+      <record jsxid="src" type="string">components/goods/addNewBrand.xml</record>
+    </record>
+    <record jsxid="5" type="map">
+      <record jsxid="id" type="string">addNewGoodsType_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/addNewGoodsType.xml</record>
+    </record>
+    <record jsxid="6" type="map">
+      <record jsxid="id" type="string">changeEncryption_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/changeEncryption.xml</record>
+    </record>
+    <record jsxid="7" type="map">
+      <record jsxid="id" type="string">generateGoodsCode_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/generateGoodsCode.xml</record>
+    </record>
+    <record jsxid="8" type="map">
+      <record jsxid="id" type="string">goodsBrandList_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/goodsBrandList.xml</record>
+    </record>
+    <record jsxid="9" type="map">
+      <record jsxid="id" type="string">goodsCategory_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/goodsCategory.xml</record>
+    </record>
+    <record jsxid="10" type="map">
+      <record jsxid="id" type="string">goodsType_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/goodsType.xml</record>
+    </record>
+    <record jsxid="11" type="map">
+      <record jsxid="id" type="string">goodsExport_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/goodsExport.xml</record>
+    </record>
+    <record jsxid="12" type="map">
+      <record jsxid="id" type="string">goodsModify_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/goodsModify.xml</record>
+    </record>
+    <record jsxid="13" type="map">
+      <record jsxid="id" type="string">goodsRecyclebin_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/goodsRecyclebin.xml</record>
+    </record>
+    <record jsxid="14" type="map">
+      <record jsxid="id" type="string">goodsUpAndDown_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/goodsUpAndDown.xml</record>
+    </record>
+    <record jsxid="15" type="map">
+      <record jsxid="id" type="string">goodsUpload_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/goodsUpload.xml</record>
+    </record>
+    <record jsxid="16" type="map">
+      <record jsxid="id" type="string">pictureProcess_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/pictureProcess.xml</record>
+    </record>
+    <record jsxid="17" type="map">
+      <record jsxid="id" type="string">tagsManage_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/tagsManage.xml</record>
+    </record>
+    <record jsxid="18" type="map">
+      <record jsxid="id" type="string">userComments_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/userComments.xml</record>
+    </record>
+    <record jsxid="19" type="map">
+      <record jsxid="id" type="string">visualCardList_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/visualCardList.xml</record>
+    </record>
+    <record jsxid="20" type="map">
+      <record jsxid="id" type="string">addNewVisualCard_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/addNewVisualCard.xml</record>
+    </record>
+    <record jsxid="21" type="map">
+      <record jsxid="id" type="string">addNewGood_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/addNewGood.xml</record>
+    </record>
+    <record jsxid="22" type="map">
+      <record jsxid="id" type="string">addGoodsCategory_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/addGoodsCategory.xml</record>
+    </record>
+    <record jsxid="23" type="map">
+      <record jsxid="id" type="string">note_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/note.xml</record>
+    </record>
+    <record jsxid="24" type="map">
+      <record jsxid="id" type="string">newGoodsGenetalInfo_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/newGoodsGenetalInfo.xml</record>
+    </record>
+    <record jsxid="25" type="map">
+      <record jsxid="id" type="string">newGoodsDetailInfo_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/newGoodsDetailInfo.xml</record>
+    </record>
+    <record jsxid="26" type="map">
+      <record jsxid="id" type="string">newGoodOtherInfo_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/newGoodOtherInfo.xml</record>
+    </record>
+    <record jsxid="27" type="map">
+      <record jsxid="id" type="string">newGoodsAttribute_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/newGoodsAttribute.xml</record>
+    </record>
+    <record jsxid="28" type="map">
+      <record jsxid="id" type="string">newGoodPhoto_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/newGoodPhoto.xml</record>
+    </record>
+    <record jsxid="29" type="map">
+      <record jsxid="id" type="string">newGoodRelatedGoods_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/newGoodRelatedGoods.xml</record>
+    </record>
+    <record jsxid="30" type="map">
+      <record jsxid="id" type="string">newGoodAttachment_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/newGoodAttachment.xml</record>
+    </record>
+    <record jsxid="31" type="map">
+      <record jsxid="id" type="string">newGoodRelatedArctile_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/newGoodRelatedArctile.xml</record>
+    </record>
+    <record jsxid="32" type="map">
+      <record jsxid="id" type="string">getTreasures_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/salesPromotion/getTreasures.xml</record>
+    </record>
+    <record jsxid="33" type="map">
+      <record jsxid="id" type="string">addNewTreasure_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/salesPromotion/addNewTreasure.xml</record>
+    </record>
+    <record jsxid="34" type="map">
+      <record jsxid="id" type="string">operationSuccess_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/operationSuccess.xml</record>
+    </record>
+    <record jsxid="35" type="map">
+      <record jsxid="id" type="string">addAttribute_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/addAttribute.xml</record>
+    </record>
+    <record jsxid="36" type="map">
+      <record jsxid="id" type="string">addBrand_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/addBrand.xml</record>
+    </record>
+    <record jsxid="37" type="map">
+      <record jsxid="id" type="string">getBrand_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/getBrand.xml</record>
+    </record>
+    <record jsxid="38" type="map">
+      <record jsxid="id" type="string">getType_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/getType.xml</record>
+    </record>
+    <record jsxid="39" type="map">
+      <record jsxid="id" type="string">getCategory_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/getCategory.xml</record>
+    </record>
+    <record jsxid="40" type="map">
+      <record jsxid="id" type="string">updateBrandOnMatrix_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/updateBrandOnMatrix.xml</record>
+    </record>
+    <record jsxid="41" type="map">
+      <record jsxid="id" type="string">updateTypeOnMatrix_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/updateTypeOnMatrix.xml</record>
+    </record>
+    <record jsxid="42" type="map">
+      <record jsxid="id" type="string">addType_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/addType.xml</record>
+    </record>
+    <record jsxid="43" type="map">
+      <record jsxid="id" type="string">updateTypeOnDetail_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/updateTypeOnDetail.xml</record>
+    </record>
+    <record jsxid="44" type="map">
+      <record jsxid="id" type="string">a_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">a.xml</record>
+    </record>
+    <record jsxid="45" type="map">
+      <record jsxid="id" type="string">Brand_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">js/com/tibco/ishop/Brand.js</record>
+    </record>
+    <record jsxid="46" type="map">
+      <record jsxid="id" type="string">BrandEditBlock_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">js/com/tibco/ishop/BrandEditBlock.js</record>
+    </record>
+    <record jsxid="47" type="map">
+      <record jsxid="id" type="string">Category_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">js/com/tibco/ishop/Category.js</record>
+    </record>
+    <record jsxid="48" type="map">
+      <record jsxid="id" type="string">CategoryEditBlock_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">js/com/tibco/ishop/CategoryEditBlock.js</record>
+    </record>
+    <record jsxid="49" type="map">
+      <record jsxid="id" type="string">Entity_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">js/com/tibco/ishop/Entity.js</record>
+    </record>
+    <record jsxid="50" type="map">
+      <record jsxid="id" type="string">HeadButton_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">js/com/tibco/ishop/HeadButton.js</record>
+    </record>
+    <record jsxid="51" type="map">
+      <record jsxid="id" type="string">Pagation_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">js/com/tibco/ishop/Pagation.js</record>
+    </record>
+    <record jsxid="52" type="map">
+      <record jsxid="id" type="string">Type_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">js/com/tibco/ishop/Type.js</record>
+    </record>
+    <record jsxid="53" type="map">
+      <record jsxid="id" type="string">TypeEditBlock_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">js/com/tibco/ishop/TypeEditBlock.js</record>
+    </record>
+    <record jsxid="54" type="map">
+      <record jsxid="id" type="string">parentCategorySelect_xsl</record>
+      <record jsxid="type" type="string">xsl</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">xsl/parentCategorySelect.xsl</record>
+    </record>
+    <record jsxid="55" type="map">
+      <record jsxid="id" type="string">addCategory_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/addCategory.xml</record>
+    </record>
+    <record jsxid="56" type="map">
+      <record jsxid="id" type="string">deleteBrand_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/deleteBrand.xml</record>
+    </record>
+    <record jsxid="57" type="map">
+      <record jsxid="id" type="string">deleteType_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/deleteType.xml</record>
+    </record>
+    <record jsxid="58" type="map">
+      <record jsxid="id" type="string">attributeList_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/attributeList.xml</record>
+    </record>
+    <record jsxid="59" type="map">
+      <record jsxid="id" type="string">addAttribute_xml_</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/addAttribute.xml</record>
+    </record>
+    <record jsxid="60" type="map">
+      <record jsxid="id" type="string">SelectData_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">js/com/tibco/ishop/SelectData.js</record>
+    </record>
+    <record jsxid="61" type="map">
+      <record jsxid="id" type="string">getAttribute_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/getAttribute.xml</record>
+    </record>
+    <record jsxid="62" type="map">
+      <record jsxid="id" type="string">SoapProcess_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">js/com/tibco/ishop/SoapProcess.js</record>
+    </record>
+    <record jsxid="63" type="map">
+      <record jsxid="id" type="string">attributeSelece_xsl</record>
+      <record jsxid="type" type="string">xsl</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">xsl/attributeSelece.xsl</record>
+    </record>
+    <record jsxid="64" type="map">
+      <record jsxid="id" type="string">Attribute_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">js/com/tibco/ishop/Attribute.js</record>
+    </record>
+    <record jsxid="65" type="map">
+      <record jsxid="id" type="string">test_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">1</record>
+      <record jsxid="src" type="string">js/test.js</record>
+    </record>
+    <record jsxid="66" type="map">
+      <record jsxid="id" type="string">updateAttributeOnDetail_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/updateAttributeOnDetail.xml</record>
+    </record>
+    <record jsxid="67" type="map">
+      <record jsxid="id" type="string">updateAttributeOnMatrix_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/updateAttributeOnMatrix.xml</record>
+    </record>
+    <record jsxid="68" type="map">
+      <record jsxid="id" type="string">CDF_xsl</record>
+      <record jsxid="type" type="string">xsl</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">xsl/CDF.xsl</record>
+    </record>
+    <record jsxid="69" type="map">
+      <record jsxid="id" type="string">addCategoryByName_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/addCategoryByName.xml</record>
+    </record>
+    <record jsxid="70" type="map">
+      <record jsxid="id" type="string">addBrandByName_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/addBrandByName.xml</record>
+    </record>
+    <record jsxid="71" type="map">
+      <record jsxid="id" type="string">startPage_xml</record>
+      <record jsxid="type" type="string">xml</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/start/startPage.xml</record>
+    </record>
+    <record jsxid="72" type="map">
+      <record jsxid="id" type="string">addorder_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/orders/addorder.xml</record>
+    </record>
+    <record jsxid="73" type="map">
+      <record jsxid="id" type="string">goodsAttributeEdit_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/goodsAttributeEdit.xml</record>
+    </record>
+    <record jsxid="74" type="map">
+      <record jsxid="id" type="string">handInputEdit_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/handInputEdit.xml</record>
+    </record>
+    <record jsxid="75" type="map">
+      <record jsxid="id" type="string">textAreaEdit_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/textAreaEdit.xml</record>
+    </record>
+    <record jsxid="76" type="map">
+      <record jsxid="id" type="string">textAreaEdit_plus_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/textAreaEdit_plus.xml</record>
+    </record>
+    <record jsxid="77" type="map">
+      <record jsxid="id" type="string">selectValuesEdit_Plus_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/selectValuesEdit_Plus.xml</record>
+    </record>
+    <record jsxid="78" type="map">
+      <record jsxid="id" type="string">selectValuesEdit_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/selectValuesEdit.xml</record>
+    </record>
+    <record jsxid="79" type="map">
+      <record jsxid="id" type="string">handInputEdit_Plus_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/goods/handInputEdit_Plus.xml</record>
+    </record>
+    <record jsxid="80" type="map">
+      <record jsxid="id" type="string">TypeSelect_xsl</record>
+      <record jsxid="type" type="string">xsl</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">xsl/TypeSelect.xsl</record>
+    </record>
+    <record jsxid="81" type="map">
+      <record jsxid="id" type="string">deleteCategory_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/deleteCategory.xml</record>
+    </record>
+    <record jsxid="82" type="map">
+      <record jsxid="id" type="string">getCategoryDetail_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/getCategoryDetail.xml</record>
+    </record>
+    <record jsxid="83" type="map">
+      <record jsxid="id" type="string">updateCategoryOnMatrix_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/updateCategoryOnMatrix.xml</record>
+    </record>
+    <record jsxid="84" type="map">
+      <record jsxid="id" type="string">updateCategoryOnDetail_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/updateCategoryOnDetail.xml</record>
+    </record>
+    <record jsxid="85" type="map">
+      <record jsxid="id" type="string">updateCategoryList_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/updateCategoryList.xml</record>
+    </record>
+    <record jsxid="86" type="map">
+      <record jsxid="id" type="string">getBrandDetail_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/getBrandDetail.xml</record>
+    </record>
+    <record jsxid="87" type="map">
+      <record jsxid="id" type="string">updateBrandList_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/updateBrandList.xml</record>
+    </record>
+    <record jsxid="88" type="map">
+      <record jsxid="id" type="string">addSuccess_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/addSuccess.xml</record>
+    </record>
+    <record jsxid="89" type="map">
+      <record jsxid="id" type="string">updateSucess_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/updateSucess.xml</record>
+    </record>
+    <record jsxid="90" type="map">
+      <record jsxid="id" type="string">addSucess_xml</record>
+      <record jsxid="type" type="string">component</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">components/addSucess.xml</record>
+    </record>
+    <record jsxid="91" type="map">
+      <record jsxid="id" type="string">Map_js</record>
+      <record jsxid="type" type="string">script</record>
+      <record jsxid="load" type="number">1</record>
+      <record jsxid="src" type="string">js/Map.js</record>
+    </record>
+    <record jsxid="92" type="map">
+      <record jsxid="id" type="string">getTypeDetail_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/getTypeDetail.xml</record>
+    </record>
+    <record jsxid="93" type="map">
+      <record jsxid="id" type="string">updateTypeList_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/updateTypeList.xml</record>
+    </record>
+    <record jsxid="94" type="map">
+      <record jsxid="id" type="string">getAttributeDetail_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/getAttributeDetail.xml</record>
+    </record>
+    <record jsxid="95" type="map">
+      <record jsxid="id" type="string">updateAttributeList_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/updateAttributeList.xml</record>
+    </record>
+    <record jsxid="96" type="map">
+      <record jsxid="id" type="string">deleteAttribute_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/deleteAttribute.xml</record>
+    </record>
+    <record jsxid="97" type="map">
+      <record jsxid="id" type="string">addNewGoods_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/addNewGoods.xml</record>
+    </record>
+    <record jsxid="98" type="map">
+      <record jsxid="id" type="string">getGoods_xml</record>
+      <record jsxid="type" type="string">services</record>
+      <record jsxid="load" type="number">0</record>
+      <record jsxid="src" type="string">rules/getGoods.xml</record>
+    </record>
+  </record>
+  <record jsxid="classpath" type="string">js/:com.tibco.ishop.*,js/:com.tibco.ishop.SelectData</record>
+  <record jsxid="bodyhotkeys" type="boolean">false</record>
+  <record jsxid="onunload" type="string"></record>
+</data>

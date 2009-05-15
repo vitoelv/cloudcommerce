@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<serialization jsxversion="3.5" xmlns="urn:tibco.com/v3.0">
+  <name><![CDATA[Block - 100%]]></name>
+  <icon><![CDATA[images/prototypes/block.gif]]></icon>
+  <description><![CDATA[Simple block, relatively positioned with overflow=scroll.]]></description>
+  <onBeforeDeserialize></onBeforeDeserialize>
+  <onAfterDeserialize></onAfterDeserialize>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"></variants>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="15 0 15 0" jsxtextalign="center"></strings>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxtext="" jsxpadding="5 0 0 10" jsxtextalign="right" jsxmargin="0 0 12 0"></strings>
+      <dynamics jsxborder="@Blk Border" jsxbgcolor="@Blk Top Color" jsxbg="@Bevel TopDown"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxpadding="1 0 0 0" jsxtextalign="center" jsxfontweight="bold" jsxfontname="arial" jsxstyleoverride="float:left" jsxwidth=""></strings>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="&amp;nbsp-导出淘宝助理支持数据格式" jsxcolor="#869590" jsxtextalign="left" jsxstyleoverride="float:left" jsxwidth=""></strings>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxbgcolor="" jsxtextalign="right"></strings>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="330" jsxoverflow="2"></variants>
+        <strings jsxname="pane" jsxwidth="27%" jsxbgcolor="#fff" jsxstyleoverride="float:left" jsxtextalign="center" jsxpadding="20 0 0 0"></strings>
+        <dynamics jsxborder="@Blk Border"></dynamics>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="导出到ECShop数据格式" jsxtextalign="center"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+        </object>
+        <object type="jsx3.gui.Select">
+          <variants jsxwidth="185" jsxxmlasync="1"></variants>
+          <strings jsxname="selExportCode" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="3 0 0 0" jsxvalue="a"></strings>
+          <dynamics jsxborder="@Btn Border " jsxheight="@Select Height"></dynamics>
+        </object>
+        <object type="jsx3.gui.Select">
+          <variants jsxwidth="185" jsxxmlasync="1"></variants>
+          <strings jsxname="selExportCategory" jsxxmlurl="jsx:///xml/sample.xml" jsxvalue="a" jsxmargin="5 0 0 0"></strings>
+          <dynamics jsxborder="@Btn Border " jsxheight="@Select Height"></dynamics>
+        </object>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0"></variants>
+          <strings jsxname="btnExportIShopSupportData" jsxtext="确定" jsxmargin="20 4 0 0"></strings>
+          <dynamics jsxwidth="@btnwidth" jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight " jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxpadding="@btn Padding" jsxheight="@Btn Height"></dynamics>
+          <events jsxexecute="alert('hello');"></events>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="330" jsxoverflow="2"></variants>
+        <strings jsxname="pane" jsxwidth="35%" jsxtextalign="left" jsxpadding="20 0 0 0"></strings>
+        <dynamics jsxborder="@Blk Border"></dynamics>
+        <object type="jsx3.gui.Block">
+          <variants jsxheight="20" jsxoverflow="1"></variants>
+          <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="5 0 0 0"></strings>
+          <object type="jsx3.gui.LayoutGrid">
+            <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+            <strings jsxname="layout ( | )" jsxcols="62,*" jsxwidth="100%" jsxheight="100%"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="30" jsxoverflow="2"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtext=""></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="30" jsxoverflow="1"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtextalign="left"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="160"></variants>
+                <strings jsxname="label" jsxtext="导出淘宝助理支持数据格式" jsxtextalign="center"></strings>
+                <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxheight="25" jsxoverflow="1"></variants>
+          <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="5 0 0 0"></strings>
+          <object type="jsx3.gui.LayoutGrid">
+            <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+            <strings jsxname="layout ( | )" jsxcols="62,*" jsxwidth="100%" jsxheight="100%"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="30" jsxoverflow="2"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtext=""></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="30" jsxoverflow="1"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtextalign="left"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+              <object type="jsx3.gui.Select">
+                <variants jsxwidth="185" jsxxmlasync="1"></variants>
+                <strings jsxname="selExportCategory" jsxxmlurl="jsx:///xml/sample.xml" jsxvalue="a" jsxxml="&lt;asd&gt;asdfdsf&lt;/asd&gt;"></strings>
+                <dynamics jsxborder="@txtBox Border " jsxheight="@Select Height"></dynamics>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxheight="60" jsxoverflow="1"></variants>
+          <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="5 0 0 0"></strings>
+          <object type="jsx3.gui.LayoutGrid">
+            <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+            <strings jsxname="layout ( | )" jsxcols="62,*" jsxwidth="100%" jsxheight="100%"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="30" jsxoverflow="2"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtext=""></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+              <object type="jsx3.gui.ImageButton">
+                <variants jsxwidth="16" jsxheight="16" jsxtype="0" jsxprefetch="1" jsxstate="0"></variants>
+                <strings jsxname="btnAboutTreasureID" jsxtext="[button text]" jsximage="image/help.gif"></strings>
+                <events jsxexecute="alert('Execute');"></events>
+              </object>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="12"></variants>
+                <strings jsxname="label" jsxtext="宝贝栏目ID" jsxfontname="arial"></strings>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="30" jsxoverflow="1"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtextalign="left"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+              <object type="jsx3.gui.TextBox">
+                <variants jsxwidth="185"></variants>
+                <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+                <dynamics jsxborder="@txtBox Border " jsxheight="@txtBox Height "></dynamics>
+              </object>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="10"></variants>
+                <strings jsxname="lblAboutTreasureID" jsxtext="宝贝栏目ID为淘宝分类的ID，如若不确定，请填写0"></strings>
+                <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxheight="30" jsxoverflow="1"></variants>
+          <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="5 0 0 0"></strings>
+          <object type="jsx3.gui.LayoutGrid">
+            <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+            <strings jsxname="layout ( | )" jsxcols="62,*" jsxwidth="100%" jsxheight="100%"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="20" jsxoverflow="2"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtext="平邮价格" jsxfontname="arial" jsxpadding="5 0 0 5"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="30" jsxoverflow="1"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtextalign="left"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+              <object type="jsx3.gui.TextBox">
+                <variants jsxwidth="185"></variants>
+                <strings jsxname="txtOrdinaryMailPrice" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+                <dynamics jsxborder="@txtBox Border " jsxheight="@txtBox Height "></dynamics>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxheight="30" jsxoverflow="1"></variants>
+          <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="5 0 0 0"></strings>
+          <object type="jsx3.gui.LayoutGrid">
+            <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+            <strings jsxname="layout ( | )" jsxcols="62,*" jsxwidth="100%" jsxheight="100%"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="20" jsxoverflow="2"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtext="快递价格" jsxfontname="arial" jsxpadding="5 0 0 5"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="30" jsxoverflow="1"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtextalign="left"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+              <object type="jsx3.gui.TextBox">
+                <variants jsxwidth="185"></variants>
+                <strings jsxname="txtExpressPrice" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+                <dynamics jsxborder="@txtBox Border " jsxheight="@txtBox Height "></dynamics>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxheight="30" jsxoverflow="1"></variants>
+          <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="5 0 0 0"></strings>
+          <object type="jsx3.gui.LayoutGrid">
+            <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+            <strings jsxname="layout ( | )" jsxcols="62,*" jsxwidth="100%" jsxheight="100%"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="20" jsxoverflow="2"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtext="EMS价格" jsxfontname="arial" jsxpadding="5 0 0 5"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="30" jsxoverflow="1"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtextalign="left"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+              <object type="jsx3.gui.TextBox">
+                <variants jsxwidth="185"></variants>
+                <strings jsxname="txyEMSPrice" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+                <dynamics jsxborder="@txtBox Border " jsxheight="@txtBox Height "></dynamics>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0"></variants>
+          <strings jsxname="button" jsxtext="确定" jsxmargin="10 4 0 110"></strings>
+          <dynamics jsxwidth="@btnwidth" jsxpadding="@btn Padding" jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight " jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxheight="@Btn Height"></dynamics>
+          <events jsxexecute="alert('hello');"></events>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="330" jsxoverflow="1"></variants>
+        <strings jsxname="pane" jsxwidth="35%" jsxmargin="0 0 0 10" jsxtextalign="left" jsxpadding="20 0 0 0"></strings>
+        <dynamics jsxborder="@Blk Border"></dynamics>
+        <object type="jsx3.gui.Block">
+          <variants jsxheight="20" jsxoverflow="1"></variants>
+          <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="5 0 0 0"></strings>
+          <object type="jsx3.gui.LayoutGrid">
+            <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+            <strings jsxname="layout ( | )" jsxcols="62,*" jsxwidth="100%" jsxheight="100%"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="20" jsxoverflow="2"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxfontname="arial" jsxpadding="3 0 0 0"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtextalign="left" jsxheight=""></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="170"></variants>
+                <strings jsxname="label" jsxtext="导出到拍拍助理支持数据格式" jsxtextalign="center" jsxheight=""></strings>
+                <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxheight="30" jsxoverflow="1"></variants>
+          <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="5 0 0 0"></strings>
+          <object type="jsx3.gui.LayoutGrid">
+            <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+            <strings jsxname="layout ( | )" jsxcols="62,*" jsxwidth="100%" jsxheight="100%"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="20" jsxoverflow="2"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxfontname="arial" jsxpadding="3 0 0 0"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="30" jsxoverflow="1"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtextalign="left"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+              <object type="jsx3.gui.Select">
+                <variants jsxwidth="185" jsxxmlasync="1"></variants>
+                <strings jsxname="selExportCategory" jsxxmlurl="jsx:///xml/sample.xml" jsxvalue="a" jsxxml="&lt;asd&gt;asdfdsf&lt;/asd&gt;"></strings>
+                <dynamics jsxborder="@txtBox Border " jsxheight="@Select Height"></dynamics>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxheight="30" jsxoverflow="1"></variants>
+          <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="5 0 0 0"></strings>
+          <object type="jsx3.gui.LayoutGrid">
+            <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+            <strings jsxname="layout ( | )" jsxcols="62,*" jsxwidth="100%" jsxheight="100%"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="20" jsxoverflow="2"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtext="平邮价格" jsxfontname="arial" jsxpadding="5 0 0 5"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="30" jsxoverflow="1"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtextalign="left"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+              <object type="jsx3.gui.TextBox">
+                <variants jsxwidth="185"></variants>
+                <strings jsxname="txtOrdinaryMailPrice" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+                <dynamics jsxborder="@txtBox Border " jsxheight="@txtBox Height "></dynamics>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxheight="30" jsxoverflow="1"></variants>
+          <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="5 0 0 0"></strings>
+          <object type="jsx3.gui.LayoutGrid">
+            <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+            <strings jsxname="layout ( | )" jsxcols="62,*" jsxwidth="100%" jsxheight="100%"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="20" jsxoverflow="2"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtext="快递价格" jsxfontname="arial" jsxpadding="5 0 0 5"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxheight="30" jsxoverflow="1"></variants>
+              <strings jsxname="pane" jsxwidth="100%" jsxtextalign="left"></strings>
+              <dynamics jsxborder="@No jsxborder"></dynamics>
+              <object type="jsx3.gui.TextBox">
+                <variants jsxwidth="185"></variants>
+                <strings jsxname="txtExpressPrice" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+                <dynamics jsxborder="@txtBox Border " jsxheight="@txtBox Height "></dynamics>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0"></variants>
+          <strings jsxname="btnExportAssistantData" jsxtext="确定" jsxmargin="10 4 0 110" jsxtextalign="center"></strings>
+          <dynamics jsxborder="@Btn Border " jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight " jsxcolor="@Btn Color " jsxstyleoverride="@Btn css" jsxpadding="@btn Padding" jsxwidth="@btnwidth" jsxheight="@Btn Height"></dynamics>
+          <events jsxexecute="alert('hello');"></events>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="50" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxtext="" jsxpadding="9 0 0 3" jsxtextalign="left" jsxmargin="15 0 0"></strings>
+      <dynamics jsxborder="@Blk Border"></dynamics>
+    </object>
+  </object>
+</serialization>

@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="gbk"?>
+<serialization jsxversion="3.5" xmlns="urn:tibco.com/v3.0">
+  <name><![CDATA[Block - 100%]]></name>
+  <icon><![CDATA[images/prototypes/block.gif]]></icon>
+  <description><![CDATA[Simple block, relatively positioned with overflow=scroll.]]></description>
+  <onBeforeDeserialize></onBeforeDeserialize>
+  <onAfterDeserialize></onAfterDeserialize>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"></variants>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="15 0 15 0" jsxtextalign="center"></strings>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="25" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxtext="" jsxpadding="3 0 0 10" jsxtextalign="right" jsxmargin="0 0 10 0" jsxborder="1px solid #555555"></strings>
+      <dynamics jsxbgcolor="@Blk Top Color" jsxbg="@Bevel TopDown"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxpadding="1 0 0 0" jsxtextalign="center" jsxfontweight="bold" jsxfontname="arial" jsxstyleoverride="float:left" jsxwidth=""></strings>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="&amp;nbsp-添加新文章" jsxcolor="#869590" jsxtextalign="left" jsxstyleoverride="float:left"></strings>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0" jsxheight="18"></variants>
+        <strings jsxname="button" jsxtext="文章列表" jsxmargin="0 10 0 0"></strings>
+        <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxpadding="@btn Padding"></dynamics>
+        <events jsxexecute="alert('hello');"></events>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="540" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxbgcolor="#ffffff"></strings>
+      <object type="jsx3.gui.LayoutGrid">
+        <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+        <strings jsxname="layout (--)" jsxrows="20,*" jsxwidth="100%" jsxheight="100%"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="2"></variants>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxstyleoverride="background-image:url(/ecshop/JSXAPPS/shop/image/tabpane_bg.gif); background-repeat:repeat;" jsxtextalign="left"></strings>
+          <object type="jsx3.gui.Button">
+            <variants jsxwidth="80" jsxindex="0" jsxheight="20"></variants>
+            <strings jsxname="tabGeneralInfomation" jsxtext="通用信息" jsxmargin="0 4 0 0" jsxtextalign="center" jsxborder="0px solid #7b797a; 1px solid #7b797a; 0px solid #7b797a; 1px solid #7b797a;" jsxstyleoverride="background-image:url(/ecshop/JSXAPPS/shop/image/tab_selected.jpg); background-repeat:repeat;" jsxpadding="5 0 0 0"></strings>
+            <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxfontweight="@Btn Font Weight "></dynamics>
+            <events jsxexecute="alert('hello');"></events>
+          </object>
+          <object type="jsx3.gui.Button">
+            <variants jsxwidth="80" jsxindex="0" jsxheight="20"></variants>
+            <strings jsxname="tabGoodsPhoto" jsxtext="文章内容" jsxmargin="0 4 0 0" jsxtextalign="center" jsxborder="0px solid #7b797a; 1px solid #7b797a; 1px solid #7b797a; 1px solid #7b797a;" jsxstyleoverride="background-image:url(/ecshop/JSXAPPS/shop/image/tab.jpg); background-repeat:repeat;" jsxbgcolor="" jsxdisabledcolor="" jsxpadding="5 0 0 0"></strings>
+            <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxfontweight="@Btn Font Weight "></dynamics>
+            <events jsxexecute="alert('hello');"></events>
+          </object>
+          <object type="jsx3.gui.Button">
+            <variants jsxwidth="80" jsxindex="0" jsxheight="20"></variants>
+            <strings jsxname="tabRelatedGoods" jsxtext="并联商品" jsxmargin="0 4 0 0" jsxtextalign="center" jsxborder="0px solid #7b797a; 1px solid #7b797a; 1px solid #7b797a; 1px solid #7b797a;" jsxstyleoverride="background-image:url(/ecshop/JSXAPPS/shop/image/tab.jpg); background-repeat:repeat;" jsxbgcolor="" jsxdisabledcolor="" jsxpadding="5 0 0 0"></strings>
+            <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxfontweight="@Btn Font Weight "></dynamics>
+            <events jsxexecute="alert('hello');"></events>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="1"></variants>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxborder="0px solid #7b797a; 1px solid #7b797a; 1px solid #7b797a; 1px solid #7b797a;" jsxtextalign="left"></strings>
+          <object type="jsx3.gui.Block">
+            <variants jsxheight="400" jsxoverflow="1"></variants>
+            <strings jsxname="generalinfomation" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="10 0 0 0" jsxdisplay="none"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+                <strings jsxname="label" jsxtext="文章标题" jsxtextalign="right" jsxpadding="3 20 0 0" jsxcolor="#2f525d"></strings>
+                <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+              </object>
+              <object type="jsx3.gui.TextBox">
+                <variants></variants>
+                <strings jsxname="textbox" jsxvalue=""></strings>
+                <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxwidth="@txtBox Width" jsxheight="@txtBox Height "></dynamics>
+              </object>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="20" jsxfontsize="13" jsxheight="20"></variants>
+                <strings jsxname="label" jsxtext="*" jsxcolor="red" jsxtextalign="center" jsxpadding="3 0 0 0"></strings>
+                <dynamics jsxfontname="@lbl Font Name"></dynamics>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+                <strings jsxname="label" jsxtext="文章分类" jsxtextalign="right" jsxpadding="3 20 0 0" jsxcolor="#2f525d"></strings>
+                <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+              </object>
+              <object type="jsx3.gui.Select">
+                <variants jsxxmlasync="1"></variants>
+                <strings jsxname="select" jsxxmlurl="jsx:///xml/sample.xml" jsxborder="1px solid #555555" jsxmargin=""></strings>
+                <dynamics jsxheight="@Select Height" jsxwidth="@Select Width"></dynamics>
+              </object>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="20" jsxfontsize="13" jsxheight="20"></variants>
+                <strings jsxname="label" jsxtext="*" jsxcolor="red" jsxtextalign="center" jsxpadding="3 0 0 0"></strings>
+                <dynamics jsxfontname="@lbl Font Name"></dynamics>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+                <strings jsxname="label" jsxtext="文章重要性" jsxtextalign="right" jsxpadding="3 20 0 0" jsxmargin="" jsxcolor="#2f525d"></strings>
+                <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+              </object>
+              <object type="jsx3.gui.RadioButton">
+                <variants jsxheight="18" jsxdefaultselected="1" jsxselected="1" jsxrelativeposition="1" jsxfontsize="11"></variants>
+                <strings jsxname="radio" jsxtext="普通" jsxgroupname="group1" jsxmargin="3 4 0 0" jsxfontname="Arial"></strings>
+                <events jsxselect=""></events>
+              </object>
+              <object type="jsx3.gui.RadioButton">
+                <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1" jsxfontsize="11"></variants>
+                <strings jsxname="radio" jsxtext="置顶" jsxgroupname="group1" jsxmargin="3 0 0 0" jsxfontname="Arial"></strings>
+                <events jsxselect=""></events>
+              </object>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="18" jsxfontsize="13" jsxheight="15"></variants>
+                <strings jsxname="label" jsxtext="*" jsxcolor="red" jsxtextalign="center" jsxpadding="4 0 0 0"></strings>
+                <dynamics jsxfontname="@lbl Font Name"></dynamics>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+                <strings jsxname="label" jsxtext="是否显示" jsxtextalign="right" jsxpadding="3 20 0 0" jsxmargin="" jsxcolor="#2f525d"></strings>
+                <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+              </object>
+              <object type="jsx3.gui.RadioButton">
+                <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1" jsxfontsize="11"></variants>
+                <strings jsxname="radio" jsxtext="普通" jsxgroupname="group1" jsxmargin="3 4 0 0" jsxfontname="Arial"></strings>
+                <events jsxselect=""></events>
+              </object>
+              <object type="jsx3.gui.RadioButton">
+                <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1" jsxfontsize="11"></variants>
+                <strings jsxname="radio" jsxtext="置顶" jsxgroupname="group1" jsxfontname="Arial" jsxmargin="3 0 0 0"></strings>
+                <events jsxselect=""></events>
+              </object>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="18" jsxfontsize="13" jsxheight="15"></variants>
+                <strings jsxname="label" jsxtext="*" jsxcolor="red" jsxtextalign="center" jsxpadding="4 0 0 0"></strings>
+                <dynamics jsxfontname="@lbl Font Name"></dynamics>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+                <strings jsxname="label" jsxtext="文章作者" jsxtextalign="right" jsxpadding="3 20 0 0" jsxmargin="" jsxcolor="#2f525d"></strings>
+                <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+              </object>
+              <object type="jsx3.gui.TextBox">
+                <variants></variants>
+                <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+                <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxwidth="@txtBox Width" jsxheight="@txtBox Height "></dynamics>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+                <strings jsxname="label" jsxtext="作者Email" jsxtextalign="right" jsxpadding="3 20 0 0" jsxmargin="" jsxcolor="#2f525d"></strings>
+                <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+              </object>
+              <object type="jsx3.gui.TextBox">
+                <variants></variants>
+                <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+                <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxwidth="@txtBox Width" jsxheight="@txtBox Height "></dynamics>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+                <strings jsxname="label" jsxtext="关键字" jsxtextalign="right" jsxpadding="3 20 0 0" jsxmargin="" jsxcolor="#2f525d"></strings>
+                <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+              </object>
+              <object type="jsx3.gui.TextBox">
+                <variants></variants>
+                <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+                <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxwidth="@txtBox Width" jsxheight="@txtBox Height "></dynamics>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+                <strings jsxname="label" jsxtext="外部链接" jsxtextalign="right" jsxpadding="3 20 0 0" jsxmargin="" jsxcolor="#2f525d"></strings>
+                <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+              </object>
+              <object type="jsx3.gui.TextBox">
+                <variants></variants>
+                <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+                <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxwidth="@txtBox Width" jsxheight="@txtBox Height "></dynamics>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+                <strings jsxname="label" jsxtext="上传文件" jsxtextalign="right" jsxpadding="3 20 0 0" jsxmargin="" jsxcolor="#2f525d"></strings>
+                <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+              </object>
+              <object type="jsx3.gui.TextBox">
+                <variants></variants>
+                <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+                <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxwidth="@txtBox Width" jsxheight="@txtBox Height "></dynamics>
+              </object>
+              <object type="jsx3.gui.Button">
+                <variants jsxindex="0"></variants>
+                <strings jsxname="button" jsxtext="浏览..." jsxmargin="1 0 0 0"></strings>
+                <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth" jsxpadding="@btn Padding" jsxheight="@Btn Height"></dynamics>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+              <object type="jsx3.gui.Block">
+                <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+                <strings jsxname="label" jsxtext="输入文本地址" jsxtextalign="right" jsxpadding="3 20 0 0" jsxmargin="" jsxcolor="#2f525d"></strings>
+                <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+              </object>
+              <object type="jsx3.gui.TextBox">
+                <variants></variants>
+                <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+                <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxwidth="@txtBox Width" jsxheight="@txtBox Height "></dynamics>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="10 0 0 0" jsxpadding="5 0 0 220"></strings>
+              <object type="jsx3.gui.Button">
+                <variants jsxindex="0" jsxheight="18"></variants>
+                <strings jsxname="button" jsxtext="确定" jsxmargin="0 5 0 0"></strings>
+                <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth" jsxpadding="@btn Padding"></dynamics>
+              </object>
+              <object type="jsx3.gui.Button">
+                <variants jsxindex="0" jsxheight="18"></variants>
+                <strings jsxname="button" jsxtext="重置"></strings>
+                <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth" jsxpadding="@btn Padding"></dynamics>
+              </object>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="relatedgoods" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="10 0 0 0" jsxdisplay=""></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="0 0 0 70"></strings>
+              <object type="jsx3.gui.Image">
+                <variants jsxoverflow="2" jsxrelativeposition="1"></variants>
+                <strings jsxname="image" jsxsrc="image/icon_search.gif" jsxmargin="0 4 0 0"></strings>
+              </object>
+              <object type="jsx3.gui.Select">
+                <variants jsxwidth="150" jsxtype="1" jsxxmlasync="1"></variants>
+                <strings jsxname="combo" jsxvalue="a" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0"></strings>
+                <dynamics jsxborder="@txtBox Border " jsxheight="@Select Height"></dynamics>
+                <events onmousedown="this.style.backgroundColor='';" onkeyup="jsx3.out('a server call could be made here to perform a lookup on the value, ' + this.childNodes[0].value + '.');"></events>
+              </object>
+              <object type="jsx3.gui.Select">
+                <variants jsxwidth="150" jsxtype="1" jsxxmlasync="1"></variants>
+                <strings jsxname="combo" jsxvalue="a" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0"></strings>
+                <dynamics jsxborder="@txtBox Border " jsxheight="@Select Height"></dynamics>
+                <events onmousedown="this.style.backgroundColor='';" onkeyup="jsx3.out('a server call could be made here to perform a lookup on the value, ' + this.childNodes[0].value + '.');"></events>
+              </object>
+              <object type="jsx3.gui.TextBox">
+                <variants jsxwidth="150"></variants>
+                <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+                <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border " jsxheight="@txtBox Height "></dynamics>
+              </object>
+              <object type="jsx3.gui.Button">
+                <variants jsxindex="0"></variants>
+                <strings jsxname="button" jsxtext="搜索" jsxmargin="1 0 0 0"></strings>
+                <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth" jsxheight="@Btn Height" jsxpadding="@btn Padding"></dynamics>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="300"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+              <object type="jsx3.gui.LayoutGrid">
+                <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+                <strings jsxname="layout (--)" jsxrows="25,*" jsxwidth="100%" jsxheight="100%"></strings>
+                <object type="jsx3.gui.Block">
+                  <variants jsxoverflow="2"></variants>
+                  <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                  <dynamics jsxborder="@No jsxborder"></dynamics>
+                  <object type="jsx3.gui.LayoutGrid">
+                    <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+                    <strings jsxname="layout ( | )" jsxcols="290,110,290" jsxwidth="100%" jsxheight="100%"></strings>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxoverflow="2"></variants>
+                      <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtext="可选商品" jsxtextalign="right" jsxpadding="10 100 0 0"></strings>
+                      <dynamics jsxborder="@No jsxborder" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxcolor="@lbl Color"></dynamics>
+                    </object>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxoverflow="2"></variants>
+                      <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtext="操作" jsxtextalign="center" jsxpadding="10 0 0 0"></strings>
+                      <dynamics jsxborder="@No jsxborder" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxcolor="@lbl Color"></dynamics>
+                    </object>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxoverflow="1"></variants>
+                      <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtext="跟该商品关联的商品" jsxpadding="10 100 0 0" jsxtextalign="right"></strings>
+                      <dynamics jsxborder="@No jsxborder" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxcolor="@lbl Color"></dynamics>
+                    </object>
+                  </object>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxoverflow="1"></variants>
+                  <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                  <dynamics jsxborder="@No jsxborder"></dynamics>
+                  <object type="jsx3.gui.LayoutGrid">
+                    <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+                    <strings jsxname="layout ( | )" jsxcols="290,120,290" jsxwidth="100%" jsxheight="100%"></strings>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxoverflow="2"></variants>
+                      <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxpadding="3 0 0 50"></strings>
+                      <dynamics jsxborder="@No jsxborder"></dynamics>
+                      <object type="jsx3.gui.Block">
+                        <variants jsxwidth="200" jsxheight="250" jsxoverflow="2"></variants>
+                        <strings jsxname="multi1" jsxmargin="0 4 0 0" jsxbgcolor="#FFFFFF"></strings>
+                        <dynamics jsxborder="@Inset"></dynamics>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="block" jsxwidth="100%" jsxheight="100%"></strings>
+                          <object type="jsx3.gui.Matrix">
+                            <variants jsxselectionmodel="2" jsxscalewidth="1" jsxjsxxmlasync="1" jsxheaderheight="0"></variants>
+                            <strings jsxname="matrix" jsxfocusstyle="." jsxxml="&#xA;          &lt;data jsxid=&quot;jsxroot&quot;&gt;&#xA;            &lt;record jsxid=&quot;AG&quot; jsxtext=&quot;Afghanistan&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AL&quot; jsxtext=&quot;Albania&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AR&quot; jsxtext=&quot;Algeria&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AS&quot; jsxtext=&quot;American Samoa&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AD&quot; jsxtext=&quot;Andorra&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AO&quot; jsxtext=&quot;Angola&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AU&quot; jsxtext=&quot;Anguilla&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AX&quot; jsxtext=&quot;Antarctica&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AT&quot; jsxtext=&quot;Antigua and Barbuda&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AE&quot; jsxtext=&quot;Argentina&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AM&quot; jsxtext=&quot;Armenia&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AB&quot; jsxtext=&quot;Aruba&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AA&quot; jsxtext=&quot;Australia&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AI&quot; jsxtext=&quot;Austria&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AZ&quot; jsxtext=&quot;Azerbaijan&quot;/&gt;&#xA;          &lt;/data&gt;&#xA;        "></strings>
+                            <object type="jsx3.gui.Matrix.Column">
+                              <variants></variants>
+                              <strings jsxname="column" jsxcellpadding="2" jsxpath="jsxtext"></strings>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxoverflow="2"></variants>
+                      <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="center"></strings>
+                      <dynamics jsxborder="@No jsxborder"></dynamics>
+                      <object type="jsx3.gui.LayoutGrid">
+                        <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+                        <strings jsxname="layout (--)" jsxrows="50,20,20,20,20,20,20" jsxwidth="100%" jsxheight="100%"></strings>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                          <dynamics jsxborder="@No jsxborder"></dynamics>
+                        </object>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                          <dynamics jsxborder="@No jsxborder"></dynamics>
+                          <object type="jsx3.gui.RadioButton">
+                            <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1"></variants>
+                            <strings jsxname="radio" jsxtext="单向并联" jsxgroupname="group1" jsxmargin="0 4 0 0"></strings>
+                            <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+                            <events jsxselect=""></events>
+                          </object>
+                        </object>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                          <dynamics jsxborder="@No jsxborder"></dynamics>
+                          <object type="jsx3.gui.RadioButton">
+                            <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1"></variants>
+                            <strings jsxname="radio" jsxtext="单向并联" jsxgroupname="group1" jsxmargin="0 4 0 0"></strings>
+                            <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+                            <events jsxselect=""></events>
+                          </object>
+                        </object>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                          <dynamics jsxborder="@No jsxborder"></dynamics>
+                          <object type="jsx3.gui.Button">
+                            <variants jsxindex="0" jsxheight="18"></variants>
+                            <strings jsxname="button" jsxtext="确定" jsxpadding="0 9 0 9"></strings>
+                            <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth"></dynamics>
+                          </object>
+                        </object>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                          <dynamics jsxborder="@No jsxborder"></dynamics>
+                          <object type="jsx3.gui.Button">
+                            <variants jsxindex="0" jsxheight="18"></variants>
+                            <strings jsxname="button" jsxtext="确定" jsxpadding="0 9 0 9"></strings>
+                            <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth"></dynamics>
+                          </object>
+                        </object>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                          <dynamics jsxborder="@No jsxborder"></dynamics>
+                          <object type="jsx3.gui.Button">
+                            <variants jsxindex="0" jsxheight="18"></variants>
+                            <strings jsxname="button" jsxtext="确定" jsxpadding="0 9 0 9"></strings>
+                            <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth"></dynamics>
+                          </object>
+                        </object>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="1"></variants>
+                          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                          <dynamics jsxborder="@No jsxborder"></dynamics>
+                          <object type="jsx3.gui.Button">
+                            <variants jsxindex="0" jsxheight="18"></variants>
+                            <strings jsxname="button" jsxtext="确定" jsxpadding="0 9 0 9"></strings>
+                            <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth"></dynamics>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxoverflow="1"></variants>
+                      <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxpadding="3 50 0 0" jsxtextalign="right"></strings>
+                      <dynamics jsxborder="@No jsxborder"></dynamics>
+                      <object type="jsx3.gui.Block">
+                        <variants jsxwidth="200" jsxheight="250" jsxoverflow="2"></variants>
+                        <strings jsxname="multi1" jsxmargin="0 4 0 0" jsxbgcolor="#FFFFFF"></strings>
+                        <dynamics jsxborder="@Inset"></dynamics>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="block" jsxwidth="100%" jsxheight="100%"></strings>
+                          <object type="jsx3.gui.Matrix">
+                            <variants jsxselectionmodel="2" jsxscalewidth="1" jsxjsxxmlasync="1" jsxheaderheight="0"></variants>
+                            <strings jsxname="matrix" jsxfocusstyle="." jsxxml="&#xA;          &lt;data jsxid=&quot;jsxroot&quot;&gt;&#xA;            &lt;record jsxid=&quot;AG&quot; jsxtext=&quot;Afghanistan&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AL&quot; jsxtext=&quot;Albania&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AR&quot; jsxtext=&quot;Algeria&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AS&quot; jsxtext=&quot;American Samoa&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AD&quot; jsxtext=&quot;Andorra&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AO&quot; jsxtext=&quot;Angola&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AU&quot; jsxtext=&quot;Anguilla&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AX&quot; jsxtext=&quot;Antarctica&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AT&quot; jsxtext=&quot;Antigua and Barbuda&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AE&quot; jsxtext=&quot;Argentina&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AM&quot; jsxtext=&quot;Armenia&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AB&quot; jsxtext=&quot;Aruba&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AA&quot; jsxtext=&quot;Australia&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AI&quot; jsxtext=&quot;Austria&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AZ&quot; jsxtext=&quot;Azerbaijan&quot;/&gt;&#xA;          &lt;/data&gt;&#xA;        "></strings>
+                            <object type="jsx3.gui.Matrix.Column">
+                              <variants></variants>
+                              <strings jsxname="column" jsxcellpadding="2" jsxpath="jsxtext"></strings>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                </object>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="10 0 0 0" jsxpadding="5 0 0 290"></strings>
+              <object type="jsx3.gui.Button">
+                <variants jsxindex="0"></variants>
+                <strings jsxname="button" jsxtext="确定" jsxmargin="0 10 0 0"></strings>
+                <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth" jsxpadding="@btn Padding" jsxheight="@Btn Height"></dynamics>
+              </object>
+              <object type="jsx3.gui.Button">
+                <variants jsxindex="0"></variants>
+                <strings jsxname="button" jsxtext="重置" jsxmargin="0 0 0 20"></strings>
+                <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth" jsxpadding="@btn Padding" jsxheight="@Btn Height"></dynamics>
+              </object>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="goodsattachments" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="10 0 0 0" jsxdisplay="none"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="0 0 0 70"></strings>
+              <object type="jsx3.gui.Image">
+                <variants jsxoverflow="2" jsxrelativeposition="1"></variants>
+                <strings jsxname="image" jsxsrc="image/icon_search.gif" jsxmargin="0 4 0 0"></strings>
+              </object>
+              <object type="jsx3.gui.Select">
+                <variants jsxwidth="150" jsxheight="20" jsxtype="1" jsxxmlasync="1"></variants>
+                <strings jsxname="combo" jsxvalue="a" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0"></strings>
+                <dynamics jsxborder="@txtBox Border "></dynamics>
+                <events onmousedown="this.style.backgroundColor='';" onkeyup="jsx3.out('a server call could be made here to perform a lookup on the value, ' + this.childNodes[0].value + '.');"></events>
+              </object>
+              <object type="jsx3.gui.Select">
+                <variants jsxwidth="150" jsxheight="20" jsxtype="1" jsxxmlasync="1"></variants>
+                <strings jsxname="combo" jsxvalue="a" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0"></strings>
+                <dynamics jsxborder="@txtBox Border "></dynamics>
+                <events onmousedown="this.style.backgroundColor='';" onkeyup="jsx3.out('a server call could be made here to perform a lookup on the value, ' + this.childNodes[0].value + '.');"></events>
+              </object>
+              <object type="jsx3.gui.TextBox">
+                <variants jsxheight="20" jsxwidth="150"></variants>
+                <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+                <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxborder="@txtBox Border "></dynamics>
+              </object>
+              <object type="jsx3.gui.Button">
+                <variants jsxindex="0" jsxheight="18"></variants>
+                <strings jsxname="button" jsxtext="搜索" jsxpadding="2 9 0 9" jsxmargin="1 0 0 0"></strings>
+                <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth"></dynamics>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="300"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+              <object type="jsx3.gui.LayoutGrid">
+                <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+                <strings jsxname="layout (--)" jsxrows="25,*" jsxwidth="100%" jsxheight="100%"></strings>
+                <object type="jsx3.gui.Block">
+                  <variants jsxoverflow="2"></variants>
+                  <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                  <dynamics jsxborder="@No jsxborder"></dynamics>
+                  <object type="jsx3.gui.LayoutGrid">
+                    <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+                    <strings jsxname="layout ( | )" jsxcols="290,110,290" jsxwidth="100%" jsxheight="100%"></strings>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxoverflow="2"></variants>
+                      <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtext="可选商品" jsxtextalign="right" jsxpadding="10 100 0 0"></strings>
+                      <dynamics jsxborder="@No jsxborder" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxcolor="@lbl Color"></dynamics>
+                    </object>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxoverflow="2"></variants>
+                      <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtext="操作" jsxtextalign="center" jsxpadding="10 0 0 0"></strings>
+                      <dynamics jsxborder="@No jsxborder" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxcolor="@lbl Color"></dynamics>
+                    </object>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxoverflow="1"></variants>
+                      <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtext="该商品的配件" jsxpadding="10 100 0 0" jsxtextalign="right"></strings>
+                      <dynamics jsxborder="@No jsxborder" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxcolor="@lbl Color"></dynamics>
+                    </object>
+                  </object>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxoverflow="1"></variants>
+                  <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                  <dynamics jsxborder="@No jsxborder"></dynamics>
+                  <object type="jsx3.gui.LayoutGrid">
+                    <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+                    <strings jsxname="layout ( | )" jsxcols="290,120,290" jsxwidth="100%" jsxheight="100%"></strings>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxoverflow="2"></variants>
+                      <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxpadding="3 0 0 50"></strings>
+                      <dynamics jsxborder="@No jsxborder"></dynamics>
+                      <object type="jsx3.gui.Block">
+                        <variants jsxwidth="200" jsxheight="250" jsxoverflow="2"></variants>
+                        <strings jsxname="multi1" jsxmargin="0 4 0 0" jsxbgcolor="#FFFFFF"></strings>
+                        <dynamics jsxborder="@Inset"></dynamics>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="block" jsxwidth="100%" jsxheight="100%"></strings>
+                          <object type="jsx3.gui.Matrix">
+                            <variants jsxselectionmodel="2" jsxscalewidth="1" jsxjsxxmlasync="1" jsxheaderheight="0"></variants>
+                            <strings jsxname="matrix" jsxfocusstyle="." jsxxml="&#xA;          &lt;data jsxid=&quot;jsxroot&quot;&gt;&#xA;            &lt;record jsxid=&quot;AG&quot; jsxtext=&quot;Afghanistan&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AL&quot; jsxtext=&quot;Albania&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AR&quot; jsxtext=&quot;Algeria&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AS&quot; jsxtext=&quot;American Samoa&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AD&quot; jsxtext=&quot;Andorra&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AO&quot; jsxtext=&quot;Angola&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AU&quot; jsxtext=&quot;Anguilla&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AX&quot; jsxtext=&quot;Antarctica&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AT&quot; jsxtext=&quot;Antigua and Barbuda&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AE&quot; jsxtext=&quot;Argentina&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AM&quot; jsxtext=&quot;Armenia&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AB&quot; jsxtext=&quot;Aruba&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AA&quot; jsxtext=&quot;Australia&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AI&quot; jsxtext=&quot;Austria&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AZ&quot; jsxtext=&quot;Azerbaijan&quot;/&gt;&#xA;          &lt;/data&gt;&#xA;        "></strings>
+                            <object type="jsx3.gui.Matrix.Column">
+                              <variants></variants>
+                              <strings jsxname="column" jsxcellpadding="2" jsxpath="jsxtext"></strings>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxoverflow="2"></variants>
+                      <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="center"></strings>
+                      <dynamics jsxborder="@No jsxborder"></dynamics>
+                      <object type="jsx3.gui.LayoutGrid">
+                        <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+                        <strings jsxname="layout (--)" jsxrows="50,20,20,20,20,20,20" jsxwidth="100%" jsxheight="100%"></strings>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                          <dynamics jsxborder="@No jsxborder"></dynamics>
+                        </object>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2" jsxfontsize="11"></variants>
+                          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtext="价格" jsxfontname="Arial" jsxpadding="5 0 0 0"></strings>
+                          <dynamics jsxborder="@No jsxborder"></dynamics>
+                        </object>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                          <dynamics jsxborder="@No jsxborder"></dynamics>
+                          <object type="jsx3.gui.TextBox">
+                            <variants jsxheight="18"></variants>
+                            <strings jsxname="textbox" jsxmargin="0 4 0 0"></strings>
+                          </object>
+                        </object>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                          <dynamics jsxborder="@No jsxborder"></dynamics>
+                          <object type="jsx3.gui.Button">
+                            <variants jsxindex="0" jsxheight="18"></variants>
+                            <strings jsxname="button" jsxtext="确定" jsxpadding="0 9 0 9"></strings>
+                            <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth"></dynamics>
+                          </object>
+                        </object>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                          <dynamics jsxborder="@No jsxborder"></dynamics>
+                          <object type="jsx3.gui.Button">
+                            <variants jsxindex="0" jsxheight="18"></variants>
+                            <strings jsxname="button" jsxtext="确定" jsxpadding="0 9 0 9"></strings>
+                            <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth"></dynamics>
+                          </object>
+                        </object>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                          <dynamics jsxborder="@No jsxborder"></dynamics>
+                          <object type="jsx3.gui.Button">
+                            <variants jsxindex="0" jsxheight="18"></variants>
+                            <strings jsxname="button" jsxtext="确定" jsxpadding="0 9 0 9"></strings>
+                            <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth"></dynamics>
+                          </object>
+                        </object>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="1"></variants>
+                          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                          <dynamics jsxborder="@No jsxborder"></dynamics>
+                          <object type="jsx3.gui.Button">
+                            <variants jsxindex="0" jsxheight="18"></variants>
+                            <strings jsxname="button" jsxtext="确定" jsxpadding="0 9 0 9"></strings>
+                            <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth"></dynamics>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxoverflow="1"></variants>
+                      <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxpadding="3 50 0 0" jsxtextalign="right"></strings>
+                      <dynamics jsxborder="@No jsxborder"></dynamics>
+                      <object type="jsx3.gui.Block">
+                        <variants jsxwidth="200" jsxheight="250" jsxoverflow="2"></variants>
+                        <strings jsxname="multi1" jsxmargin="0 4 0 0" jsxbgcolor="#FFFFFF"></strings>
+                        <dynamics jsxborder="@Inset"></dynamics>
+                        <object type="jsx3.gui.Block">
+                          <variants jsxoverflow="2"></variants>
+                          <strings jsxname="block" jsxwidth="100%" jsxheight="100%"></strings>
+                          <object type="jsx3.gui.Matrix">
+                            <variants jsxselectionmodel="2" jsxscalewidth="1" jsxjsxxmlasync="1" jsxheaderheight="0"></variants>
+                            <strings jsxname="matrix" jsxfocusstyle="." jsxxml="&#xA;          &lt;data jsxid=&quot;jsxroot&quot;&gt;&#xA;            &lt;record jsxid=&quot;AG&quot; jsxtext=&quot;Afghanistan&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AL&quot; jsxtext=&quot;Albania&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AR&quot; jsxtext=&quot;Algeria&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AS&quot; jsxtext=&quot;American Samoa&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AD&quot; jsxtext=&quot;Andorra&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AO&quot; jsxtext=&quot;Angola&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AU&quot; jsxtext=&quot;Anguilla&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AX&quot; jsxtext=&quot;Antarctica&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AT&quot; jsxtext=&quot;Antigua and Barbuda&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AE&quot; jsxtext=&quot;Argentina&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AM&quot; jsxtext=&quot;Armenia&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AB&quot; jsxtext=&quot;Aruba&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AA&quot; jsxtext=&quot;Australia&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AI&quot; jsxtext=&quot;Austria&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AZ&quot; jsxtext=&quot;Azerbaijan&quot;/&gt;&#xA;          &lt;/data&gt;&#xA;        "></strings>
+                            <object type="jsx3.gui.Matrix.Column">
+                              <variants></variants>
+                              <strings jsxname="column" jsxcellpadding="2" jsxpath="jsxtext"></strings>
+                            </object>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                </object>
+              </object>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxoverflow="1" jsxheight="25"></variants>
+              <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="10 0 0 0" jsxpadding="5 0 0 290"></strings>
+              <object type="jsx3.gui.Button">
+                <variants jsxindex="0" jsxheight="18"></variants>
+                <strings jsxname="button" jsxtext="确定" jsxmargin="0 10 0 0"></strings>
+                <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth" jsxpadding="@btn Padding"></dynamics>
+              </object>
+              <object type="jsx3.gui.Button">
+                <variants jsxindex="0" jsxheight="18"></variants>
+                <strings jsxname="button" jsxtext="重置" jsxmargin="0 0 0 20"></strings>
+                <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxwidth="@btnwidth" jsxpadding="@btn Padding"></dynamics>
+              </object>
+            </object>
+          </object>
+        </object>
+      </object>
+    </object>
+  </object>
+</serialization>

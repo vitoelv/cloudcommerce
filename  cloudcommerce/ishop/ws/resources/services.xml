@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This file was auto-generated from WSDL -->
+<!-- by the Apache Axis2 version: 1.4.1  Built on : Aug 13, 2008 (05:03:35 LKT) -->
+<serviceGroup>
+    <service name="JCommerceWS">
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="com.jcommerce.ws.server.JCommerceWSMessageReceiverInOut"/>
+        </messageReceivers>
+        <parameter name="ServiceClass">com.jcommerce.ws.server.JCommerceWSSkeleton</parameter>
+        <parameter name="useOriginalwsdl">true</parameter>
+        <parameter name="modifyUserWSDLPortAddress">true</parameter>
+        <operation name="OPERATION" mep="http://www.w3.org/ns/wsdl/in-out" namespace="http://ws.jcommerce.com/">
+            <actionMapping>/JCommerceWS</actionMapping>
+            <outputActionMapping>http://ws.jcommerce.com/JCommerceWSPortType/OPERATIONResponse</outputActionMapping>
+        </operation>
+    </service>
+</serviceGroup>

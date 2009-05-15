@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<serialization jsxversion="3.5" xmlns="urn:tibco.com/v3.0">
+  <name><![CDATA[Block - 100%]]></name>
+  <icon><![CDATA[images/prototypes/block.gif]]></icon>
+  <description><![CDATA[Simple block, relatively positioned with overflow=scroll.]]></description>
+  <onBeforeDeserialize></onBeforeDeserialize>
+  <onAfterDeserialize></onAfterDeserialize>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"></variants>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="15 0 15 0" jsxtextalign="center"></strings>
+    <dynamics jsxborder="@Blk Border"></dynamics>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxpadding="5 0 0 10" jsxtextalign="right" jsxmargin="0 0 12 0"></strings>
+      <dynamics jsxbgcolor="@Blk Top Color" jsxbg="@Bevel TopDown" jsxborder="@Blk Border"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxtextalign="center" jsxstyleoverride="float:left"></strings>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight"></dynamics>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxtextalign="left" jsxpadding="20 0 0 0" jsxheight=""></strings>
+      <dynamics jsxborder="@Blk Border"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="0 0 5 0"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="选择商品分类：" jsxpadding="3 20 0 0" jsxtextalign="right"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+        </object>
+        <object type="jsx3.gui.Select">
+          <variants jsxxmlasync="1"></variants>
+          <strings jsxname="selGoodsCategory" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0"></strings>
+          <dynamics jsxborder="@txtBox Border " jsxwidth="@Select Width" jsxheight="@Select Height"></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="0 0 5 0"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="选择商品品牌：" jsxpadding="3 20 0 0" jsxtextalign="right"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+        </object>
+        <object type="jsx3.gui.Select">
+          <variants jsxxmlasync="1"></variants>
+          <strings jsxname="selGoodsBrand" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0"></strings>
+          <dynamics jsxborder="@txtBox Border " jsxwidth="@Select Width" jsxheight="@Select Height"></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="0 0 5 0"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="选择推荐类型：" jsxpadding="3 20 0 0" jsxtextalign="right"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+        </object>
+        <object type="jsx3.gui.Select">
+          <variants jsxxmlasync="1"></variants>
+          <strings jsxname="selRecomendType" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0"></strings>
+          <dynamics jsxborder="@txtBox Border " jsxwidth="@Select Width" jsxheight="@Select Height"></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="0 0 5 0"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="是否显示商品图片：" jsxpadding="3 20 0 0" jsxtextalign="right"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+        </object>
+        <object type="jsx3.gui.Select">
+          <variants jsxxmlasync="1"></variants>
+          <strings jsxname="selShowPhoOrNot" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0"></strings>
+          <dynamics jsxborder="@txtBox Border " jsxwidth="@Select Width" jsxheight="@Select Height"></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="0 0 5 0"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="显示商品数量：" jsxpadding="3 20 0 0" jsxtextalign="right"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+        </object>
+        <object type="jsx3.gui.TextBox">
+          <variants jsxwidth="220"></variants>
+          <strings jsxname="txtGoodsAcount" jsxmargin="0 4 0 0"></strings>
+          <dynamics jsxborder="@txtBox Border " jsxheight="@txtBox Height "></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="0 0 5 0"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="选择商品排列方式：" jsxpadding="3 20 0 0" jsxtextalign="right"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+        </object>
+        <object type="jsx3.gui.Select">
+          <variants jsxxmlasync="1"></variants>
+          <strings jsxname="selSortType" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0"></strings>
+          <dynamics jsxborder="@txtBox Border " jsxwidth="@Select Width" jsxheight="@Select Height"></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="0 0 5 0"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="选择编码：" jsxpadding="3 20 0 0" jsxtextalign="right"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+        </object>
+        <object type="jsx3.gui.Select">
+          <variants jsxxmlasync="1"></variants>
+          <strings jsxname="selCodeType" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0"></strings>
+          <dynamics jsxborder="@txtBox Border " jsxheight="@Select Height" jsxwidth="@Select Width"></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="0 0 5 0"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="引用站点名称：" jsxpadding="3 20 0 0" jsxtextalign="right"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+        </object>
+        <object type="jsx3.gui.TextBox">
+          <variants jsxwidth="220"></variants>
+          <strings jsxname="txtRefSiteName" jsxmargin="0 4 0 0" jsxvalue=""></strings>
+          <dynamics jsxborder="@txtBox Border " jsxheight="@txtBox Height "></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="10 0 0 0" jsxtextalign="left" jsxpadding="0 0 0 300"></strings>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0"></variants>
+          <strings jsxname="btnGenerateCode" jsxtext="生成代码" jsxmargin="0 0 4 0"></strings>
+          <dynamics jsxwidth="@btnwidth" jsxheight="@Btn Height" jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight " jsxcolor="@Btn Color " jsxpadding="@btn Padding" jsxborder="@Btn Border " jsxstyleoverride="@Btn css"></dynamics>
+          <events jsxexecute="alert('hello');"></events>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="120" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="10 0 0 0" jsxtextalign="center"></strings>
+        <object type="jsx3.gui.TextBox">
+          <variants jsxheight="100" jsxwidth="500"></variants>
+          <strings jsxname="txtCode"></strings>
+          <dynamics jsxborder="@txtBox Border "></dynamics>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="50" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left" jsxmargin="15 0 0 0"></strings>
+      <dynamics jsxborder="@Blk Border"></dynamics>
+    </object>
+  </object>
+</serialization>

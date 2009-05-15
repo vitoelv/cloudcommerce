@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<serialization jsxversion="3.6" xmlns="urn:tibco.com/v3.0">
+  <name><![CDATA[Block - 100%]]></name>
+  <icon><![CDATA[images/prototypes/block.gif]]></icon>
+  <description><![CDATA[Simple block, relatively positioned with overflow=scroll.]]></description>
+  <onBeforeDeserialize></onBeforeDeserialize>
+  <onAfterDeserialize><![CDATA[com.tibco.ishop.Type.init();
+com.tibco.ishop.Type.getType();]]></onAfterDeserialize>
+  <object type="com.tibco.ishop.Type">
+    <variants jsxoverflow="1"></variants>
+    <strings jsxname="blkTypeMain" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxtextalign="center" jsxinstanceof="jsx3.app.Model" jsxleft="typelist"></strings>
+    <dynamics jsxpadding="@Block Padding"></dynamics>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="right"></strings>
+      <dynamics jsxbgcolor="@Blk Top Color" jsxborder="@Blk Border" jsxbg="@Bevel TopDown" jsxpadding="@Top Block Padding" jsxmargin="@Top Block Margin"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxstyleoverride="float:left"></strings>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight"></dynamics>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="&amp;nbsp;-商品类型" jsxcolor="#869590" jsxstyleoverride="float:left"></strings>
+        <dynamics jsxfontname="@lbl Font Name"></dynamics>
+        <events jsxclick="com.tibco.ishop.Type.getType();"></events>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0"></variants>
+        <strings jsxname="btnAddtype" jsxtext="添加类型" jsxmargin="0 10 0 0"></strings>
+        <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxheight="@Btn Height" jsxwidth="@Btn Width" jsxpadding="@@Btn Padding"></dynamics>
+        <events jsxexecute="service.onMenuClick(&quot;a20&quot;);"></events>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="300" jsxoverflow="1"></variants>
+      <strings jsxname="blkTypelist" jsxwidth="100%" jsxrelativeposition="1"></strings>
+      <dynamics jsxborder="@No jsxborder"></dynamics>
+      <object type="jsx3.gui.Matrix">
+        <variants jsxpagingmodel="1" jsxselectionmodel="1" jsxjsxxmlasync="1" jsxsuppressvscroll="1"></variants>
+        <strings jsxxmlurl="" jsxxmlid="typelist" jsxselectionbg="none" jsxinstanceof="jsx3.app.Model" jsxname="typelist"></strings>
+        <dynamics jsxrowheight="@Matrix RowHeight " jsxbgcolor="@MatrixC BGColor " jsxfocusstyle="@Matrix Focus Style " jsxspystyle="@Matrix   Spy Style " jsxheaderheight="@Matrix HeaderHeight " jsxbodyborder="@Matrix BodyBorder " jsxheaderborder="@Matrix HeaderBorder "></dynamics>
+        <properties start="5" end="15"></properties>
+        <events jsxaftercommit="com.tibco.ishop.Type.updateType(&quot;updateTypeOnMatrix_xml&quot;);"></events>
+        <xslparameters jsx_rowbg1="#ffffff" jsx_rowbg2="#ffffff"></xslparameters>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="120"></variants>
+          <strings jsxname="typename" jsxtext="商品类型名称" jsxpadding="1 7 0 7" jsxcellpadding="3" jsxpath="name" jsxtextalign="center"></strings>
+          <dynamics jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxbg="@Matrix Header Bg" jsxborder="@Matrix Cell Header Boder" jsxcellborder="@MatrixC Border "></dynamics>
+          <object type="jsx3.gui.TextBox">
+            <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxwidth="120" jsxheight="20" jsxzindex="10"></variants>
+            <strings jsxname="txtMatTypeName" jsxdisplay="none" jsxvalue="book"></strings>
+            <events jsxkeydown="1;"></events>
+          </object>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="200"></variants>
+          <strings jsxname="attributeGroup" jsxtext="属性分组" jsxpadding="1 0 0 0" jsxcellpadding="3" jsxpath="attributegroup" jsxtextalign="center"></strings>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxbg="@Matrix Header Bg" jsxcellborder="@MatrixC Border "></dynamics>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="200"></variants>
+          <strings jsxname="attributeacount" jsxtext="属性数" jsxpadding="1 0 0 0" jsxcellpadding="3" jsxpath="attributecount" jsxtextalign="center" jsxcelltextalign="center"></strings>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxbg="@Matrix Header Bg" jsxcellborder="@MatrixC Border "></dynamics>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="80"></variants>
+          <strings jsxname="state" jsxtext="状态" jsxcellpadding="1" jsxpath="state" jsxtextalign="center" jsxcelltextalign="center" jsxpadding="1 0 0 0"></strings>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxbg="@Matrix Header Bg" jsxbgcolor="@Solid Disabled" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxcellborder="@MatrixC Border " jsxvaluetemplate="@Type State Template"></dynamics>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants></variants>
+          <strings jsxname="operation" jsxtext="操作" jsxpadding="1 0 0 0" jsxcellpadding="3 0 0 0" jsxtextalign="center" jsxwidth="*" jsxcelltextalign="center" jsxpath="operation"></strings>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxbg="@Matrix Header Bg" jsxcellborder="@MatrixC Border " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxcellbgcolor="@MatrixCell BGColor " jsxvaluetemplate="@Type Operation Template"></dynamics>
+        </object>
+      </object>
+    </object>
+    <object type="com.tibco.ishop.Pagation">
+      <variants jsxheight="28" jsxoverflow="1"></variants>
+      <strings jsxwidth="100%" jsxborder="0px solid #737373;1px solid #737373;1px solid #737373;1px solid #737373" jsxtextalign="right" jsxinstanceof="jsx3.app.Model" jsxname="blkPagation"></strings>
+      <dynamics jsxmargin="@Top Block Margin"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+        <strings jsxname="label" jsxtext="总计"></strings>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@txtBox Font Weight " jsxcolor="@Label Color"></dynamics>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+        <strings jsxname="lblTotalRecord" jsxtext="10"></strings>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontweight="@txtBox Font Weight " jsxcolor="@Label Color" jsxfontsize="@lbl Font Size"></dynamics>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+        <strings jsxname="label" jsxtext="个记录,当前第"></strings>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@txtBox Font Weight " jsxcolor="@Label Color"></dynamics>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxtext="1" jsxrelativeposition="1" jsxoverflow="3"></variants>
+        <strings jsxname="lblNowPage"></strings>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontweight="@txtBox Font Weight " jsxcolor="@Label Color" jsxfontsize="@lbl Font Size"></dynamics>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+        <strings jsxname="label" jsxtext="页，每页"></strings>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@txtBox Font Weight " jsxcolor="@Label Color"></dynamics>
+      </object>
+      <object type="jsx3.gui.TextBox">
+        <variants jsxheight="18" jsxwidth="30"></variants>
+        <strings jsxname="txtShowNumber" jsxvalue="2"></strings>
+        <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxfontweight="@txtBox Font Weight " jsxborder="@txtBox Border "></dynamics>
+        <events jsxchange="com.tibco.ishop.Type.getType();"></events>
+      </object>
+      <object type="jsx3.gui.Image">
+        <variants jsxoverflow="2" jsxrelativeposition="1" jsxwidth="10"></variants>
+        <strings jsxname="imgPrevious" jsxsrc="images/spin_left.gif" jsxborder="1px solid #cccccc"></strings>
+        <events jsxclick="com.tibco.ishop.Type.getType(this);"></events>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+        <strings jsxname="lblPage" jsxtext="1"></strings>
+        <dynamics jsxfontname="@lbl Font Name" jsxcolor="@Label Color" jsxfontsize="@lbl Font Size" jsxfontweight="@txtBox Font Weight "></dynamics>
+      </object>
+      <object type="jsx3.gui.TextBox">
+        <variants jsxheight="18" jsxwidth="30"></variants>
+        <strings jsxname="txtShowPage" jsxvalue=""></strings>
+        <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxfontweight="@txtBox Font Weight " jsxborder="@txtBox Border "></dynamics>
+        <events jsxchange="com.tibco.ishop.Type.getType(null,service.getServer().getJSXByName(&quot;blkPagation&quot;).getTargetPage());"></events>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxtext="5" jsxrelativeposition="1" jsxoverflow="3"></variants>
+        <strings jsxname="lblTotalPage"></strings>
+        <dynamics jsxfontname="@lbl Font Name" jsxcolor="@Label Color" jsxfontsize="@lbl Font Size" jsxfontweight="@txtBox Font Weight "></dynamics>
+      </object>
+      <object type="jsx3.gui.Image">
+        <variants jsxoverflow="2" jsxrelativeposition="1" jsxwidth="10"></variants>
+        <strings jsxname="imgNext" jsxsrc="images/spin_right.gif" jsxborder="1px solid #cccccc"></strings>
+        <events jsxclick="com.tibco.ishop.Type.getType(this);"></events>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="50" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxpadding="9 0 0 3" jsxtextalign="left" jsxmargin="15 0 0"></strings>
+      <dynamics jsxborder="@Blk Border"></dynamics>
+    </object>
+  </object>
+</serialization>

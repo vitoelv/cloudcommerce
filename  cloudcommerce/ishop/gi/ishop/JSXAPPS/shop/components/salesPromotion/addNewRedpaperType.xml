@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="gbk"?>
+<serialization jsxversion="3.5" xmlns="urn:tibco.com/v3.0">
+  <name><![CDATA[Block - 100%]]></name>
+  <icon><![CDATA[images/prototypes/block.gif]]></icon>
+  <description><![CDATA[Simple block, relatively positioned with overflow=scroll.]]></description>
+  <onBeforeDeserialize></onBeforeDeserialize>
+  <onAfterDeserialize></onAfterDeserialize>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"></variants>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="15 0 15 0" jsxtextalign="center"></strings>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="25" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxtext="" jsxpadding="3 0 0 10" jsxtextalign="right" jsxmargin="0 0 12 0"></strings>
+      <dynamics jsxbgcolor="@Blk Top Color" jsxbg="@Bevel TopDown Light" jsxborder="@Blk Border"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxpadding="1 0 0 0" jsxtextalign="center" jsxfontweight="bold" jsxfontname="arial" jsxstyleoverride="float:left"></strings>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="&amp;nbsp-添加夺宝奇兵" jsxcolor="#869590" jsxtextalign="left" jsxstyleoverride="float:left"></strings>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0" jsxheight="18"></variants>
+        <strings jsxname="btnBrandList" jsxtext="夺宝奇兵" jsxmargin="0 10 0 0"></strings>
+        <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color " jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight " jsxpadding="@btn Padding"></dynamics>
+        <events jsxexecute="alert('hello');"></events>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="350" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxpadding="10 0 0 0"></strings>
+      <dynamics jsxborder="@Blk Border"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxfontname="arial" jsxtextalign="left"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="类型名称" jsxtextalign="right" jsxpadding="5 20 0 0"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+        </object>
+        <object type="jsx3.gui.TextBox">
+          <variants jsxheight="20" jsxwidth="160"></variants>
+          <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue="" jsxborder="1px solid #278296 ;"></strings>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="20" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="*" jsxcolor="red" jsxpadding="5 0 00" jsxtextalign="center"></strings>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="3 0 0 0"></strings>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+          <strings jsxname="layout ( | )" jsxcols="145,75,280" jsxwidth="100%" jsxheight="100%"></strings>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="right" jsxpadding="4 0 0 0"></strings>
+            <dynamics jsxborder="@No jsxborder"></dynamics>
+            <object type="jsx3.gui.ImageButton">
+              <variants jsxwidth="16" jsxheight="16" jsxtype="0" jsxprefetch="1" jsxstate="0"></variants>
+              <strings jsxname="imagebutton" jsxtext="[button text]" jsximage="image/help.gif"></strings>
+              <events jsxexecute="alert('Execute');"></events>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtext="红包金额" jsxpadding="5 0 0 0" jsxtextalign="left"></strings>
+            <dynamics jsxborder="@No jsxborder" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="left"></strings>
+            <dynamics jsxborder="@No jsxborder"></dynamics>
+            <object type="jsx3.gui.TextBox">
+              <variants jsxheight="20" jsxwidth="160"></variants>
+              <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue="" jsxborder="1px solid #278296 ;"></strings>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="20" jsxheight="20"></variants>
+              <strings jsxname="label" jsxtext="*" jsxcolor="red" jsxpadding="5 0 00" jsxtextalign="center"></strings>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="15" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left" jsxpadding="0 0 0 220"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="label" jsxtext="此类型的红包可以抵销的金额" jsxfontname="Arial"></strings>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="3 0 0 0"></strings>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+          <strings jsxname="layout ( | )" jsxcols="120,100,280" jsxwidth="100%" jsxheight="100%"></strings>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="right" jsxpadding="4 0 0 0"></strings>
+            <dynamics jsxborder="@No jsxborder"></dynamics>
+            <object type="jsx3.gui.ImageButton">
+              <variants jsxwidth="16" jsxheight="16" jsxtype="0" jsxprefetch="1" jsxstate="0"></variants>
+              <strings jsxname="imagebutton" jsxtext="[button text]" jsximage="image/help.gif"></strings>
+              <events jsxexecute="alert('Execute');"></events>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtext="最小订单金额" jsxpadding="5 0 0 0" jsxtextalign="left"></strings>
+            <dynamics jsxborder="@No jsxborder" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="left"></strings>
+            <dynamics jsxborder="@No jsxborder"></dynamics>
+            <object type="jsx3.gui.TextBox">
+              <variants jsxheight="20" jsxwidth="160"></variants>
+              <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue="" jsxborder="1px solid #278296 ;"></strings>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="20" jsxheight="20"></variants>
+              <strings jsxname="label" jsxtext="*" jsxcolor="red" jsxpadding="5 0 00" jsxtextalign="center"></strings>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="15" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left" jsxpadding="0 0 0 220"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="label" jsxtext="只有商品总金额达到这个数的订单才能使用这种红包" jsxfontname="Arial"></strings>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxfontname="arial" jsxtextalign="left"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="如何发放此类红包" jsxtextalign="right" jsxpadding="5 20 0 0"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+        </object>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1"></variants>
+          <strings jsxname="radio" jsxtext="按用户发放" jsxgroupname="group1" jsxmargin="4 4 0 0"></strings>
+          <events jsxselect=""></events>
+        </object>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="1" jsxrelativeposition="1"></variants>
+          <strings jsxname="radio" jsxtext="按商品发放" jsxgroupname="group1" jsxmargin="4 4 0 0"></strings>
+          <events jsxselect=""></events>
+        </object>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1"></variants>
+          <strings jsxname="radio" jsxtext="按订单金额发放" jsxgroupname="group1" jsxmargin="4 4 0 0"></strings>
+          <events jsxselect=""></events>
+        </object>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1"></variants>
+          <strings jsxname="radio" jsxtext="线下发放的红包" jsxgroupname="group1" jsxmargin="4 4 0 0"></strings>
+          <events jsxselect=""></events>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="3 0 0 0"></strings>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+          <strings jsxname="layout ( | )" jsxcols="145,75,280" jsxwidth="100%" jsxheight="100%"></strings>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="right" jsxpadding="4 0 0 0"></strings>
+            <dynamics jsxborder="@No jsxborder"></dynamics>
+            <object type="jsx3.gui.ImageButton">
+              <variants jsxwidth="16" jsxheight="16" jsxtype="0" jsxprefetch="1" jsxstate="0"></variants>
+              <strings jsxname="imagebutton" jsxtext="[button text]" jsximage="image/help.gif"></strings>
+              <events jsxexecute="alert('Execute');"></events>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtext="订单下限" jsxpadding="5 0 0 0" jsxtextalign="left"></strings>
+            <dynamics jsxborder="@No jsxborder" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="left"></strings>
+            <dynamics jsxborder="@No jsxborder"></dynamics>
+            <object type="jsx3.gui.TextBox">
+              <variants jsxheight="20" jsxwidth="160"></variants>
+              <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue="" jsxborder="1px solid #278296 ;"></strings>
+            </object>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="20" jsxheight="20"></variants>
+              <strings jsxname="label" jsxtext="*" jsxcolor="red" jsxpadding="5 0 00" jsxtextalign="center"></strings>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="15" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left" jsxpadding="0 0 0 220"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="label" jsxtext="只要订单金额达到该数值，就会发放红包给用户" jsxfontname="Arial"></strings>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="3 0 0 0"></strings>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+          <strings jsxname="layout ( | )" jsxcols="120,100,280" jsxwidth="100%" jsxheight="100%"></strings>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="right" jsxpadding="4 0 0 0"></strings>
+            <dynamics jsxborder="@No jsxborder"></dynamics>
+            <object type="jsx3.gui.ImageButton">
+              <variants jsxwidth="16" jsxheight="16" jsxtype="0" jsxprefetch="1" jsxstate="0"></variants>
+              <strings jsxname="imagebutton" jsxtext="[button text]" jsximage="image/help.gif"></strings>
+              <events jsxexecute="alert('Execute');"></events>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtext="发放起始日期" jsxpadding="5 0 0 0" jsxtextalign="left"></strings>
+            <dynamics jsxborder="@No jsxborder" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="left"></strings>
+            <dynamics jsxborder="@No jsxborder"></dynamics>
+            <object type="jsx3.gui.TextBox">
+              <variants jsxheight="20" jsxwidth="160"></variants>
+              <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue="" jsxborder="1px solid #278296 ;"></strings>
+            </object>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="20" jsxwidth="50"></variants>
+              <strings jsxname="button" jsxtext="选择" jsxmargin="0 8 0 0" jsxfontname="Arial" jsxtextalign="center" jsxborder="1px solid #2D5082" jsxstyleoverride="background-image: url(c:/ecshop/JSXAPPS/shop/image/button_bg.gif);background-repeat:repeat-x;"></strings>
+              <events jsxexecute="alert('hello');"></events>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="15" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left" jsxpadding="0 0 0 220"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="label" jsxtext="只有当前时间介于起始日期和截止日期之间时，此类型的红包才可以发放" jsxfontname="Arial"></strings>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxfontname="arial" jsxtextalign="left"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="发放结束日期" jsxtextalign="right" jsxpadding="5 20 0 0"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+        </object>
+        <object type="jsx3.gui.TextBox">
+          <variants jsxheight="20" jsxwidth="160"></variants>
+          <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue="" jsxborder="1px solid #278296 ;"></strings>
+        </object>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0" jsxheight="20" jsxwidth="50"></variants>
+          <strings jsxname="button" jsxtext="选择" jsxmargin="0 8 0 0" jsxfontname="Arial" jsxtextalign="center" jsxborder="1px solid #2D5082" jsxstyleoverride="background-image: url(c:/ecshop/JSXAPPS/shop/image/button_bg.gif);background-repeat:repeat-x;"></strings>
+          <events jsxexecute="alert('hello');"></events>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="3 0 0 0"></strings>
+        <object type="jsx3.gui.LayoutGrid">
+          <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+          <strings jsxname="layout ( | )" jsxcols="120,100,280" jsxwidth="100%" jsxheight="100%"></strings>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="right" jsxpadding="4 0 0 0"></strings>
+            <dynamics jsxborder="@No jsxborder"></dynamics>
+            <object type="jsx3.gui.ImageButton">
+              <variants jsxwidth="16" jsxheight="16" jsxtype="0" jsxprefetch="1" jsxstate="0"></variants>
+              <strings jsxname="imagebutton" jsxtext="[button text]" jsximage="image/help.gif"></strings>
+              <events jsxexecute="alert('Execute');"></events>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="2"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtext="使用起始日期" jsxpadding="5 0 0 0" jsxtextalign="left"></strings>
+            <dynamics jsxborder="@No jsxborder" jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxoverflow="1"></variants>
+            <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="left"></strings>
+            <dynamics jsxborder="@No jsxborder"></dynamics>
+            <object type="jsx3.gui.TextBox">
+              <variants jsxheight="20" jsxwidth="160"></variants>
+              <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue="" jsxborder="1px solid #278296 ;"></strings>
+            </object>
+            <object type="jsx3.gui.Button">
+              <variants jsxindex="0" jsxheight="20" jsxwidth="50"></variants>
+              <strings jsxname="button" jsxtext="选择" jsxmargin="0 8 0 0" jsxfontname="Arial" jsxtextalign="center" jsxborder="1px solid #2D5082" jsxstyleoverride="background-image: url(c:/ecshop/JSXAPPS/shop/image/button_bg.gif);background-repeat:repeat-x;"></strings>
+              <events jsxexecute="alert('hello');"></events>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="15" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left" jsxpadding="0 0 0 220"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="label" jsxtext="只有当前时间介于起始日期和截止日期之间时，此类型的红包才可以使用" jsxfontname="Arial"></strings>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxfontname="arial" jsxtextalign="left"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="发放结束日期" jsxtextalign="right" jsxpadding="5 20 0 0"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+        </object>
+        <object type="jsx3.gui.TextBox">
+          <variants jsxheight="20" jsxwidth="160"></variants>
+          <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxvalue="" jsxborder="1px solid #278296 ;"></strings>
+        </object>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0" jsxheight="20" jsxwidth="50"></variants>
+          <strings jsxname="button" jsxtext="选择" jsxmargin="0 8 0 0" jsxfontname="Arial" jsxtextalign="center" jsxborder="1px solid #2D5082" jsxstyleoverride="background-image: url(c:/ecshop/JSXAPPS/shop/image/button_bg.gif);background-repeat:repeat-x;"></strings>
+          <events jsxexecute="alert('hello');"></events>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="30" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="0 0 0 220" jsxtextalign="left" jsxmargin="5 0 0 0"></strings>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0" jsxheight="20" jsxwidth="50"></variants>
+          <strings jsxname="button" jsxtext="确定" jsxmargin="0 8 0 0" jsxfontname="Arial" jsxtextalign="center" jsxborder="1px solid #2D5082" jsxstyleoverride="background-image: url(c:/ecshop/JSXAPPS/shop/image/button_bg.gif);background-repeat:repeat-x;"></strings>
+          <events jsxexecute="alert('hello');"></events>
+        </object>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0" jsxheight="20" jsxwidth="50"></variants>
+          <strings jsxname="button" jsxtext="重置" jsxmargin="0 4 0 0" jsxfontname="Arial" jsxtextalign="center" jsxborder="1px solid #2D5082" jsxstyleoverride="background-image: url(c:/ecshop/JSXAPPS/shop/image/button_bg.gif);background-repeat:repeat-x;"></strings>
+          <events jsxexecute="alert('hello');"></events>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="50" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxtext="" jsxbgcolor="#f4fbfb" jsxpadding="9 0 0 3" jsxtextalign="left" jsxmargin="15 0 0" jsxborder="1px solid #278296"></strings>
+    </object>
+  </object>
+</serialization>

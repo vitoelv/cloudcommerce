@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data jsxid="jsxroot">
+  <record jsxid="prefs" type="map">
+    <record jsxid="dom" type="map">
+      <record jsxid="showFocus" type="boolean">false</record>
+      <record jsxid="snapTo" type="boolean">true</record>
+    </record>
+    <record jsxid="builder" type="map">
+      <record jsxid="cachewarn" type="boolean">false</record>
+      <record jsxid="dereferencewarn" type="boolean">false</record>
+      <record jsxid="domfocus" type="boolean">true</record>
+      <record jsxid="snapto" type="string">10</record>
+      <record jsxid="domdeletewarn" type="boolean">false</record>
+      <record jsxid="addcharset" type="boolean">true</record>
+      <record jsxid="openlastproject" type="boolean">true</record>
+      <record jsxid="welcome" type="boolean">true</record>
+      <record jsxid="outputcharset" type="string"></record>
+      <record jsxid="outputlinesep" type="null"></record>
+      <record jsxid="xmlencodeas" type="boolean">true</record>
+      <record jsxid="xmloutputcharset" type="string">utf-8</record>
+      <record jsxid="welcome_v" type="map">
+        <record jsxid="3.6.1.4" type="boolean">false</record>
+        <record jsxid="3.6.2.1" type="boolean">false</record>
+      </record>
+    </record>
+  </record>
+  <record jsxid="lastProject" type="string">JSXAPPS/shop</record>
+  <record jsxid="recentProjects" type="array">
+    <record jsxid="0" type="string">JSXAPPS/shop</record>
+    <record jsxid="1" type="string">JSXAPPS/ishop</record>
+    <record jsxid="2" type="string">JSXAPPS/aa</record>
+  </record>
+  <record jsxid="palettes" type="map">
+    <record jsxid="jsx_ide_props_dom" type="map">
+      <record jsxid="closed" type="boolean">false</record>
+    </record>
+    <record jsxid="jsx_ide_props_contentblock" type="map">
+      <record jsxid="closed" type="boolean">false</record>
+      <record jsxid="float" type="boolean">true</record>
+      <record jsxid="dialog" type="map">
+        <record jsxid="left" type="number">349</record>
+        <record jsxid="top" type="number">269</record>
+        <record jsxid="width" type="number">616</record>
+        <record jsxid="height" type="number">521</record>
+      </record>
+    </record>
+    <record jsxid="jsx_ide_me_contentblock" type="map">
+      <record jsxid="closed" type="boolean">false</record>
+      <record jsxid="float" type="boolean">true</record>
+      <record jsxid="dialog" type="map">
+        <record jsxid="left" type="number">292</record>
+        <record jsxid="top" type="number">209</record>
+        <record jsxid="width" type="number">765</record>
+        <record jsxid="height" type="number">498</record>
+      </record>
+    </record>
+    <record jsxid="jsx_ide_attributes_contentblock" type="map">
+      <record jsxid="closed" type="boolean">false</record>
+    </record>
+    <record jsxid="jsx_ide_xslparams_contentblock" type="map">
+      <record jsxid="closed" type="boolean">true</record>
+    </record>
+    <record jsxid="jsx_ide_palette_complibs" type="map">
+      <record jsxid="closed" type="boolean">false</record>
+      <record jsxid="float" type="boolean">true</record>
+      <record jsxid="dialog" type="map">
+        <record jsxid="left" type="number">488</record>
+        <record jsxid="top" type="number">334</record>
+        <record jsxid="width" type="number">300</record>
+        <record jsxid="height" type="number">300</record>
+      </record>
+    </record>
+    <record jsxid="jsx_ide_cache_contentblock" type="map">
+      <record jsxid="closed" type="boolean">false</record>
+    </record>
+    <record jsxid="jsx_ide_resources_contentblock" type="map">
+      <record jsxid="closed" type="boolean">false</record>
+      <record jsxid="float" type="boolean">true</record>
+      <record jsxid="dialog" type="map">
+        <record jsxid="left" type="number">368</record>
+        <record jsxid="top" type="number">120</record>
+        <record jsxid="width" type="number">300</record>
+        <record jsxid="height" type="number">300</record>
+      </record>
+    </record>
+  </record>
+  <record jsxid="projects" type="map">
+    <record jsxid="JSXAPPS/shop" type="map">
+      <record jsxid="openFiles" type="array">
+        <record jsxid="0" type="string">components/goods/addAttribute.xml</record>
+        <record jsxid="1" type="string">jss/style.xml</record>
+      </record>
+      <record jsxid="recentFiles" type="array">
+        <record jsxid="0" type="string">jss/style.xml</record>
+        <record jsxid="1" type="string">components/goods/addAttribute.xml</record>
+        <record jsxid="2" type="string">rules/getCategory.xml</record>
+        <record jsxid="3" type="string">components/appCanvas.xml</record>
+        <record jsxid="4" type="string">components/goods/addNewBrand.xml</record>
+        <record jsxid="5" type="string">components/goods/attributeList.xml</record>
+        <record jsxid="6" type="string">rules/updateAttributeOnMatrix.xml</record>
+        <record jsxid="7" type="string">rules/updateBrandOnMatrix.xml</record>
+        <record jsxid="8" type="string">components/goods/goodsBrandList.xml</record>
+        <record jsxid="9" type="string">rules/updateBrandOnDetail.xml</record>
+        <record jsxid="10" type="string">rules/updateAttributeOnDetail.xml</record>
+        <record jsxid="11" type="string">rules/addAttribute.xml</record>
+        <record jsxid="12" type="string">rules/getType.xml</record>
+        <record jsxid="13" type="string">rules/getAttributeByType.xml</record>
+        <record jsxid="14" type="string">rules/generateTypeSel.xml</record>
+      </record>
+    </record>
+    <record jsxid="JSXAPPS/ishop" type="map">
+      <record jsxid="openFiles" type="array">
+        <record jsxid="0" type="string">components/appCanvas.xml</record>
+        <record jsxid="1" type="string">components/goods/goodsBrandList.xml</record>
+        <record jsxid="2" type="string">components/goods/addBrand.xml</record>
+      </record>
+      <record jsxid="recentFiles" type="array">
+        <record jsxid="0" type="string">components/goods/addBrand.xml</record>
+        <record jsxid="1" type="string">components/goods/goodsBrandList.xml</record>
+        <record jsxid="2" type="string">components/appCanvas.xml</record>
+        <record jsxid="3" type="string">components/goods/goodsCategory.xml</record>
+        <record jsxid="4" type="string">components/goods/goodslist.xml</record>
+        <record jsxid="5" type="string">jss/style.xml</record>
+        <record jsxid="6" type="string">rules/getBrand.xml</record>
+        <record jsxid="7" type="string">js/com/tibco/ishop/brand.js</record>
+        <record jsxid="8" type="string">js/logic.js</record>
+        <record jsxid="9" type="string">js/com/tibco/ishop/entity.js</record>
+        <record jsxid="10" type="string">js/com/tibco/ishop/pagation.js</record>
+        <record jsxid="11" type="string">components/goods/goodstype.xml</record>
+        <record jsxid="12" type="string">jss/common.xml</record>
+      </record>
+    </record>
+    <record jsxid="JSXAPPS/aa" type="map">
+      <record jsxid="openFiles" type="array">
+        <record jsxid="0" type="string">js/logic.js</record>
+        <record jsxid="1" type="string">components/appCanvas.xml</record>
+      </record>
+      <record jsxid="recentFiles" type="array">
+        <record jsxid="0" type="string">components/appCanvas.xml</record>
+        <record jsxid="1" type="string">js/logic.js</record>
+      </record>
+    </record>
+  </record>
+  <record jsxid="window" type="map">
+    <record jsxid="splitters" type="map">
+      <record jsxid="jsx_ide_splitter1" type="string">80%</record>
+      <record jsxid="jsx_ide_splitter2" type="string">14.0625%</record>
+      <record jsxid="jsx_ide_splitter3" type="string">0%</record>
+      <record jsxid="jsx_ide_splitter4" type="string">100%</record>
+      <record jsxid="jsx_ide_splitter5" type="string">100%</record>
+    </record>
+  </record>
+  <record jsxid="http" type="map">
+    <record jsxid="base" type="string"></record>
+    <record jsxid="home" type="string"></record>
+  </record>
+  <record jsxid="find-replace" type="map">
+    <record jsxid="left" type="number">641</record>
+    <record jsxid="top" type="number">55</record>
+    <record jsxid="cs" type="number">0</record>
+    <record jsxid="regexp" type="number">0</record>
+    <record jsxid="find" type="string">13</record>
+    <record jsxid="replace" type="string"></record>
+  </record>
+  <record jsxid="apihelp" type="map">
+    <record jsxid="class" type="string">jsx3.net.Service</record>
+    <record jsxid="member" type="string">_summary</record>
+    <record jsxid="aswindow" type="boolean">false</record>
+  </record>
+</data>

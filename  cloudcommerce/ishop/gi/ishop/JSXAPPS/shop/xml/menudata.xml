@@ -1,0 +1,71 @@
+<data jsxid="jsxroot">
+  <record jsxid="1">
+         <record jsxid="a" jsxtext="商品管理" jsximg="" jsxopen="1" jsxstyle="font-weight:bold;" jsxunselectable="1"  >
+          <record jsxid="a1" jsxtext="商品列表" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/goodsList.xml');" />
+          <record jsxid="a2" jsxtext="添加/编辑新商品" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/addNewGood.xml');" />
+		  <record jsxid="a3" jsxtext="商品分类" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/goodsCategory.xml');" />
+		  <record jsxid="a18" jsxtext="添加/编辑商品分类" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/addGoodsCategory.xml');"  />
+		  <record jsxid="a4" jsxtext="用户评论" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/userComments.xml');" />
+		  <record jsxid="a5" jsxtext="商品品牌" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/goodsBrandList.xml');"/>
+		  <record jsxid="a19" jsxtext="添加/编辑商品品牌" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/addNewBrand.xml');"/>
+		  <record jsxid="a6" jsxtext="商品类型" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/goodsType.xml');" />
+		  <record jsxid="a20" jsxtext="添加/编辑商品类型" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/addNewGoodsType.xml');" />
+		  <record jsxid="a21" jsxtext="商品属性" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/attributeList.xml');"/>
+		  <record jsxid="a22" jsxtext="添加/编辑属性" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/addAttribute.xml');"/>
+		  <record jsxid="a7" jsxtext="商品回收站" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/goodsRecyclebin.xml');"/>
+		  <record jsxid="a8" jsxtext="图片批量处理" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/pictureProcess.xml');"/>
+		  <record jsxid="a9" jsxtext="商品批量上传" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/goodsUpload.xml');"/>
+		  <record jsxid="a10" jsxtext="商品批量导出" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/goodsExport.xml');"/>
+		  <record jsxid="a11" jsxtext="商品批量修改" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/goodsModify.xml');"/>
+		  <record jsxid="a12" jsxtext="生成商品代码" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/generateGoodsCode.xml');"/>
+		  <record jsxid="a13" jsxtext="标签管理" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/tagsManage.xml');"/>
+		  <record jsxid="a14" jsxtext="虚拟卡管理" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/visualCardList.xml');"/>
+		  <record jsxid="a15" jsxtext="添加新虚拟卡" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/addNewVisualCard.xml');"/>
+		  <record jsxid="a16" jsxtext="更改加密串" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/changeEncryption.xml');"/>
+		  <record jsxid="a17" jsxtext="商品自动上下架" jsximg="images/menuunseleted.gif" jsxexecute="service.loadPage('components/goods/goodsUpAndDown.xml');"/>
+		  
+         </record>
+		 <record jsxid="b" jsxtext="促销管理" jsximg="" jsxopen="1" jsxstyle="font-weight:bold;" jsxunselectable="1">
+           <record jsxid="b1" jsxtext="夺宝奇兵" jsximg="images/menuunseleted.gif"/>
+		   <record jsxid="b2" jsxtext="红包类型" jsximg="images/menuunseleted.gif"/>
+		   <record jsxid="b3" jsxtext="商品包装"  jsximg="images/menuunseleted.gif"/>
+		   <record jsxid="b4" jsxtext="祝福贺卡"  jsximg="images/menuunseleted.gif"/>
+		   <record jsxid="b5" jsxtext="团购活动"  jsximg="images/menuunseleted.gif"/>
+           <record jsxid="b6" jsxtext="专题管理"  jsximg="images/menuunseleted.gif"/>
+           <record jsxid="b7" jsxtext="拍卖活动"  jsximg="images/menuunseleted.gif"/>
+           <record jsxid="b8" jsxtext="优惠活动"  jsximg="images/menuunseleted.gif"/>
+		   <record jsxid="b9" jsxtext="批发管理"  jsximg="images/menuunseleted.gif"/>
+		 </record>
+         <record jsxid="c" jsxtext="订单管理" jsximg="" jsxopen="1" jsxstyle="font-weight:bold;" jsxunselectable="1" >
+           <record jsxid="c1" jsxtext="订单列表" jsximg="images/menuunseleted.gif"/>
+           <record jsxid="c2" jsxtext="订单查询" jsximg="images/menuunseleted.gif"/>
+		   <record jsxid="c3" jsxtext="合并订单" jsximg="images/menuunseleted.gif"/>
+		   <record jsxid="c4" jsxtext="订单打印"  jsximg="images/menuunseleted.gif"/>
+		   <record jsxid="c5" jsxtext="缺货登记"  jsximg="images/menuunseleted.gif"/>
+		   <record jsxid="c6" jsxtext="添加订单"  jsximg="images/menuunseleted.gif"/>
+		 </record>
+		 <record jsxid="d" jsxtext="广告管理" jsximg="" jsxopen="1" jsxstyle="font-weight:bold;" jsxunselectable="1" >
+           <record jsxid="d1" jsxtext="广告列表"  jsximg="images/menuunseleted.gif"/>
+           <record jsxid="d2" jsxtext="广告位置"  jsximg="images/menuunseleted.gif"/>
+		  </record>
+		  <record jsxid="e" jsxtext="报表统计" jsximg="" jsxopen="1" jsxstyle="font-weight:bold;" jsxunselectable="1" >
+           <record jsxid="e1" jsxtext="流量分析" jsximg="images/menuunseleted.gif" />
+           <record jsxid="e2" jsxtext="订单统计" jsximg="images/menuunseleted.gif" />
+		   <record jsxid="e3" jsxtext="客户统计" jsximg="images/menuunseleted.gif" />
+		   <record jsxid="e4" jsxtext="销售概况" jsximg="images/menuunseleted.gif" />
+		   <record jsxid="e5" jsxtext="搜索引擎" jsximg="images/menuunseleted.gif" />
+		   <record jsxid="e6" jsxtext="销售排行" jsximg="images/menuunseleted.gif" />
+		   <record jsxid="e7" jsxtext="访问购买率" jsximg="images/menuunseleted.gif" />
+		   <record jsxid="e8" jsxtext="站外投放js" jsximg="images/menuunseleted.gif" />
+		   <record jsxid="e9" jsxtext="会员排行" jsximg="images/menuunseleted.gif" />
+		   <record jsxid="e8" jsxtext="销售明细" jsximg="images/menuunseleted.gif" />
+		 </record>
+		  <record jsxid="f" jsxtext="文章管理" jsximg="" jsxopen="1" jsxstyle="font-weight:bold;" jsxunselectable="1" >
+           <record jsxid="f1" jsxtext="文章分类" jsximg="images/menuunseleted.gif" />
+           <record jsxid="f2" jsxtext="文章列表" jsximg="images/menuunseleted.gif" />
+		   <record jsxid="f3" jsxtext="文章自动发布" jsximg="images/menuunseleted.gif" />
+		   <record jsxid="f4" jsxtext="在线调查" jsximg="images/menuunseleted.gif" />
+		 </record>
+
+        </record>
+      </data>

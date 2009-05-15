@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <!-- Define Struts Actions here -->
+    <bean name="/respond" class="com.jcommerce.web.action.PaymentRespondAction" singleton="true">
+    </bean>
+	<bean name="/dispatch" class="com.jcommerce.web.action.JspInitAction" singleton="true">
+		<property name="categoryManager">
+			<ref bean="CategoryManager"/>
+		</property>
+		<property name="goodsManager">
+			<ref bean="GoodsManager"/>
+		</property>
+		<property name="brandManager">
+			<ref bean="BrandManager"/>
+		</property>
+		<property name="cartManager">
+			<ref bean="CartManager"/>
+		</property>
+		<property name="sessionManager">
+			<ref bean="SessionManager"/>
+		</property>
+		<property name="galleryManager">
+			<ref bean="GalleryManager"/>
+		</property>
+		<property name="regionManager">
+			<ref bean="RegionManager"/>
+		</property>		
+		<property name="orderManager">
+			<ref bean="OrderManager"/>
+		</property>
+		<property name="orderGoodsManager">
+			<ref bean="OrderGoodsManager"/>
+		</property>
+		<property name="shippingManager">
+			<ref bean="ShippingManager"/>
+		</property>
+		<property name="paymentManager">
+			<ref bean="PaymentManager"/>
+		</property>		
+		<property name="userManager">
+			<ref bean="UserManager"/>
+		</property>
+		<property name="articleManager">
+			<ref bean="ArticleManager"/>
+		</property>
+		<property name="commentManager">
+			<ref bean="CommentManager"/>
+		</property>
+		<property name="paymentMetaManager">
+			<ref bean="PaymentMetaManager"/>
+		</property>
+	</bean>
+	
+	<bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+      <property name="templateLoaderPath"><value>/</value></property>
+    </bean>
+    
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+      <property name="exposeSpringMacroHelpers"><value>true</value></property>
+      <property name="requestContextAttribute"><value>rc</value></property>
+      <property name="prefix"><value>/WEB-INF/freemarker</value></property>
+      <property name="suffix"><value>.ftl</value></property> 
+    </bean>
+</beans>

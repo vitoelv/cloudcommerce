@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<serialization xmlns="urn:tibco.com/v3.0" jsxversion="3.6">
+  <name>Dialog</name>
+  <icon>images/prototypes/dialog.gif</icon>
+  <description>Dialog box.  (Set Modal property for a modal dialog).</description>
+  <onBeforeDeserialize/>
+  <onAfterDeserialize/>
+  <object type="jsx3.gui.Dialog">
+    <variants jsxwidth="300" jsxheight="150" jsxzindex="5000" jsxwindowstate="1" jsxresize="0"/>
+    <strings jsxname="diaNote" jsxleft="0" jsxtop="0"/>
+    <object type="jsx3.gui.WindowBar">
+      <variants/>
+      <strings jsxname="windowBar" jsxtext="记事本"/>
+      <dynamics jsxbg="@Dialoge BG"/>
+      <object type="jsx3.gui.ToolbarButton">
+        <variants/>
+        <strings jsxname="btnMinimize" jsximage="images/min.gif"/>
+        <dynamics jsxtip="@Min Tip"/>
+        <events jsxexecute="this.getAncestorOfType(jsx3.gui.Dialog).doToggleState();"/>
+      </object>
+      <object type="jsx3.gui.ToolbarButton">
+        <variants/>
+        <strings jsxname="btnClose"/>
+        <dynamics jsximage="@Close Icon" jsxtip="@Close Tip"/>
+        <events jsxexecute="this.getAncestorOfType(jsx3.gui.Dialog).doClose();"/>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxoverflow="1" jsxloadtype="1"/>
+      <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1"/>
+      <object type="jsx3.gui.LayoutGrid">
+        <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+        <strings jsxname="layout (--)" jsxrows="90,*" jsxwidth="100%" jsxheight="100%"/>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="2"/>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"/>
+          <dynamics jsxborder="@No jsxborder"/>
+          <object type="jsx3.gui.TextBox">
+            <variants jsxwidth="290" jsxheight="80" jsxtype="1"/>
+            <strings jsxname="textarea" jsxoverflow="auto" jsxvalue=""/>
+            <dynamics jsxborder="@txtBox Border "/>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="1"/>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="right"/>
+          <dynamics jsxborder="@No jsxborder"/>
+          <object type="jsx3.gui.CheckBox">
+            <variants jsxheight="18"/>
+            <strings jsxname="checkbox" jsxtext="自动保存" jsxmargin="0 4 0 0" jsxfontname="Arial"/>
+            <events jsxexecute="jsx3.out('mycheck','the jsxexecute method was fired for checkbox, ' + this.getId());"/>
+          </object>
+          <object type="jsx3.gui.Button">
+            <variants jsxindex="0" jsxrelativeposition="1"/>
+            <strings jsxname="button" jsxtext="保存" jsxmargin="0 5 0 0" jsxdisplay=""/>
+            <dynamics jsxwidth="@btnwidth" jsxheight="@Btn Height" jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight" jsxcolor="@Btn Color" jsxstyleoverride="@Btn css" jsxborder="@Btn Border " jsxpadding="@@Btn Padding"/>
+            <events jsxexecute="alert('hello');"/>
+          </object>
+          <object type="jsx3.gui.Button">
+            <variants jsxindex="0"/>
+            <strings jsxname="button" jsxtext="保存" jsxmargin="0 5 0 0"/>
+            <dynamics jsxwidth="@btnwidth" jsxheight="@Btn Height" jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight" jsxcolor="@Btn Color" jsxstyleoverride="@Btn css" jsxborder="@Btn Border " jsxpadding="@@Btn Padding"/>
+            <events jsxexecute="alert('hello');"/>
+          </object>
+        </object>
+      </object>
+    </object>
+  </object>
+</serialization>

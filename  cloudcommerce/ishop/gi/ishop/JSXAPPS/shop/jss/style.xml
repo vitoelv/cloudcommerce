@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data jsxid="jsxroot" jsxns="urn:tibco.com/v3.0/dynamicproperties/1">
+  <record jsxid="@Btn Font Name" type="jsxfontname" jsxtext="Arial"></record>
+  <record jsxid="@Btn Font Size" type="jsxfontsize" jsxtext="12"></record>
+  <record jsxid="@Btn Font Weight" type="jsxfontweight" jsxtext="normal"></record>
+  <record jsxid="@Btn Color" type="jsxcolor" jsxtext="#2F525D"></record>
+  <record jsxid="@Btn Disabled Color " jsxtext="#c2c2c2" type="jsxdisabledcolor"></record>
+  <record jsxid="@Btn Border " type="jsxborder" jsxtext="1px solid #000000"></record>
+  <record jsxid="@Btn css" eval="1" jsxtext="'background-image:url('+shop.resolveURI(&quot;images/buttonBkgrd.jpg&quot;)+'); background-repeat:repeat;'" type="jsxstyleoverride"></record>
+  <record jsxid="@Matrix HeaderHeight " type="jsxheaderheight" jsxtext="18"></record>
+  <record jsxid="@Matrix RowHeight " jsxtext="20" type="jsxrowheight"></record>
+  <record jsxid="@Matrix HeaderBorder " type="jsxheaderborder" jsxtext="0px solid #737373;1px solid #737373;1px solid #737373;1px solid #737373"></record>
+  <record jsxid="@Matrix BodyBorder " jsxtext="0px solid #737373; 1px solid #737373; 1px solid #737373; 1px solid #737373" type="jsxbodyborder"></record>
+  <record jsxid="@Matrix Focus Style " type="jsxfocusstyle" jsxtext="font-weight:normal"></record>
+  <record jsxid="@Matrix Spy Style " jsxtext="text-docoration:none" type="jsxspystyle"></record>
+  <record jsxid="@MatrixC Font Name " type="jsxfontname" jsxtext="Arial"></record>
+  <record jsxid="@MatrixC Font Size" type="jsxfontsize" jsxtext="12"></record>
+  <record jsxid="@MatrixC Font Weight " type="jsxfontweight" jsxtext="bold"></record>
+  <record jsxid="@MatrixC Color " type="jsxcolor" jsxtext="#000000"></record>
+  <record jsxid="@MatrixC BGColor " jsxtext="#c8c8d5" type="jsxbgcolor"></record>
+  <record jsxid="@MatrixC BackGround " type="jsxbg" eval="1" jsxtext="&quot;background-image:url(&quot;+shop.resolveURI(&quot;images/tableHeaderBkgrd.jpg&quot;)+&quot;); background-repeat:repeat;&quot;"></record>
+  <record jsxid="@MatrixC Border " type="jsxcellborder" jsxtext="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"></record>
+  <record jsxid="@MatrixCell Font Name " jsxtext="Arial" type="jsxcellfontname"></record>
+  <record jsxid="@MatrixCell Font Size " type="jsxcellfontsize" jsxtext="12"></record>
+  <record jsxid="@MatrixCell Font Weight " type="jsxcellfontweight" jsxtext="normal"></record>
+  <record jsxid="@MatrixCell Color " jsxtext="#424242" type="jsxcellcolor"></record>
+  <record jsxid="@MatrixCell BGColor " type="jsxcellbgcolor" jsxtext="#ffffff"></record>
+  <record jsxid="@txtBox Font Name " type="jsxfontname" jsxtext="Arial"></record>
+  <record jsxid="@txtBox Font Size " type="jsxfontsize" jsxtext="12"></record>
+  <record jsxid="@txtBox Font Weight " type="jsxfontweight" jsxtext="normal"></record>
+  <record jsxid="@txtBox Border " type="jsxborder" jsxtext="1px solid #555555"></record>
+  <record jsxid="@txtBox Height " type="jsxheight" jsxtext="18"></record>
+  <record jsxid="@txtBox Width" type="jsxwidth" jsxtext="250"></record>
+  <record jsxid="@lbl Font Name" type="jsxfontname" jsxtext="Arial"></record>
+  <record jsxid="@lbl Font Size" jsxtext="12" type="jsxfontsize"></record>
+  <record jsxid="@lbl Font Weight" type="jsxfontweight" jsxtext="bold"></record>
+  <record jsxid="@Matrix BG" jsxtext="&quot;background-image:url(&quot;+shop.resolveURI(&quot;images/tableHeaderBkgrd.jpg&quot;)+&quot;); background-repeat:repeat;&quot;" type="jsxbg" eval="1"></record>
+  <record jsxid="@Btn Width" type="jsxwidth"></record>
+  <record jsxid="@Btn Padding" type="jsxpdding" jsxtext="1 9 0 9"></record>
+  <record jsxid="@Table Header Color" type="jsxbgcolor" jsxtext="#ECE9E9"></record>
+  <record jsxid="@Blk Top Color" type="jsxbgcolor" jsxtext="#ECE9E9"></record>
+  <record jsxid="@Blk Border" jsxtext="1px solid #555555" type="jsxborder"></record>
+  <record jsxid="@Btn Height" type="jsxheight" jsxtext="18"></record>
+  <record jsxid="@Select Height" type="jsxheight" jsxtext="18"></record>
+  <record jsxid="@Select Border" jsxtext="1px solid #555555" type="jsxborder"></record>
+  <record jsxid="@Select Width" type="jsxwidth" jsxtext="220"></record>
+  <record jsxid="@Spliiter V Imange" jsxtext="&quot;background-image:url(&quot;+shop.resolveURI(&quot;images/splitter_vertical.jpg&quot;)+&quot;); background-repeat:repeat-y;&quot;" type="jsxvsplitimage" eval="1"></record>
+  <record jsxid="@Matrix Header Bg" type="jsxbg" eval="1" jsxtext="&quot;background-image:url(&quot;+shop.resolveURI(&quot;images/tableHeaderBkgrd.jpg&quot;)+&quot;);background-repeat:repeat;&quot;"></record>
+  <record jsxid="@Tab Selected CSS" type="jsxstyleoverride" eval="1" jsxtext="&quot;background-image:url(&quot;+shop.resolveURI('jsxapp://shop/images/tab_selected.jpg')+&quot;); background-repeat:repeat;&quot;"></record>
+  <record jsxid="@Tab Unselecte CSS" type="jsxstyleoverride" eval="1" jsxtext="&quot;background-image:url(&quot;+shop.resolveURI('jsxapp://shop/images/tab.jpg')+&quot;); background-repeat:repeat;&quot;"></record>
+  <record jsxid="@Tab Panel Bg" jsxtext="&quot;background-image:url(&quot;+shop.resolveURI(&quot;images/tabpane_bg.gif&quot;)+&quot;); background-repeat:repeat; background-position: 0px 0px;&quot;" type="jsxbg" eval="1"></record>
+  <record jsxid="@Navigation Label Bg" jsxtext="&quot;background-image:url(&quot;+shop.resolveURI(&quot;images/navigationCaret.gif&quot;)+&quot;);background-repeat:no-repeat;background-position: 0px 4px; &quot;" type="jsxbg" eval="1"></record>
+  <record jsxid="@Brand Operation Template" jsxtext="&quot;&lt;xsl:template xmlns:xsl=\&quot;http://www.w3.org/1999/XSL/Transform\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI('images/icon_edit.gif')+&quot;\&quot; onclick=\&quot;com.tibco.ishop.Brand.onEditImgClick();\&quot; title=\&quot;编辑\&quot;/&gt;&lt;img src=\&quot;&quot;+shop.resolveURI('images/icon_trash.gif')+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Brand.onDeleteImgClick();\&quot; title=\&quot;删除\&quot;/&gt;&lt;/xsl:template&gt;&quot; " type="jsxvaluetemplate" eval="1"></record>
+  <record jsxid="@Btn Temp CSS" type="jsxstyleoverride" jsxtext="&quot;background-image:url(&quot;+shop.resolveURI(&quot;images/buttonBkgrd_pressed.jpg&quot;)+&quot;);background-repeat:repeat;&quot;" eval="1"></record>
+  <record jsxid="@Matrix Cell Border" type="jsxcellorder" jsxtext="0px solid #F5F5F5; 1px solid #F5F5F5; 1px solid #EAEAEA; 0px solid #F5F5F5"></record>
+  <record jsxid="@Select Font Name" type="jsxfontname" jsxtext="Arial"></record>
+  <record jsxid="@Select Font Size" type="jsxfontsize" jsxtext="12"></record>
+  <record jsxid="@Header BG" type="jsxbg" eval="1" jsxtext="&quot;background-image:url(&quot;+shop.resolveURI(&quot;images/headerLog.jpg&quot;)+&quot;); background-repeat:repeat;&quot;"></record>
+  <record jsxid="@Navigation Label Padding" jsxtext="0 5 0 4" type="jsxpadding"></record>
+  <record jsxid="@@Btn Padding" type="jsxpadding" jsxtext="1 9 0 9"></record>
+  <record jsxid="@Block Padding" type="jsxpadding" jsxtext="15 5 15 5"></record>
+  <record jsxid="@Top Block Padding" type="jsxpadding" jsxtext="5 0 0 10"></record>
+  <record jsxid="@Top Block Margin" type="jsxmargin" jsxtext="0 0 12 0"></record>
+  <record jsxid="@Top Btn Margin" type="jsxmargin" jsxtext="0 10 0 0"></record>
+  <record jsxid="@Label Color" type="jsxcolor" jsxtext="#2f525d"></record>
+  <record jsxid="@Label Padding" type="jsxpadding" jsxtext="2 20 0 0"></record>
+  <record jsxid="@Label Width" type="jsxwidth" jsxtext="220"></record>
+  <record jsxid="@Label Height" type="jsxheight" jsxtext="20"></record>
+  <record jsxid="@Detai Block Padding" type="jsxpadding" jsxtext="10 0 30 0"></record>
+  <record jsxid="@Brand Show Template" type="jsxvaluetemplate" eval="1" jsxtext="&quot;&lt;xsl:template xmlns:xsl=\&quot;http://www.w3.org/1999/XSL/Transform\&quot;&gt;&lt;xsl:if test=\&quot;@show='true'\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/yes.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Brand.onShowImageClick();\&quot; /&gt;   &lt;/xsl:if&gt;    &lt;xsl:if test=\&quot;@show='false'\&quot;&gt;      &lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/no.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Brand.onShowImageClick();\&quot; /&gt;   &lt;/xsl:if&gt; &lt;/xsl:template&gt;&quot;"></record>
+  <record jsxid="@Type State Template" type="jsxvaluetemplate" eval="1" jsxtext="&quot;&lt;xsl:template xmlns:xsl=\&quot;http://www.w3.org/1999/XSL/Transform\&quot;&gt;&lt;xsl:if test=\&quot;@state='true'\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/yes.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Brand.onShowImageClick();\&quot; /&gt;   &lt;/xsl:if&gt;    &lt;xsl:if test=\&quot;@state='false'\&quot;&gt;      &lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/no.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Brand.onShowImageClick();\&quot; /&gt;   &lt;/xsl:if&gt; &lt;/xsl:template&gt;&quot;"></record>
+  <record jsxid="@Type Operation Template" jsxtext="&lt;xsl:template xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;   &lt;span style=&quot;text-decoration:underline&quot; title=&quot;属性列表&quot; onClick=&quot;com.tibco.ishop.Type.onAttributeClick()&quot;&gt;属性列表&lt;/span&gt; | &lt;span style=&quot;text-decoration:underline&quot; title=&quot;编辑&quot; onClick=&quot;com.tibco.ishop.Type.onEditClick()&quot;&gt;编辑&lt;/span&gt; | &lt;span style=&quot;text-decoration:underline&quot; title=&quot;删除&quot; onClick=&quot;com.tibco.ishop.Type.onDeleteClick()&quot;&gt;删除&lt;/span&gt;  &lt;/xsl:template&gt;" type="jsxvaluetemplate"></record>
+  <record jsxid="@Matrix Cell Header Boder" type="jsxborder" jsxtext="1px solid #555555;1px solid #949494;0px solid #555555;1px solid #E4E4E4"></record>
+  <record jsxid="@Btn Press Color" type="jsxcolor" jsxtext="#c2c2c2"></record>
+  <record jsxid="@Attribute Operation Template" type="jsxvaluetemplate" eval="1" jsxtext=" &quot;&lt;xsl:template xmlns:xsl=\&quot;http://www.w3.org/1999/XSL/Transform\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI('images/icon_edit.gif')+&quot;\&quot; onclick=\&quot;com.tibco.ishop.Attribute.onEditImgClick();\&quot; title=\&quot;编辑\&quot;/&gt;&lt;img src=\&quot;&quot;+shop.resolveURI('images/icon_trash.gif')+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Attribute.onDeleteImgClick();\&quot; title=\&quot;删除\&quot;/&gt;&lt;/xsl:template&gt;&quot; "></record>
+  <record jsxid="@Pane Padding" type="jsxpadding" jsxtext="2 20 0 0"></record>
+  <record jsxid="@Attribute InputType Template" type="jsxvaluetemplate" jsxtext="&lt;xsl:template xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;&lt;xsl:if test=&quot;@inputtype='0'&quot;&gt;手工输入&lt;/xsl:if&gt;   &lt;xsl:if test=&quot;@inputtype='1'&quot;&gt;从列表中选择&lt;/xsl:if&gt;&lt;xsl:if test=&quot;@inputtype='2'&quot;&gt;多行文本框&lt;/xsl:if&gt;&lt;/xsl:template&gt;"></record>
+  <record jsxid="@Category Operation Template" type="jsxvaluetemplate" jsxtext="&lt;xsl:template xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;   &lt;span style=&quot;text-decoration:underline&quot; title=&quot;转移商品&quot; onClick=&quot;com.tibco.ishop.Category.onTransferGoodsClick()&quot;&gt;转移商品&lt;/span&gt; | &lt;span style=&quot;text-decoration:underline&quot; title=&quot;编辑&quot; onClick=&quot;com.tibco.ishop.Category.onEditClick()&quot;&gt;编辑&lt;/span&gt; | &lt;span style=&quot;text-decoration:underline&quot; title=&quot;删除&quot; onClick=&quot;com.tibco.ishop.Category.onDeleteClick()&quot;&gt;删除&lt;/span&gt;  &lt;/xsl:template&gt; "></record>
+  <record jsxid="@Category ShowNavigation Template" type="jsxvaluetemplate" jsxtext="&quot;&lt;xsl:template xmlns:xsl=\&quot;http://www.w3.org/1999/XSL/Transform\&quot;&gt;&lt;xsl:if test=\&quot;@shownavigation='true'\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/yes.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;\&quot; /&gt;&lt;/xsl:if&gt;&lt;xsl:if test=\&quot;@shownavigation='false'\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/no.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;;\&quot; /&gt;&lt;/xsl:if&gt; &lt;/xsl:template&gt;&quot;" eval="1"></record>
+  <record jsxid="@Category Show Template" type="jsxvaluetemplate" eval="1" jsxtext="&quot;&lt;xsl:template xmlns:xsl=\&quot;http://www.w3.org/1999/XSL/Transform\&quot;&gt;&lt;xsl:if test=\&quot;@show='true'\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/yes.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;\&quot; /&gt;&lt;/xsl:if&gt;&lt;xsl:if test=\&quot;@show='false'\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/no.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;;\&quot; /&gt;&lt;/xsl:if&gt; &lt;/xsl:template&gt;&quot;"></record>
+  <record jsxid="@Goods OnSale Template" type="jsxvaluetemplate" jsxtext="&quot;&lt;xsl:template xmlns:xsl=\&quot;http://www.w3.org/1999/XSL/Transform\&quot;&gt;&lt;xsl:if test=\&quot;@onsale='true'\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/yes.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Goods.onSaleImageClick();\&quot; /&gt;&lt;/xsl:if&gt; &lt;xsl:if test=\&quot;@onsale='false'\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/no.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Goods.onSaleImageClick();\&quot; /&gt;&lt;/xsl:if&gt; &lt;/xsl:template&gt;&quot;" eval="1"></record>
+  <record jsxid="@Goods Hot Template" type="jsxvaluetemplate" eval="1" jsxtext="&quot;&lt;xsl:template xmlns:xsl=\&quot;http://www.w3.org/1999/XSL/Transform\&quot;&gt;&lt;xsl:if test=\&quot;@hotsold='true'\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/yes.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Goods.onHotImageClick();\&quot; /&gt;&lt;/xsl:if&gt; &lt;xsl:if test=\&quot;@hotsold='false'\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/no.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Goods.onHotImageClick();\&quot; /&gt;&lt;/xsl:if&gt; &lt;/xsl:template&gt;&quot;"></record>
+  <record jsxid="@Goods New Template" type="jsxvaluetemplate" jsxtext="&quot;&lt;xsl:template xmlns:xsl=\&quot;http://www.w3.org/1999/XSL/Transform\&quot;&gt;&lt;xsl:if test=\&quot;@new='true'\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/yes.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Goods.onHotImageClick();\&quot; /&gt;&lt;/xsl:if&gt; &lt;xsl:if test=\&quot;@new='false'\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/no.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Goods.onHotImageClick();\&quot; /&gt;&lt;/xsl:if&gt; &lt;/xsl:template&gt;&quot;" eval="1"></record>
+  <record jsxid="@Goods Best Template" type="jsxvaluetemplate" eval="1" jsxtext="&quot;&lt;xsl:template xmlns:xsl=\&quot;http://www.w3.org/1999/XSL/Transform\&quot;&gt;&lt;xsl:if test=\&quot;@best='true'\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/yes.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Goods.onHotImageClick();\&quot; /&gt;&lt;/xsl:if&gt; &lt;xsl:if test=\&quot;@best='false'\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI(&quot;images/no.gif&quot;)+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Goods.onHotImageClick();\&quot; /&gt;&lt;/xsl:if&gt; &lt;/xsl:template&gt;&quot;"></record>
+  <record jsxid="@Goods Operation Template" type="jsxvaluetemplate" eval="1" jsxtext="&quot;&lt;xsl:template xmlns:xsl=\&quot;http://www.w3.org/1999/XSL/Transform\&quot;&gt;&lt;img src=\&quot;&quot;+shop.resolveURI('images/icon_view.gif')+&quot;\&quot; onclick=\&quot;com.tibco.ishop.Goods.onViewImgClick();\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; title=\&quot;查看\&quot;/&gt;&lt;img src=\&quot;&quot;+shop.resolveURI('images/icon_edit.gif')+&quot;\&quot; onclick=\&quot;com.tibco.ishop.Goods.onEditImgClick();\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; title=\&quot;编辑\&quot;/&gt;&lt;img src=\&quot;&quot;+shop.resolveURI('images/icon_copy.gif')+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Goods.onCopyImgClick();\&quot; title=\&quot;复制\&quot;/&gt;&lt;img src=\&quot;&quot;+shop.resolveURI('images/icon_trash.gif')+&quot;\&quot; style=\&quot;margin:0px 5px 0px 4px\&quot; onclick=\&quot;com.tibco.ishop.Goods.onDeleteImgClick();\&quot; title=\&quot;回收站\&quot;/&gt;&lt;/xsl:template&gt;&quot; "></record>
+</data>

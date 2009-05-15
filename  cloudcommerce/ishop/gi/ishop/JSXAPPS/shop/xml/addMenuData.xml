@@ -1,0 +1,16 @@
+<data jsxid="jsxroot">
+         <record jsxid="a" jsxtext="AAAAAA" jsxopen="1" >
+           <record jsxid="a1" jsxtext="a1" />
+           <record jsxid="a2" jsxtext="a2" />
+		   <record jsxid="a3" jsxtext="a3" />
+		   <record jsxid="a4" jsxtext="a4" />
+		   <record jsxid="a5" jsxtext="a4" />
+		 </record>
+		 <record jsxid="b" jsxtext="BBBBB" jsxopen="1" >
+           <record jsxid="a1" jsxtext="a1" />
+           <record jsxid="a2" jsxtext="a2" />
+		   <record jsxid="a3" jsxtext="a3" />
+		   <record jsxid="a4" jsxtext="a4" />
+		   <record jsxid="a5" jsxtext="a4" />
+		 </record>
+</data>

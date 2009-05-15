@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<serialization jsxversion="3.6" xmlns="urn:tibco.com/v3.0">
+  <name><![CDATA[undefined]]></name>
+  <icon><![CDATA[undefined]]></icon>
+  <description><![CDATA[undefined]]></description>
+  <onBeforeDeserialize><![CDATA[undefined]]></onBeforeDeserialize>
+  <onAfterDeserialize><![CDATA[undefined]]></onAfterDeserialize>
+  <object type="jsx3.gui.Block">
+    <variants jsxheight="80" jsxoverflow="1"></variants>
+    <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+    <object type="jsx3.gui.LayoutGrid">
+      <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+      <strings jsxname="layout ( | )" jsxcols="220,225,*" jsxwidth="100%" jsxheight="100%"></strings>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2"></variants>
+        <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="right" jsxpadding="0 20 0 0"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="lblAdd" jsxtext="[+]" jsxcursor="hand"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxcolor="@Label Color"></dynamics>
+          <properties onmouseout="this.style.color=&quot;2f525d&quot;;" onmouseover="this.style.color=&quot;#EB8A3D&quot;;"></properties>
+          <events jsxclick="com.tibco.ishop.GoodAttributeEditBlock.onLabelAddClick(this);"></events>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="lblMinus" jsxtext="[-]" jsxcursor="hand" jsxdisplay="none"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxcolor="@Label Color"></dynamics>
+          <properties onmouseout="this.style.color=&quot;2f525d&quot;;" onmouseover="this.style.color=&quot;#EB8A3D&quot;;"></properties>
+          <events jsxclick="com.tibco.ishop.GoodAttributeEditBlock.onLabelMinusClick(this);"></events>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="lblAttributeName" jsxtext=""></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight" jsxcolor="@Label Color"></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="1"></variants>
+        <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+        <dynamics jsxborder="@No jsxborder"></dynamics>
+        <object type="jsx3.gui.TextBox">
+          <variants jsxheight="72" jsxtype="1" jsxwidth="220"></variants>
+          <strings jsxname="txtAttributeValue" jsxvalue="" jsxoverflow="auto"></strings>
+          <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxfontweight="@txtBox Font Weight " jsxborder="@txtBox Border "></dynamics>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="2"></variants>
+        <strings jsxname="attributePricePane" jsxwidth="100%" jsxheight="100%" jsxtextalign="left"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3"></variants>
+          <strings jsxname="label" jsxtext="属性价格"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxcolor="@Label Color"></dynamics>
+        </object>
+        <object type="jsx3.gui.TextBox">
+          <variants jsxwidth="80"></variants>
+          <strings jsxname="txtPrice" jsxmargin="0 4 0 0"></strings>
+          <dynamics jsxheight="@txtBox Height " jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxfontweight="@txtBox Font Weight " jsxborder="@txtBox Border "></dynamics>
+        </object>
+      </object>
+    </object>
+  </object>
+</serialization>

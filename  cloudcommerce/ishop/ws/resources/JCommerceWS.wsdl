@@ -1,0 +1,1631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions targetNamespace="http://ws.jcommerce.com/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:s0="http://ws.jcommerce.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://ws.jcommerce.com/">
+			<s:simpleType name="CommandType">
+				<s:annotation>
+					<s:documentation>Provides actions to deal with element data.</s:documentation>
+				</s:annotation>
+				<s:restriction base="s:string">
+					<s:enumeration value="read"/>
+					<s:enumeration value="insert"/>
+					<s:enumeration value="update"/>
+					<s:enumeration value="upsert"/>
+					<!-- N/A -->
+					<s:enumeration value="delete"/>
+				</s:restriction>
+			</s:simpleType>
+			<s:simpleType name="EntityName">
+				<s:restriction base="s:string">
+					<s:enumeration value="AccountLog"/>
+					<s:enumeration value="AdminAction"/>
+					<s:enumeration value="AdminLog"/>
+					<s:enumeration value="AdminMessage"/>
+					<s:enumeration value="AdminUser"/>
+					<s:enumeration value="AdPosition"/>
+					<s:enumeration value="Adsense"/>
+					<s:enumeration value="Advertisement"/>
+					<s:enumeration value="AffiliateLog"/>
+					<s:enumeration value="Agency"/>
+					<s:enumeration value="Article"/>
+					<s:enumeration value="ArticleCategory"/>
+					<s:enumeration value="Attribute"/>
+					<s:enumeration value="AuctionLog"/>
+					<s:enumeration value="AutoManage"/>
+					<s:enumeration value="BonusType"/>
+					<s:enumeration value="BookingGoods"/>
+					<s:enumeration value="Brand"/>
+					<s:enumeration value="Card"/>
+					<s:enumeration value="Cart"/>
+					<s:enumeration value="Category"/>
+					<s:enumeration value="CollectGoods"/>
+					<s:enumeration value="Comment"/>
+					<s:enumeration value="Crons"/>
+					<s:enumeration value="EmailList"/>
+					<s:enumeration value="EmailSendList"/>
+					<s:enumeration value="ErrorLog"/>
+					<s:enumeration value="FailedLogin"/>
+					<s:enumeration value="FavourableActivity"/>
+					<s:enumeration value="Feedback"/>
+					<s:enumeration value="FriendLink"/>
+					<s:enumeration value="Gallery"/>
+					<s:enumeration value="Goods"/>
+					<s:enumeration value="GoodsActivity"/>
+					<s:enumeration value="GoodsArticle"/>
+					<s:enumeration value="GoodsAttribute"/>
+					<s:enumeration value="GoodsType"/>
+					<s:enumeration value="GroupGoods"/>
+					<s:enumeration value="Keywords"/>
+					<s:enumeration value="LinkGoods"/>
+					<s:enumeration value="MailTemplate"/>
+					<s:enumeration value="MemberPrice"/>
+					<s:enumeration value="Navigation"/>
+					<s:enumeration value="Order"/>
+					<s:enumeration value="OrderAction"/>
+					<s:enumeration value="OrderGoods"/>
+					<s:enumeration value="Pack"/>
+					<s:enumeration value="PayLog"/>
+					<s:enumeration value="Payment"/>
+					<s:enumeration value="Plugins"/>
+					<s:enumeration value="Region"/>
+					<s:enumeration value="SearchEngine"/>
+					<s:enumeration value="Session"/>
+					<s:enumeration value="SessionsData"/>
+					<s:enumeration value="Shipping"/>
+					<s:enumeration value="ShippingArea"/>
+					<s:enumeration value="ShopConfig"/>
+					<s:enumeration value="SnatchLog"/>
+					<s:enumeration value="Stats"/>
+					<s:enumeration value="Tag"/>
+					<s:enumeration value="Topic"/>
+					<s:enumeration value="User"/>
+					<s:enumeration value="UserAccount"/>
+					<s:enumeration value="UserAddress"/>
+					<s:enumeration value="UserBonus"/>
+					<s:enumeration value="UserRank"/>
+					<s:enumeration value="VirtualCard"/>
+					<s:enumeration value="Vote"/>
+					<s:enumeration value="VoteData"/>
+					<s:enumeration value="VoteLog"/>
+					<s:enumeration value="Wholesale"/>
+				</s:restriction>
+			</s:simpleType>
+			<!-- record count of every read request -->
+			<s:complexType name="ReadCount">
+				<s:sequence>
+					<s:element default="0" maxOccurs="1" minOccurs="1" name="count" type="s:int"/>
+					<s:element default="0" maxOccurs="1" minOccurs="1" name="start" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:simpleType name="QueryOperator">
+				<s:restriction base="s:int">
+					<s:enumeration value="0"/>
+					<!-- EQUALS -->
+					<s:enumeration value="1"/>
+					<!-- CONTAINS -->
+					<s:enumeration value="2"/>
+					<!-- LIKE -->
+					<s:enumeration value="3"/>
+					<!-- GREATERTHAN -->
+					<s:enumeration value="4"/>
+					<!-- LESSTHAN -->
+				</s:restriction>
+			</s:simpleType>
+			<s:complexType name="QueryCondition">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="1" name="field" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="1" name="value" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="1" name="operator" type="s0:QueryOperator"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="QueryOrder">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="1" name="field" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="1" name="ascend" type="s:boolean"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="QueryCriteria">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="condition" type="s0:QueryCondition"/>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="order" type="s0:QueryOrder"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ObjIdList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="id" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Brand">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="logo" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="description" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="siteUrl" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="show" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sortOrder" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Category">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="parent" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="children" type="s0:ObjIdList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsList" type="s0:ObjIdList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="keywords" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="description" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sortOrder" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="templateFile" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="measureUnit" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="showInNavigator" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="style" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="show" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="grade" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="filterAttribute" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:simpleType name="SearchStyle">
+				<s:restriction base="s:int">
+					<s:enumeration value="0"/>
+					<!-- no need -->
+					<s:enumeration value="1"/>
+					<!-- serrch by keyword -->
+					<s:enumeration value="2"/>
+					<!-- search in one scopeno -->
+				</s:restriction>
+			</s:simpleType>
+			<s:complexType name="Attribute">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsType" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="inputType" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="type" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="values" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="index" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sortOrder" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="linked" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="group" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:simpleType name="AttGroupList">
+				<s:list itemType="s:string"/>
+			</s:simpleType>
+			<s:complexType name="GoodsType">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="enabled" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="attributeGroup" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Goods">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="categories" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="SN" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="nameStyle" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="clickCount" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="brand" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="providerName" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="number" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="weight" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="marketPrice" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="shopPrice" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="promotePrice" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="promoteStart" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="promoteEnd" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="warnNumber" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="keywords" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="brief" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="description" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="thumb" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="image" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="originalImage" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="realGoods" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="extensionCode" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="onSale" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="aloneSale" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="integral" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="addTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sortOrder" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="deleted" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="bestSold" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="newAdded" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="hotSold" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="promoted" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="bonusType" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="lastUpdate" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="type" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sellerNote" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="giveIntegral" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="mainCategory" type="s:int"/>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="galleries" type="s:int"/>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="articles" type="s:int"/>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="attributes" type="s0:GoodsAttribute"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AccountLog">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="user" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="userMoney" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="frozenMoney" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="rankPoints" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="payPoints" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="changeTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="changeDescription" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="changeType" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AdminAction">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="parent" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="code" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AdminLog">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="user" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="logTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="logInfo" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="IP" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AdminMessage">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="senderID" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="receiverID" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sentTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="readTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="readed" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="deleted" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="title" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="message" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AdminUser">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="password" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="email" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="lastIP" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="lastLogin" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="addTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="actionList" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="navigatorList" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="languageType" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="todolist" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="agency" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AdPosition">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="positionName" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="adWidth" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="adHeight" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="positionDescription" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="positionStyle" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Adsense">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="advertisement" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="referer" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="clicks" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Advertisement">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="adPosition" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="mediaType" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="adName" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="adLink" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="adCode" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="startTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="endTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="linkMan" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="linkEmail" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="linkPhone" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="clickCount" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="enabled" type="s:boolean"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AffiliateLog">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="order" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="time" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="user" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="money" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="points" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="separateType" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Agency">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="description" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Article">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="articleCategory" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="title" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="content" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="author" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="authorEmail" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="keywords" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="articleType" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="open" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="addTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="fileURL" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="openType" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="link" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArticleCategory">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="type" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="keywords" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="description" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sortOrder" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="showInNavigator" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="parent" type="s:int"/>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="children" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AuctionLog">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="actId" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="bidUser" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="bidPrice" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="bidTime" type="s:date"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AutoManage">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="type" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="startTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="endTime" type="s:date"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="BonusType">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="money" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="minAmount" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="maxAmount" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sendType" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="minGoodsAmount" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sendStart" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sendEnd" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="useStart" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="useEnd" type="s:date"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="BookingGoods">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="user" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="email" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="linker" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="phone" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsDescription" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsNumber" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="time" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="disposed" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="disposeUser" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="disposeTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="disposeNote" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Card">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="description" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="image" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="fee" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="freeMoney" type="s:double"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Cart">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="user" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="session" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsSN" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsName" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="marketPrice" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsPrice" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsNumber" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="realGoods" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="extensionCode" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="parent" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="type" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="gift" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="handSelectable" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsAttribute" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="CollectGoods">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="user" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="addTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="attention" type="s:boolean"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Comment">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="commentType" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="email" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="user" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="userName" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="content" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="commentRank" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="addTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="ipAddress" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="status" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="parent" type="s:int"/>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="children" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Crons">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="cronCode" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="cronName" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="cronDesc" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="cronConfig" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="cronOrder" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="thisTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="nextTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="day" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="week" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="hour" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="minutes" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="enable" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="runOnce" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="allowIp" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="allowFiles" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="EmailList">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="email" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="confirm" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="hash" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="EmailSendList">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="email" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="templateId" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="emailContent" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="error" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="priority" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="lastSend" type="s:date"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ErrorLog">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="info" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="file" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="time" type="s:date"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="FailedLogin">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="count" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="lastUpdate" type="s:date"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="FavourableActivity">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="actName" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="startTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="endTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="userRank" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="actRange" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="actRangeExt" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="minAmount" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="maxAmount" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="actType" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="actTypeExt" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="gift" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sortOrder" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Feedback">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="parent" type="s:int"/>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="children" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="user" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="userName" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="userEmail" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="msgTitle" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="msgType" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="msgContent" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="msgTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="messageImage" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="orderID" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="FriendLink">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="url" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="logo" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="showOrder" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Gallery">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="imageUrl" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="thumbUrl" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="description" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="originalImage" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="GoodsActivity">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="description" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="type" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="startTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="endTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="finished" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="extraInfo" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="GoodsArticle">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="article" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="GoodsAttribute">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="attribute" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="value" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="price" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="GroupGoods">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="parent" type="s:int"/>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="children" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsPrice" type="s:double"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Keywords">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="date" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="searchEngine" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="keyword" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="count" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="LinkGoods">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="linkGoods" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="bidirectional" type="s:boolean"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="MailTemplate">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="code" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="html" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="subject" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="content" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="type" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="lastSend" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="lastModify" type="s:date"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="MemberPrice">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="userRank" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="userPrice" type="s:double"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Navigation">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="categoryType" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="categoryId" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="show" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="viewOrder" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="openNew" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="url" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="type" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Order">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="SN" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="user" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="status" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="shippingStatus" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="payStatus" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="consignee" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="email" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="region" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="address" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="zip" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="phone" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="mobile" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="signBuilding" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="bestTime" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="postScript" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="packName" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="cardName" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="cardMessage" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="invoicePayee" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="invoiceContent" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsAmount" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="shippingFee" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="insureFee" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="payFee" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="payment" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="shipping" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="howOss" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="howSurplus" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="moneyPaid" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="surplus" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="integral" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="integralMoney" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="orderAmount" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="bonusMoney" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="fromAD" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="referer" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="addTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="confirmTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="payTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="shippingTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="pack" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="card" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="userBonus" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="invoiceNO" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="extensionCode" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="extensionId" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="toBuyer" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="payNote" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="agency" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="invoceType" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="tax" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="separate" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="discount" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="parent" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="OrderAction">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="order" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="actionUser" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="orderStatus" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="shippingStatus" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="payStatus" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="actionNote" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="logTime" type="s:date"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="OrderGoods">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="order" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsName" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsSN" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsNumber" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="marketPrice" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsPrice" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsAttribute" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sendNumber" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="realGoods" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="gift" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="extensionCode" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="parent" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Pack">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="image" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="fee" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="freeMoney" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="description" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="PayLog">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="order" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="orderAmount" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="orderType" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="paid" type="s:boolean"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Payment">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="code" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="fee" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="description" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="order" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="config" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="enabled" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="cod" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="online" type="s:boolean"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Plugins">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="code" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="version" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="library" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="assign" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="installDate" type="s:date"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Region">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="parent" type="s:int"/>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="children" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="type" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="agency" type="s:int"/>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="areas" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="SearchEngine">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="date" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="searchEngine" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="count" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Session">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="expiry" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="user" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="IP" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="data" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="SessionsData">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sesskey" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="expiry" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="data" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Shipping">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="code" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="description" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="insure" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="supportCod" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="enabled" type="s:boolean"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ShippingArea">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="shipping" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="config" type="s:string"/>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="regions" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ShopConfig">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="parent" type="s:int"/>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="children" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="code" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="type" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="storeRange" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="storeDir" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="value" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sortOrder" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="SnatchLog">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="snatchId" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="userId" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="bidPrice" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="bidTime" type="s:date"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Stats">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="accessTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="IP" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="visitTimes" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="browser" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="system" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="language" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="area" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="refererDomain" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="refererPath" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="accessUrl" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Tag">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="user" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="tagWords" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Topic">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="title" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="intro" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="startTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="endTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="data" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="template" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="css" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="User">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="password" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="email" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="question" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="answer" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sex" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="birthday" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="money" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="frozenMoney" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="payPoints" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="rankPoints" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="address" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="registerTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="lastLogin" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="lastTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="lastIP" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="visitCount" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="rank" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="special" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="salt" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="parent" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="flag" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="alias" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="MSN" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="QQ" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="officePhone" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="homePhone" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="mobilePhone" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="validated" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="creditLine" type="s:double"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="UserAccount">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="user" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="adminUser" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="amount" type="s:double"/>
+					<s:element maxOccurs="1" minOccurs="0" name="addTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="paidTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="adminNote" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="userNote" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="processType" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="payment" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="paid" type="s:boolean"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="UserAddress">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="user" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="consignee" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="email" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="region" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="address" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="zip" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="phone" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="mobile" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="signBuilding" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="bestTime" type="s:string"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="UserBonus">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="type" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="bonusSN" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="user" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="usedTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="order" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="emailed" type="s:boolean"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="UserRank">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="name" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="maxPoints" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="minPoints" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="discount" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="showPrice" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="special" type="s:boolean"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="VirtualCard">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="cardSn" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="cardPassword" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="addDate" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="endDate" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="sold" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="orderSn" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="crc32" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Vote">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="voteName" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="startTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="endTime" type="s:date"/>
+					<s:element maxOccurs="1" minOccurs="0" name="MultipleSelection" type="s:boolean"/>
+					<s:element maxOccurs="1" minOccurs="0" name="voteCount" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="VoteData">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="vote" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="itemName" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="itemCount" type="s:int"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="VoteLog">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="vote" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="ipAddress" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="voteTime" type="s:date"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="Wholesale">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="id" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goods" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="goodsName" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="rankIds" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="prices" type="s:string"/>
+					<s:element maxOccurs="1" minOccurs="0" name="enabled" type="s:boolean"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="StatusType">
+				<s:attribute name="code" type="s:int"/>
+				<s:attribute name="message" type="s:string"/>
+			</s:complexType>
+			<s:complexType name="XXXRESP">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="0" name="objId" type="s:int"/>
+					<s:element maxOccurs="1" minOccurs="0" name="totalNumber" type="s:int"/>
+					<!-- this field only used in getAll operation and start field in request is 0-->
+					<s:element maxOccurs="1" minOccurs="0" name="AccountLogList" type="s0:AccountLogList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="AdminActionList" type="s0:AdminActionList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="AdminLogList" type="s0:AdminLogList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="AdminMessageList" type="s0:AdminMessageList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="AdminUserList" type="s0:AdminUserList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="AdPositionList" type="s0:AdPositionList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="AdsenseList" type="s0:AdsenseList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="AdvertisementList" type="s0:AdvertisementList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="AffiliateLogList" type="s0:AffiliateLogList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="AgencyList" type="s0:AgencyList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="ArticleList" type="s0:ArticleList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="ArticleCategoryList" type="s0:ArticleCategoryList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="AttributeList" type="s0:AttributeList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="AuctionLogList" type="s0:AuctionLogList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="AutoManageList" type="s0:AutoManageList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="BonusTypeList" type="s0:BonusTypeList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="BookingGoodsList" type="s0:BookingGoodsList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="BrandList" type="s0:BrandList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="CardList" type="s0:CardList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="CartList" type="s0:CartList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="CategoryList" type="s0:CategoryList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="CollectGoodsList" type="s0:CollectGoodsList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="CommentList" type="s0:CommentList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="CronsList" type="s0:CronsList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="EmailListList" type="s0:EmailListList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="EmailSendListList" type="s0:EmailSendListList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="ErrorLogList" type="s0:ErrorLogList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="FailedLoginList" type="s0:FailedLoginList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="FavourableActivityList" type="s0:FavourableActivityList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="FeedbackList" type="s0:FeedbackList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="FriendLinkList" type="s0:FriendLinkList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="GalleryList" type="s0:GalleryList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="GoodsList" type="s0:GoodsList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="GoodsActivityList" type="s0:GoodsActivityList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="GoodsArticleList" type="s0:GoodsArticleList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="GoodsAttributeList" type="s0:GoodsAttributeList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="GoodsTypeList" type="s0:GoodsTypeList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="GroupGoodsList" type="s0:GroupGoodsList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="KeywordsList" type="s0:KeywordsList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="LinkGoodsList" type="s0:LinkGoodsList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="MailTemplateList" type="s0:MailTemplateList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="MemberPriceList" type="s0:MemberPriceList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="NavigationList" type="s0:NavigationList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="OrderList" type="s0:OrderList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="OrderActionList" type="s0:OrderActionList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="OrderGoodsList" type="s0:OrderGoodsList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="PackList" type="s0:PackList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="PayLogList" type="s0:PayLogList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="PaymentList" type="s0:PaymentList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="PluginsList" type="s0:PluginsList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="RegionList" type="s0:RegionList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="SearchEngineList" type="s0:SearchEngineList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="SessionList" type="s0:SessionList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="SessionsDataList" type="s0:SessionsDataList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="ShippingList" type="s0:ShippingList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="ShippingAreaList" type="s0:ShippingAreaList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="ShopConfigList" type="s0:ShopConfigList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="SnatchLogList" type="s0:SnatchLogList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="StatsList" type="s0:StatsList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="TagList" type="s0:TagList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="TopicList" type="s0:TopicList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="UserList" type="s0:UserList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="UserAccountList" type="s0:UserAccountList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="UserAddressList" type="s0:UserAddressList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="UserBonusList" type="s0:UserBonusList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="UserRankList" type="s0:UserRankList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="VirtualCardList" type="s0:VirtualCardList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="VoteList" type="s0:VoteList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="VoteDataList" type="s0:VoteDataList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="VoteLogList" type="s0:VoteLogList"/>
+					<s:element maxOccurs="1" minOccurs="0" name="WholesaleList" type="s0:WholesaleList"/>
+					<s:element name="status" type="s0:StatusType"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="GoodsList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Goods" type="s0:Goods"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="BrandList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Brand" type="s0:Brand"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="CategoryList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Category" type="s0:Category"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AttributeList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Attribute" type="s0:Attribute"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="GoodsTypeList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="GoodsType" type="s0:GoodsType"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AccountLogList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="AccountLog" type="s0:AccountLog"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AdminActionList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="AdminAction" type="s0:AdminAction"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AdminLogList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="AdminLog" type="s0:AdminLog"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AdminMessageList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="AdminMessage" type="s0:AdminMessage"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AdminUserList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="AdminUser" type="s0:AdminUser"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AdPositionList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="AdPosition" type="s0:AdPosition"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AdsenseList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Adsense" type="s0:Adsense"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AdvertisementList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Advertisement" type="s0:Advertisement"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AffiliateLogList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="AffiliateLog" type="s0:AffiliateLog"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AgencyList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Agency" type="s0:Agency"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArticleList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Article" type="s0:Article"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ArticleCategoryList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="ArticleCategory" type="s0:ArticleCategory"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AuctionLogList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="AuctionLog" type="s0:AuctionLog"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="AutoManageList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="AutoManage" type="s0:AutoManage"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="BonusTypeList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="BonusType" type="s0:BonusType"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="BookingGoodsList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="BookingGoods" type="s0:BookingGoods"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="CardList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Card" type="s0:Card"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="CartList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Cart" type="s0:Cart"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="CollectGoodsList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="CollectGoods" type="s0:CollectGoods"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="CommentList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Comment" type="s0:Comment"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="CronsList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Crons" type="s0:Crons"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="EmailListList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="EmailList" type="s0:EmailList"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="EmailSendListList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="EmailSendList" type="s0:EmailSendList"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ErrorLogList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="ErrorLog" type="s0:ErrorLog"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="FailedLoginList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="FailedLogin" type="s0:FailedLogin"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="FavourableActivityList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="FavourableActivity" type="s0:FavourableActivity"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="FeedbackList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Feedback" type="s0:Feedback"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="FriendLinkList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="FriendLink" type="s0:FriendLink"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="GalleryList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Gallery" type="s0:Gallery"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="GoodsActivityList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="GoodsActivity" type="s0:GoodsActivity"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="GoodsArticleList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="GoodsArticle" type="s0:GoodsArticle"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="GoodsAttributeList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="GoodsAttribute" type="s0:GoodsAttribute"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="GroupGoodsList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="GroupGoods" type="s0:GroupGoods"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="KeywordsList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Keywords" type="s0:Keywords"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="LinkGoodsList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="LinkGoods" type="s0:LinkGoods"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="MailTemplateList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="MailTemplate" type="s0:MailTemplate"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="MemberPriceList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="MemberPrice" type="s0:MemberPrice"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="NavigationList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Navigation" type="s0:Navigation"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="OrderList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Order" type="s0:Order"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="OrderActionList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="OrderAction" type="s0:OrderAction"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="OrderGoodsList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="OrderGoods" type="s0:OrderGoods"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="PackList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Pack" type="s0:Pack"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="PayLogList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="PayLog" type="s0:PayLog"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="PaymentList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Payment" type="s0:Payment"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="PluginsList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Plugins" type="s0:Plugins"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="RegionList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Region" type="s0:Region"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="SearchEngineList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="SearchEngine" type="s0:SearchEngine"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="SessionList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Session" type="s0:Session"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="SessionsDataList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="SessionsData" type="s0:SessionsData"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ShippingList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Shipping" type="s0:Shipping"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ShippingAreaList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="ShippingArea" type="s0:ShippingArea"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="ShopConfigList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="ShopConfig" type="s0:ShopConfig"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="SnatchLogList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="SnatchLog" type="s0:SnatchLog"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="StatsList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Stats" type="s0:Stats"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="TagList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Tag" type="s0:Tag"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="TopicList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Topic" type="s0:Topic"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="UserList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="User" type="s0:User"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="UserAccountList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="UserAccount" type="s0:UserAccount"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="UserAddressList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="UserAddress" type="s0:UserAddress"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="UserBonusList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="UserBonus" type="s0:UserBonus"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="UserRankList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="UserRank" type="s0:UserRank"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="VirtualCardList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="VirtualCard" type="s0:VirtualCard"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="VoteList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Vote" type="s0:Vote"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="VoteDataList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="VoteData" type="s0:VoteData"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="VoteLogList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="VoteLog" type="s0:VoteLog"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="WholesaleList">
+				<s:sequence>
+					<s:element maxOccurs="unbounded" minOccurs="0" name="Wholesale" type="s0:Wholesale"/>
+				</s:sequence>
+			</s:complexType>
+			<s:complexType name="XXXREQ">
+				<s:sequence>
+					<s:element maxOccurs="1" minOccurs="1" name="commandType" type="s0:CommandType"/>
+					<s:element maxOccurs="1" minOccurs="1" name="targetType" type="s0:EntityName"/>
+					<s:element maxOccurs="1" minOccurs="0" name="readCount" type="s0:ReadCount"/>
+					<s:element maxOccurs="1" minOccurs="0" name="criteria" type="s0:QueryCriteria"/>
+					<!-- the number of records return by server in 'query all' operation -->
+					<s:choice maxOccurs="1" minOccurs="0">
+						<s:element maxOccurs="1" minOccurs="0" name="AccountLogList" type="s0:AccountLogList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="AdminActionList" type="s0:AdminActionList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="AdminLogList" type="s0:AdminLogList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="AdminMessageList" type="s0:AdminMessageList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="AdminUserList" type="s0:AdminUserList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="AdPositionList" type="s0:AdPositionList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="AdsenseList" type="s0:AdsenseList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="AdvertisementList" type="s0:AdvertisementList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="AffiliateLogList" type="s0:AffiliateLogList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="AgencyList" type="s0:AgencyList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="ArticleList" type="s0:ArticleList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="ArticleCategoryList" type="s0:ArticleCategoryList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="AttributeList" type="s0:AttributeList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="AuctionLogList" type="s0:AuctionLogList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="AutoManageList" type="s0:AutoManageList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="BonusTypeList" type="s0:BonusTypeList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="BookingGoodsList" type="s0:BookingGoodsList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="BrandList" type="s0:BrandList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="CardList" type="s0:CardList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="CartList" type="s0:CartList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="CategoryList" type="s0:CategoryList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="CollectGoodsList" type="s0:CollectGoodsList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="CommentList" type="s0:CommentList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="CronsList" type="s0:CronsList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="EmailListList" type="s0:EmailListList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="EmailSendListList" type="s0:EmailSendListList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="ErrorLogList" type="s0:ErrorLogList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="FailedLoginList" type="s0:FailedLoginList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="FavourableActivityList" type="s0:FavourableActivityList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="FeedbackList" type="s0:FeedbackList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="FriendLinkList" type="s0:FriendLinkList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="GalleryList" type="s0:GalleryList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="GoodsList" type="s0:GoodsList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="GoodsActivityList" type="s0:GoodsActivityList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="GoodsArticleList" type="s0:GoodsArticleList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="GoodsAttributeList" type="s0:GoodsAttributeList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="GoodsTypeList" type="s0:GoodsTypeList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="GroupGoodsList" type="s0:GroupGoodsList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="KeywordsList" type="s0:KeywordsList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="LinkGoodsList" type="s0:LinkGoodsList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="MailTemplateList" type="s0:MailTemplateList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="MemberPriceList" type="s0:MemberPriceList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="NavigationList" type="s0:NavigationList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="OrderList" type="s0:OrderList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="OrderActionList" type="s0:OrderActionList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="OrderGoodsList" type="s0:OrderGoodsList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="PackList" type="s0:PackList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="PayLogList" type="s0:PayLogList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="PaymentList" type="s0:PaymentList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="PluginsList" type="s0:PluginsList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="RegionList" type="s0:RegionList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="SearchEngineList" type="s0:SearchEngineList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="SessionList" type="s0:SessionList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="SessionsDataList" type="s0:SessionsDataList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="ShippingList" type="s0:ShippingList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="ShippingAreaList" type="s0:ShippingAreaList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="ShopConfigList" type="s0:ShopConfigList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="SnatchLogList" type="s0:SnatchLogList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="StatsList" type="s0:StatsList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="TagList" type="s0:TagList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="TopicList" type="s0:TopicList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="UserList" type="s0:UserList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="UserAccountList" type="s0:UserAccountList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="UserAddressList" type="s0:UserAddressList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="UserBonusList" type="s0:UserBonusList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="UserRankList" type="s0:UserRankList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="VirtualCardList" type="s0:VirtualCardList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="VoteList" type="s0:VoteList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="VoteDataList" type="s0:VoteDataList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="VoteLogList" type="s0:VoteLogList"/>
+						<s:element maxOccurs="1" minOccurs="0" name="WholesaleList" type="s0:WholesaleList"/>
+					</s:choice>
+				</s:sequence>
+			</s:complexType>
+			<s:element name="REQUEST" type="s0:XXXREQ"/>
+			<s:element name="RESPONSE" type="s0:XXXRESP"/>
+		</s:schema>
+  </types>
+  <message name="Output">
+    <part name="body" element="s0:RESPONSE">
+    </part>
+  </message>
+  <message name="Input">
+    <part name="body" element="s0:REQUEST">
+    </part>
+  </message>
+  <portType name="JCommerceWSPortType">
+    <operation name="OPERATION">
+<documentation/>
+      <input message="s0:Input">
+    </input>
+      <output message="s0:Output">
+    </output>
+    </operation>
+  </portType>
+  <binding name="JCommerceWSBinding" type="s0:JCommerceWSPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="OPERATION">
+      <soap:operation soapAction="/JCommerceWS" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="JCommerceWS">
+<documentation/>
+    <port name="JCommerceWSPort" binding="s0:JCommerceWSBinding">
+      <soap:address location="http://127.0.0.1:8880/axis2/services/JCommerceWS"/>
+    </port>
+  </service>
+</definitions>

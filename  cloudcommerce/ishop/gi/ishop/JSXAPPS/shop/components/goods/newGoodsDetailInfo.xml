@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<serialization jsxversion="3.6" xmlns="urn:tibco.com/v3.0">
+  <name></name>
+  <icon></icon>
+  <description></description>
+  <onBeforeDeserialize></onBeforeDeserialize>
+  <onAfterDeserialize></onAfterDeserialize>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"></variants>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="10 0 0 0" jsxdisplay=""></strings>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="300" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+      <object type="jsx3.gui.TextBox">
+        <variants jsxtype="1"></variants>
+        <strings jsxname="txtDetailInfo" jsxwidth="100%" jsxheight="90%" jsxoverflow="auto"></strings>
+        <dynamics jsxfontname="@txtBox Font Name " jsxfontsize="@txtBox Font Size " jsxfontweight="@txtBox Font Weight " jsxborder="@txtBox Border "></dynamics>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxoverflow="1" jsxheight="25"></variants>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="10 0 0 0" jsxpadding="5 0 0 220"></strings>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0"></variants>
+        <strings jsxname="button" jsxtext="确定" jsxmargin="0 4 0 0"></strings>
+        <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxwidth="@Btn Width" jsxpadding="@@Btn Padding" jsxheight="@Btn Height"></dynamics>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0"></variants>
+        <strings jsxname="button" jsxtext="重置"></strings>
+        <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxwidth="@Btn Width" jsxpadding="@@Btn Padding" jsxheight="@Btn Height"></dynamics>
+      </object>
+    </object>
+  </object>
+</serialization>

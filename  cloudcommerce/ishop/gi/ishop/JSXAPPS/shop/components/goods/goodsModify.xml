@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<serialization jsxversion="3.5" xmlns="urn:tibco.com/v3.0">
+  <name><![CDATA[Block - 100%]]></name>
+  <icon><![CDATA[images/prototypes/block.gif]]></icon>
+  <description><![CDATA[Simple block, relatively positioned with overflow=scroll.]]></description>
+  <onBeforeDeserialize></onBeforeDeserialize>
+  <onAfterDeserialize></onAfterDeserialize>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"></variants>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxpadding="15 0 15 0" jsxtextalign="center" jsxcolor=""></strings>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxpadding="5 0 0 10" jsxtextalign="left" jsxmargin="0 0 12 0"></strings>
+      <dynamics jsxbgcolor="@Blk Top Color" jsxbg="@Bevel TopDown" jsxborder="@Blk Border"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxpadding="" jsxtextalign="center"></strings>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight"></dynamics>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxtextalign="left" jsxpadding="20 0 0 0"></strings>
+      <dynamics jsxborder="@Blk Border"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="选择商品的方式" jsxpadding="3 20 0 0" jsxtextalign="right" jsxcolor="#2f525d"></strings>
+          <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+        </object>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1" jsxfontsize="11"></variants>
+          <strings jsxname="radGoodsBrandCategory" jsxtext="根据商品分类、品牌" jsxgroupname="group1" jsxmargin="0 4 0 0" jsxfontname="arial"></strings>
+          <events jsxselect=""></events>
+        </object>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1"></variants>
+          <strings jsxname="radGoodsNumber" jsxtext="根据商品货号" jsxgroupname="group1" jsxmargin="0 4 0 0" jsxfontname="arial" jsxborder=""></strings>
+          <events jsxselect=""></events>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="1"></variants>
+          <strings jsxname="blkAccoridingToNumber" jsxwidth="95%" jsxrelativeposition="1" jsxdisplay="none"></strings>
+          <object type="jsx3.gui.Block">
+            <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220"></variants>
+            <strings jsxname="label" jsxtext="输入商品货号&lt;br&gt;&#xA;（每行一个）" jsxpadding="3 20 0 0" jsxtextalign="right" jsxheight="" jsxcolor="#2f525d"></strings>
+            <dynamics jsxfontsize="@Btn Font Size" jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight"></dynamics>
+          </object>
+          <object type="jsx3.gui.TextBox">
+            <variants jsxwidth="300" jsxheight="190" jsxtype="1"></variants>
+            <strings jsxname="textarea" jsxmargin="0 4 0 0"></strings>
+            <dynamics jsxborder="@txtBox Border "></dynamics>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="1"></variants>
+          <strings jsxname="blkAccordingToCategory" jsxwidth="95%" jsxrelativeposition="1"></strings>
+          <object type="jsx3.gui.Block">
+            <variants jsxheight="25" jsxoverflow="1"></variants>
+            <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+              <strings jsxname="label" jsxtext="选择商品分类" jsxpadding="3 20 0 0" jsxtextalign="right" jsxcolor="#2f525d"></strings>
+              <dynamics jsxfontsize="@lbl Font Size" jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight"></dynamics>
+            </object>
+            <object type="jsx3.gui.Select">
+              <variants jsxxmlasync="1"></variants>
+              <strings jsxname="selGoodsCategory" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0"></strings>
+              <dynamics jsxborder="@txtBox Border " jsxwidth="@Select Width" jsxheight="@Select Height"></dynamics>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxheight="20" jsxoverflow="1"></variants>
+            <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+            <object type="jsx3.gui.Block">
+              <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+              <strings jsxname="label" jsxtext="选择商品品牌" jsxpadding="3 20 0 0" jsxtextalign="right" jsxcolor="#2f525d"></strings>
+              <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+            </object>
+            <object type="jsx3.gui.Select">
+              <variants jsxxmlasync="1"></variants>
+              <strings jsxname="selGoodsBrand" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0"></strings>
+              <dynamics jsxborder="@txtBox Border " jsxwidth="@Select Width" jsxheight="@Select Height"></dynamics>
+            </object>
+          </object>
+          <object type="jsx3.gui.Block">
+            <variants jsxheight="220" jsxoverflow="2"></variants>
+            <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxtextalign="left" jsxpadding="3 0 0 2" jsxbgcolor="#fff"></strings>
+            <object type="jsx3.gui.LayoutGrid">
+              <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+              <strings jsxname="layout (--)" jsxrows="20,*" jsxwidth="100%" jsxheight="100%"></strings>
+              <object type="jsx3.gui.Block">
+                <variants jsxoverflow="2"></variants>
+                <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+                  <strings jsxname="label" jsxtext="选择商品品牌" jsxpadding="3 20 0 0" jsxtextalign="right" jsxcolor="#2f525d"></strings>
+                  <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size" jsxfontweight="@lbl Font Weight"></dynamics>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+                  <strings jsxname="label" jsxtext="待选列表" jsxpadding="3 25 0 0" jsxtextalign="center"></strings>
+                  <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+                </object>
+                <object type="jsx3.gui.Block">
+                  <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+                  <strings jsxname="label" jsxtext="选定列表" jsxpadding="3 0 0 30" jsxtextalign="center"></strings>
+                  <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"></dynamics>
+                </object>
+              </object>
+              <object type="jsx3.gui.Block">
+                <variants jsxoverflow="1"></variants>
+                <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxpadding="0 0 0 220"></strings>
+                <object type="jsx3.gui.LayoutGrid">
+                  <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+                  <strings jsxname="layout ( | )" jsxcols="200,60,210" jsxwidth="100%" jsxheight="100%"></strings>
+                  <object type="jsx3.gui.Block">
+                    <variants jsxoverflow="2"></variants>
+                    <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                    <dynamics jsxborder="@Blk Border"></dynamics>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxwidth="200" jsxheight="200" jsxoverflow="2"></variants>
+                      <strings jsxname="multi1" jsxmargin="0 4 0 0" jsxbgcolor="#FFFFFF"></strings>
+                      <object type="jsx3.gui.Block">
+                        <variants jsxoverflow="2"></variants>
+                        <strings jsxname="block" jsxwidth="100%" jsxheight="100%"></strings>
+                        <object type="jsx3.gui.Matrix">
+                          <variants jsxselectionmodel="2" jsxscalewidth="1" jsxjsxxmlasync="1" jsxheaderheight="0"></variants>
+                          <strings jsxname="matrix" jsxfocusstyle="." jsxxml="&#xA;          &lt;data jsxid=&quot;jsxroot&quot;&gt;&#xA;            &lt;record jsxid=&quot;AG&quot; jsxtext=&quot;Afghanistan&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AL&quot; jsxtext=&quot;Albania&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AR&quot; jsxtext=&quot;Algeria&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AS&quot; jsxtext=&quot;American Samoa&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AD&quot; jsxtext=&quot;Andorra&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AO&quot; jsxtext=&quot;Angola&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AU&quot; jsxtext=&quot;Anguilla&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AX&quot; jsxtext=&quot;Antarctica&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AT&quot; jsxtext=&quot;Antigua and Barbuda&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AE&quot; jsxtext=&quot;Argentina&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AM&quot; jsxtext=&quot;Armenia&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AB&quot; jsxtext=&quot;Aruba&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AA&quot; jsxtext=&quot;Australia&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AI&quot; jsxtext=&quot;Austria&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AZ&quot; jsxtext=&quot;Azerbaijan&quot;/&gt;&#xA;          &lt;/data&gt;&#xA;        "></strings>
+                          <object type="jsx3.gui.Matrix.Column">
+                            <variants></variants>
+                            <strings jsxname="column" jsxcellpadding="2" jsxpath="jsxtext"></strings>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                  <object type="jsx3.gui.Block">
+                    <variants jsxoverflow="2"></variants>
+                    <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="center" jsxpadding="70 0 0 0"></strings>
+                    <dynamics jsxborder="@No jsxborder"></dynamics>
+                    <object type="jsx3.gui.Button">
+                      <variants jsxindex="0" jsxheight="18"></variants>
+                      <strings jsxname="btnAddToSelectList" jsxtext="&gt;&gt;" jsxmargin="0 0 4 0" jsxtextalign="center" jsxwidth=""></strings>
+                      <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight " jsxcolor="@Btn Color " jsxpadding="@btn Padding" jsxborder="@Btn Border " jsxstyleoverride="@Btn css"></dynamics>
+                      <events jsxexecute="alert('hello');"></events>
+                    </object>
+                    <object type="jsx3.gui.Button">
+                      <variants jsxindex="0"></variants>
+                      <strings jsxname="btnAddBackReadyList" jsxtext="&lt;&lt;" jsxmargin="0 0 4 0" jsxtextalign="center"></strings>
+                      <dynamics jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight " jsxcolor="@Btn Color " jsxpadding="@btn Padding" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxheight="@Btn Height" jsxwidth="@btnwidth"></dynamics>
+                      <events jsxexecute="alert('hello');"></events>
+                    </object>
+                  </object>
+                  <object type="jsx3.gui.Block">
+                    <variants jsxoverflow="2"></variants>
+                    <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+                    <dynamics jsxborder="@Blk Border"></dynamics>
+                    <object type="jsx3.gui.Block">
+                      <variants jsxwidth="200" jsxheight="200" jsxoverflow="2"></variants>
+                      <strings jsxname="multi1" jsxmargin="0 4 0 0" jsxbgcolor="#FFFFFF"></strings>
+                      <dynamics jsxborder="@No jsxborder"></dynamics>
+                      <object type="jsx3.gui.Block">
+                        <variants jsxoverflow="2"></variants>
+                        <strings jsxname="block" jsxwidth="100%" jsxheight="100%"></strings>
+                        <object type="jsx3.gui.Matrix">
+                          <variants jsxselectionmodel="2" jsxscalewidth="1" jsxjsxxmlasync="1" jsxheaderheight="0"></variants>
+                          <strings jsxname="matrix" jsxfocusstyle="." jsxxml="&#xA;          &lt;data jsxid=&quot;jsxroot&quot;&gt;&#xA;            &lt;record jsxid=&quot;AG&quot; jsxtext=&quot;Afghanistan&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AL&quot; jsxtext=&quot;Albania&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AR&quot; jsxtext=&quot;Algeria&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AS&quot; jsxtext=&quot;American Samoa&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AD&quot; jsxtext=&quot;Andorra&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AO&quot; jsxtext=&quot;Angola&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AU&quot; jsxtext=&quot;Anguilla&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AX&quot; jsxtext=&quot;Antarctica&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AT&quot; jsxtext=&quot;Antigua and Barbuda&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AE&quot; jsxtext=&quot;Argentina&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AM&quot; jsxtext=&quot;Armenia&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AB&quot; jsxtext=&quot;Aruba&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AA&quot; jsxtext=&quot;Australia&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AI&quot; jsxtext=&quot;Austria&quot;/&gt;&#xA;            &lt;record jsxid=&quot;AZ&quot; jsxtext=&quot;Azerbaijan&quot;/&gt;&#xA;          &lt;/data&gt;&#xA;        "></strings>
+                          <object type="jsx3.gui.Matrix.Column">
+                            <variants></variants>
+                            <strings jsxname="column" jsxcellpadding="2" jsxpath="jsxtext"></strings>
+                          </object>
+                        </object>
+                      </object>
+                    </object>
+                  </object>
+                </object>
+              </object>
+            </object>
+          </object>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="20" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="10 0 0 0"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="编辑方式" jsxpadding="3 20 0 0" jsxtextalign="right" jsxcolor="#2f525d"></strings>
+          <dynamics jsxfontsize="@lbl Font Size" jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight"></dynamics>
+        </object>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1"></variants>
+          <strings jsxname="radEditOne" jsxtext="逐个编辑" jsxgroupname="group1" jsxmargin="0 4 0 0" jsxfontname="arial"></strings>
+          <events jsxselect=""></events>
+        </object>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="1" jsxrelativeposition="1"></variants>
+          <strings jsxname="radEditAll" jsxtext="统一编辑" jsxgroupname="group1" jsxmargin="0 4 0 0" jsxfontname="arial" jsxborder=""></strings>
+          <events jsxselect=""></events>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxmargin="10 0 0 0" jsxtextalign="left" jsxpadding="0 0 0 220"></strings>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0"></variants>
+          <strings jsxname="btnEdit" jsxtext="进入编辑" jsxmargin="0 0 4 0"></strings>
+          <dynamics jsxwidth="@btnwidth" jsxheight="@Btn Height" jsxfontname="@Btn Font Name " jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight " jsxcolor="@Btn Color " jsxpadding="@btn Padding" jsxstyleoverride="@Btn css" jsxborder="@Btn Border "></dynamics>
+          <events jsxexecute="alert('hello');"></events>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="50" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left" jsxmargin="15 0 0 0"></strings>
+      <dynamics jsxborder="@Blk Border"></dynamics>
+    </object>
+  </object>
+</serialization>

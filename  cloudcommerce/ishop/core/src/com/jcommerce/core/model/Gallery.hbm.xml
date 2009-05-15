@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://hibernate.sourceforge.net/hibernate-mapping-2.0.dtd" >
+<hibernate-mapping>
+ <class name="com.jcommerce.core.model.Gallery" table="tis_goods_gallery" >
+  <id name="id" column="img_id" type="int">
+   <generator class="native"/>
+  </id>
+
+  <property name="imageUrl" column="img_url" length="255"/>
+  <property name="thumbUrl" column="thumb_url" length="255"/>
+  <property name="description" column="img_desc" length="255"/>
+  <property name="originalImage" column="img_original" length="255"/>
+
+  <many-to-one name="goods" column="goods_id" class="com.jcommerce.core.model.Goods" cascade="save-update" />
+
+ </class>
+</hibernate-mapping>

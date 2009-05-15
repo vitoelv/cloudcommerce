@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="gbk"?>
+<serialization jsxversion="3.5" xmlns="urn:tibco.com/v3.0">
+  <name><![CDATA[Block - 100%]]></name>
+  <icon><![CDATA[images/prototypes/block.gif]]></icon>
+  <description><![CDATA[Simple block, relatively positioned with overflow=scroll.]]></description>
+  <onBeforeDeserialize></onBeforeDeserialize>
+  <onAfterDeserialize></onAfterDeserialize>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"></variants>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxbgcolor="#DDEEF2" jsxpadding="15 0 15 0" jsxtextalign="center"></strings>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="40" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxtext="" jsxbgcolor="#f4fbfb" jsxpadding="9 0 0 3" jsxtextalign="right" jsxmargin="0 0 12 0" jsxborder="1px solid #278296"></strings>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="15" jsxwidth="140"></variants>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxpadding="1 0 0 0" jsxtextalign="center" jsxfontweight="bold" jsxfontname="arial" jsxstyleoverride="float:left"></strings>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="15" jsxwidth="140"></variants>
+        <strings jsxname="label" jsxtext="-红包列表" jsxcolor="#869590" jsxtextalign="left" jsxstyleoverride="float:left"></strings>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0" jsxfontsize="11" jsxheight="20" jsxwidth="80"></variants>
+        <strings jsxname="button" jsxtext="红包类型" jsxmargin="0 10 0 0" jsxstyleoverride="background-image:url(C:/ecshop/JSXAPPS/shop/image/icon_add.gif);background-repeat: no-repeat;" jsxbgcolor="#DDEEF2" jsxcolor="#9E9898" jsxtextalign="center" jsxfontname="arial" jsxborder="1px solid #278296 ;1.5px solid #278296 ;1.5px solid #278296 ;1px solid #278296 ;"></strings>
+        <events jsxexecute="alert('hello');"></events>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="250" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxborder=""></strings>
+      <object type="jsx3.gui.LayoutGrid">
+        <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"></variants>
+        <strings jsxname="layout (--)" jsxrows="230,*" jsxwidth="100%" jsxheight="100%"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="2"></variants>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"></strings>
+          <dynamics jsxborder="@No jsxborder"></dynamics>
+          <object type="jsx3.gui.Matrix">
+            <variants jsxpagingmodel="2" jsxselectionmodel="0" jsxjsxxmlasync="1" jsxheaderheight="25" jsxrowheight="30"></variants>
+            <strings jsxname="matrix1" jsxbgcolor="#efefff" jsxxml="" jsxsortpath="jsximg" jsxsorttype="text" jsxsortdirection="descending" jsxxmlurl="xml/goodslist.xml"></strings>
+            <events jsxbeforeedit="jsx3.log('EVENT: (jsxbeforeedit). Record: ' + strRECORDID);" jsxafteredit="jsx3.log('EVENT: (jsxafteredit). Record: ' + strRECORDID + '. New Value: ' + strNEWVALUE);" jsxexecute="" jsxselect="alert(&quot;asd&quot;);"></events>
+            <xslparameters jsx_rowbg1="#ffffff" jsx_rowbg2="#fff"></xslparameters>
+            <object type="jsx3.gui.Matrix.Column">
+              <variants jsxfontsize="12"></variants>
+              <strings jsxname="checkboxColumn" jsxwidth="100" jsxtext="编号" jsxpath="checked" jsxcelltextalign="center" jsxpadding="3" jsxcellpadding="1" jsxvaluetemplate="@default" jsxbgcolor="#5FA6B6" jsxtextalign="center" jsxcellborder="0px;1px solid #DDEEF2;1px solid #DDEEF2;0px;"></strings>
+              <dynamics jsxborder="@Outset" jsxbg="@Bevel TopDown"></dynamics>
+              <object type="jsx3.gui.CheckBox">
+                <variants jsxchecked="0" jsxenabled="1"></variants>
+                <strings jsxname="checkboxMask" jsxtext=""></strings>
+              </object>
+            </object>
+            <object type="jsx3.gui.Matrix.Column">
+              <variants></variants>
+              <strings jsxname="mc1" jsxwidth="*" jsxtext="Name" jsxpadding="2" jsxcellpadding="3" jsxpath="jsxtext" jsxborder="1px solid #fff" jsxbgcolor="#5FA6B6" jsxcellborder="0px;1px solid #DDEEF2;1px solid #DDEEF2;0px;"></strings>
+              <dynamics jsxbg="@Bevel TopDown"></dynamics>
+              <object type="jsx3.gui.TextBox">
+                <variants jsxrelativeposition="0" jsxleft="100" jsxtop="30" jsxwidth="100" jsxheight="20" jsxzindex="10"></variants>
+                <strings jsxname="tb1" jsxdisplay="none" jsxvalue="UnitedStates"></strings>
+                <events jsxkeydown="1;"></events>
+              </object>
+            </object>
+            <object type="jsx3.gui.Matrix.Column">
+              <variants jsxwidth="115"></variants>
+              <strings jsxname="imageColumn" jsxtext="Image" jsxvaluetemplate="@image" jsxpadding="3" jsxcellpadding="" jsxpath="jsximg" jsxborder="1px solid #fff" jsxbgcolor="#5FA6B6" jsxtextalign="center" jsxcelltextalign="center" jsxcellbgcolor="" jsxcellborder="0px;1px solid #DDEEF2;1px solid #DDEEF2;0px;"></strings>
+              <dynamics jsxbg="@Bevel TopDown"></dynamics>
+            </object>
+            <object type="jsx3.gui.Matrix.Column">
+              <variants></variants>
+              <strings jsxname="mc1" jsxwidth="*" jsxtext="Name" jsxpadding="2" jsxcellpadding="3" jsxpath="jsxtext" jsxborder="1px solid #fff" jsxbgcolor="#5FA6B6" jsxcellborder="0px;1px solid #DDEEF2;1px solid #DDEEF2;0px;"></strings>
+              <dynamics jsxbg="@Bevel TopDown"></dynamics>
+              <object type="jsx3.gui.TextBox">
+                <variants jsxrelativeposition="0" jsxleft="315" jsxtop="120" jsxwidth="100" jsxheight="20" jsxzindex="10"></variants>
+                <strings jsxname="tb1" jsxdisplay="none" jsxvalue="UnitedStates"></strings>
+                <events jsxkeydown="1;"></events>
+              </object>
+            </object>
+          </object>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="1"></variants>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%" jsxtextalign="left"></strings>
+          <dynamics jsxborder="@No jsxborder"></dynamics>
+          <object type="jsx3.gui.Button">
+            <variants jsxindex="0" jsxheight="20" jsxwidth="50"></variants>
+            <strings jsxname="button" jsxtext="删除" jsxmargin="0 8 0 0" jsxfontname="Arial" jsxtextalign="center" jsxborder="1px solid #2D5082" jsxstyleoverride="background-image: url(c:/ecshop/JSXAPPS/shop/image/button_bg.gif);background-repeat:repeat-x;"></strings>
+            <events jsxexecute="alert('hello');"></events>
+          </object>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="50" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxtext="" jsxbgcolor="#f4fbfb" jsxpadding="9 0 0 3" jsxtextalign="left" jsxmargin="15 0 0" jsxborder="1px solid #278296"></strings>
+    </object>
+  </object>
+</serialization>

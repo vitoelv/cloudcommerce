@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<serialization xmlns="urn:tibco.com/v3.0" jsxversion="3.6">
+  <name>Block - 100%</name>
+  <icon>images/prototypes/block.gif</icon>
+  <description>Simple block, relatively positioned with overflow=scroll.</description>
+  <onBeforeDeserialize/>
+  <onAfterDeserialize/>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"/>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxtextalign="center"/>
+    <dynamics jsxpadding="@Block Padding"/>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left" jsxmargin="0 0 12 0"/>
+      <dynamics jsxbgcolor="@Blk Top Color" jsxbg="@Bevel TopDown" jsxborder="@Blk Border" jsxpadding="@Top Block Padding"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="13"/>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxpadding="1 0 0 0" jsxtextalign="center" jsxfontweight="bold" jsxfontname="arial" jsxstyleoverride="float:left" jsxwidth=""/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="13" jsxwidth="140"/>
+        <strings jsxname="label" jsxtext="&amp;nbsp-图片批量处理" jsxcolor="#869590" jsxtextalign="left" jsxstyleoverride="float:left"/>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxoverflow="1"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxpadding="20 0 0 3" jsxtextalign="left"/>
+      <dynamics jsxborder="@Blk Border"/>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="30" jsxoverflow="1"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="图片批量处理允许您重新生成商品的缩略图以及重新添加水印。&lt;br&gt;该处理过程可能会比较慢，请您耐心等候。"/>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontsize="@lbl Font Size"/>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxfontname="arial"/>
+        <dynamics jsxfontsize="@lbl Font Size"/>
+        <object type="jsx3.gui.CheckBox">
+          <variants jsxheight="18" jsxchecked="1"/>
+          <strings jsxname="checkbox" jsxtext="重新生成缩略图" jsxmargin="0 4 0 0"/>
+          <events jsxexecute="jsx3.out('mycheck','the jsxexecute method was fired for checkbox, ' + this.getId());"/>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxfontname="arial"/>
+        <dynamics jsxfontsize="@lbl Font Size"/>
+        <object type="jsx3.gui.CheckBox">
+          <variants jsxheight="18" jsxchecked="0"/>
+          <strings jsxname="checkbox" jsxtext="重新生成商品详情图" jsxmargin="0 4 0 0"/>
+          <events jsxexecute="jsx3.out('mycheck','the jsxexecute method was fired for checkbox, ' + this.getId());"/>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxfontname="arial"/>
+        <dynamics jsxfontsize="@lbl Font Size"/>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1"/>
+          <strings jsxname="radio" jsxtext="新生成图片使用新名称，并删除旧图片" jsxgroupname="group1" jsxmargin="0 4 0 0"/>
+          <dynamics jsxfontname="@lbl Font Name"/>
+          <events jsxselect=""/>
+        </object>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1"/>
+          <strings jsxname="radio" jsxtext="新生成图片覆盖旧图片" jsxgroupname="group1" jsxmargin="0 4 0 0"/>
+          <dynamics jsxfontname="@lbl Font Name"/>
+          <events jsxselect=""/>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxfontname="arial"/>
+        <dynamics jsxfontsize="@lbl Font Size"/>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="0" jsxrelativeposition="1"/>
+          <strings jsxname="radio" jsxtext="出错时忽略错误,继续执行程序" jsxgroupname="group1" jsxmargin="0 4 0 0"/>
+          <dynamics jsxfontname="@lbl Font Name"/>
+          <events jsxselect=""/>
+        </object>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="1" jsxrelativeposition="1"/>
+          <strings jsxname="radio" jsxtext="出错时立即提示，并中止程序" jsxgroupname="group1" jsxmargin="0 4 0 0"/>
+          <dynamics jsxfontname="@lbl Font Name"/>
+          <events jsxselect=""/>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"/>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxfontname="arial" jsxtextalign="center"/>
+        <dynamics jsxfontsize="@lbl Font Size"/>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0"/>
+          <strings jsxname="button" jsxtext="确定"/>
+          <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxfontweight="@Btn Font Weight" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxpadding="@@Btn Padding" jsxstyleoverride="@Btn css" jsxwidth="@Btn Width" jsxheight="@Btn Height"/>
+          <events jsxexecute="alert('hello');"/>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="100" jsxoverflow="1"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="left" jsxmargin="15 0 0 0"/>
+      <dynamics jsxborder="@Blk Border"/>
+      <object type="jsx3.gui.LayoutGrid">
+        <variants jsxrelativeposition="0" jsxleft="0" jsxtop="0" jsxoverflow="2"/>
+        <strings jsxname="layout (--)" jsxrows="20,*" jsxwidth="100%" jsxheight="100%"/>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="2"/>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"/>
+          <dynamics jsxborder="@No jsxborder"/>
+        </object>
+        <object type="jsx3.gui.Block">
+          <variants jsxoverflow="1"/>
+          <strings jsxname="pane" jsxwidth="100%" jsxheight="100%"/>
+          <dynamics jsxborder="@No jsxborder"/>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="50" jsxoverflow="1"/>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxpadding="9 0 0 3" jsxtextalign="left" jsxmargin="15 0 0"/>
+      <dynamics jsxbgcolor="@Blk Top Color" jsxborder="@Blk Border"/>
+    </object>
+  </object>
+</serialization>

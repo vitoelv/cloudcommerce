@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<serialization jsxversion="3.6" xmlns="urn:tibco.com/v3.0">
+  <name><![CDATA[Block - 100%]]></name>
+  <icon><![CDATA[images/prototypes/block.gif]]></icon>
+  <description><![CDATA[Simple block, relatively positioned with overflow=scroll.]]></description>
+  <onBeforeDeserialize></onBeforeDeserialize>
+  <onAfterDeserialize><![CDATA[com.tibco.ishop.Category.init();
+com.tibco.ishop.Category.getCategory();]]></onAfterDeserialize>
+  <object type="com.tibco.ishop.Category">
+    <variants jsxoverflow="1"></variants>
+    <strings jsxname="blkCategoryMain" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxtextalign="center" jsxinstanceof="jsx3.app.Model" jsxleft="goodsCategoryList"></strings>
+    <dynamics jsxpadding="@Block Padding"></dynamics>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxtextalign="right"></strings>
+      <dynamics jsxbgcolor="@Blk Top Color" jsxborder="@Blk Border" jsxbg="@Bevel TopDown" jsxpadding="@Top Block Padding" jsxmargin="@Top Block Margin"></dynamics>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxstyleoverride="float:left"></strings>
+        <dynamics jsxfontname="@lbl Font Name" jsxfontweight="@lbl Font Weight"></dynamics>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13"></variants>
+        <strings jsxname="label" jsxtext="&amp;nbsp;-商品分类" jsxcolor="#869590" jsxstyleoverride="float:left"></strings>
+        <dynamics jsxfontname="@lbl Font Name"></dynamics>
+        <events jsxclick="com.tibco.ishop.Category.getCategory();"></events>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0" jsxenabled="1"></variants>
+        <strings jsxname="btnAddCategory" jsxtext="添加分类" jsxmargin="0 10 0 0"></strings>
+        <dynamics jsxfontname="@Btn Font Name" jsxfontsize="@Btn Font Size" jsxcolor="@Btn Color" jsxborder="@Btn Border " jsxstyleoverride="@Btn css" jsxfontweight="@Btn Font Weight" jsxheight="@Btn Height" jsxwidth="@Btn Width" jsxpadding="@@Btn Padding"></dynamics>
+        <events jsxexecute="service.onMenuClick(&quot;a18&quot;);"></events>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="400" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1"></strings>
+      <dynamics jsxmargin="@Top Block Margin"></dynamics>
+      <object type="jsx3.gui.Matrix">
+        <variants jsxpagingmodel="4" jsxselectionmodel="1" jsxjsxxmlasync="1" jsxsuppressvscroll="1"></variants>
+        <strings jsxname="goodsCategoryList" jsxsorttype="text" jsxsortdirection="ascending" jsxselectionbg="none" jsxinstanceof="jsx3.app.Model" jsxxmlid="categorylist" jsxrenderingmodel="hierarchical" jsxfocusstyle="none"></strings>
+        <dynamics jsxrowheight="@Matrix RowHeight " jsxbgcolor="@MatrixC BGColor " jsxheaderborder="@Matrix HeaderBorder " jsxspystyle="@Matrix Spy Style " jsxheaderheight="@Matrix HeaderHeight " jsxbodyborder="@Matrix BodyBorder "></dynamics>
+        <properties start="5" end="15"></properties>
+        <events jsxaftercommit="com.tibco.ishop.Category.updateCategory(&quot;updateCategoryOnMatrix_xml&quot;,strRECORDID);"></events>
+        <xslparameters jsx_rowbg1="#ffffff" jsx_rowbg2="#ffffff" jsx_icon=""></xslparameters>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="110"></variants>
+          <strings jsxname="categoryName" jsxtext="分类名称" jsxcellpadding="" jsxpath="name" jsxtextalign="center" jsxpadding="2 7 0 7"></strings>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxbg="@Matrix Header Bg" jsxcellborder="@MatrixC Border " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxcellbgcolor="@MatrixCell BGColor "></dynamics>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="94"></variants>
+          <strings jsxname="goodsAcount" jsxtext="商品数量" jsxcellpadding="" jsxpath="count" jsxtextalign="center" jsxpadding="2 7 0 7"></strings>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxbg="@Matrix Header Bg" jsxcellborder="@MatrixC Border " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxcellbgcolor="@MatrixCell BGColor "></dynamics>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="107"></variants>
+          <strings jsxname="measureUnit" jsxtext="数量单位" jsxcellpadding="" jsxpath="measureunit" jsxtextalign="center" jsxpadding="2 7 0 7" jsxcelltextalign="center"></strings>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxbg="@Matrix Header Bg" jsxcellborder="@MatrixC Border " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxcellbgcolor="@MatrixCell BGColor "></dynamics>
+          <object type="jsx3.gui.TextBox">
+            <variants jsxrelativeposition="0" jsxleft="204" jsxtop="100" jsxwidth="107" jsxheight="20" jsxzindex="10"></variants>
+            <strings jsxname="tb1" jsxdisplay="none" jsxvalue="8"></strings>
+            <events jsxkeydown="1;"></events>
+          </object>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="84"></variants>
+          <strings jsxname="navigation" jsxtext="导航栏" jsxcellpadding="" jsxpath="shownavigation" jsxtextalign="center" jsxcelltextalign="center" jsxpadding="2 7 0 7"></strings>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxbg="@Matrix Header Bg" jsxbgcolor="@Solid Disabled" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxcellborder="@MatrixC Border " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxcellbgcolor="@MatrixCell BGColor " jsxvaluetemplate="@Category ShowNavigation Template"></dynamics>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="106"></variants>
+          <strings jsxname="showornot" jsxtext="是否显示" jsxcellpadding="" jsxpath="show" jsxtextalign="center" jsxcelltextalign="center" jsxpadding="2 7 0 7"></strings>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxbg="@Matrix Header Bg" jsxbgcolor="@Solid Disabled" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxcolor="@MatrixC Color " jsxcellborder="@MatrixC Border " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxcellbgcolor="@MatrixCell BGColor " jsxvaluetemplate="@Category Show Template"></dynamics>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="119"></variants>
+          <strings jsxname="priceGrade" jsxtext="价格分级" jsxcellpadding="" jsxpath="grade" jsxtextalign="center" jsxcelltextalign="center" jsxpadding="2 7 0 7"></strings>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxbg="@Matrix Header Bg" jsxcellborder="@MatrixC Border " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxcellbgcolor="@MatrixCell BGColor "></dynamics>
+          <object type="jsx3.gui.TextBox">
+            <variants jsxrelativeposition="0" jsxleft="501" jsxtop="80" jsxwidth="119" jsxheight="20" jsxzindex="10"></variants>
+            <strings jsxname="tb1" jsxdisplay="none" jsxvalue="8" jsxtextalign="center"></strings>
+            <events jsxkeydown="1;"></events>
+          </object>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants jsxwidth="126"></variants>
+          <strings jsxname="goodsSort" jsxtext="排序" jsxcellpadding="" jsxpath="order" jsxtextalign="center" jsxcelltextalign="center" jsxpadding="2 7 0 7"></strings>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxbg="@Matrix Header Bg" jsxcellborder="@MatrixC Border " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxcellbgcolor="@MatrixCell BGColor "></dynamics>
+          <object type="jsx3.gui.TextBox">
+            <variants jsxrelativeposition="0" jsxleft="620" jsxtop="0" jsxwidth="126" jsxheight="20" jsxzindex="10"></variants>
+            <strings jsxname="tb1" jsxdisplay="none" jsxvalue="36" jsxtextalign="center"></strings>
+            <events jsxkeydown="1;"></events>
+          </object>
+        </object>
+        <object type="jsx3.gui.Matrix.Column">
+          <variants></variants>
+          <strings jsxname="categoryOperation" jsxtext="操作" jsxcellpadding="" jsxtextalign="center" jsxwidth="*" jsxcelltextalign="center" jsxpadding="2 7 0 7" jsxpath="operation"></strings>
+          <dynamics jsxborder="@Matrix Cell Header Boder" jsxfontname="@MatrixC Font Name " jsxfontsize="@MatrixC Font Size" jsxfontweight="@MatrixC Font Weight " jsxbg="@Matrix Header Bg" jsxcellborder="@MatrixC Border " jsxcellfontname="@MatrixCell Font Name " jsxcellfontsize="@MatrixCell Font Size " jsxcellfontweight="@MatrixCell Font Weight " jsxcellcolor="@MatrixCell Color " jsxcellbgcolor="@MatrixCell BGColor " jsxvaluetemplate="@Category Operation Template"></dynamics>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="30" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxpadding="9 0 0 3" jsxtextalign="left" jsxmargin="15 0 0"></strings>
+      <dynamics jsxborder="@txtBox Border "></dynamics>
+    </object>
+  </object>
+</serialization>

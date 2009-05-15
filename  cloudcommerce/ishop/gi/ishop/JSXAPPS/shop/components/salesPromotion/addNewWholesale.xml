@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="gbk"?>
+<serialization jsxversion="3.5" xmlns="urn:tibco.com/v3.0">
+  <name><![CDATA[Block - 100%]]></name>
+  <icon><![CDATA[images/prototypes/block.gif]]></icon>
+  <description><![CDATA[Simple block, relatively positioned with overflow=scroll.]]></description>
+  <onBeforeDeserialize></onBeforeDeserialize>
+  <onAfterDeserialize></onAfterDeserialize>
+  <object type="jsx3.gui.Block">
+    <variants jsxoverflow="1"></variants>
+    <strings jsxname="block" jsxwidth="100%" jsxheight="100%" jsxrelativeposition="1" jsxbgcolor="#DDEEF2" jsxpadding="15 0 15 0" jsxtextalign="center"></strings>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="40" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxtext="" jsxbgcolor="#f4fbfb" jsxpadding="9 0 0 3" jsxtextalign="right" jsxmargin="0 0 12 0" jsxborder="1px solid #278296"></strings>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="15" jsxwidth="140"></variants>
+        <strings jsxname="label" jsxtext="ECSHOP 管理中心" jsxpadding="1 0 0 0" jsxtextalign="center" jsxfontweight="bold" jsxfontname="arial" jsxstyleoverride="float:left"></strings>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxrelativeposition="1" jsxoverflow="3" jsxheight="20" jsxfontsize="15" jsxwidth="140"></variants>
+        <strings jsxname="label" jsxtext="-添加拍卖活动" jsxcolor="#869590" jsxtextalign="left" jsxstyleoverride="float:left"></strings>
+      </object>
+      <object type="jsx3.gui.Button">
+        <variants jsxindex="0" jsxfontsize="11" jsxheight="20" jsxwidth="100"></variants>
+        <strings jsxname="button" jsxtext="拍卖活动列表" jsxmargin="0 10 0 0" jsxstyleoverride="background-image:url(C:/ecshop/JSXAPPS/shop/image/icon_add.gif);background-repeat: no-repeat;" jsxbgcolor="#DDEEF2" jsxcolor="#9E9898" jsxtextalign="right" jsxfontname="arial" jsxborder="1px solid #278296 ;1.5px solid #278296 ;1.5px solid #278296 ;1px solid #278296 ;"></strings>
+        <events jsxexecute="alert('hello');"></events>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="400" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxbgcolor="#fff" jsxpadding="10 0 0 0"></strings>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxfontname="arial" jsxtextalign="left"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13" jsxwidth="240" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="根据商品编号、名称或货号搜索商品" jsxfontname="Arial" jsxtextalign="right" jsxpadding="5 20 0 0"></strings>
+        </object>
+        <object type="jsx3.gui.TextBox">
+          <variants jsxheight="20" jsxwidth="220"></variants>
+          <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxborder="1px solid #278296" jsxvalue=""></strings>
+        </object>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0" jsxheight="20" jsxwidth="50"></variants>
+          <strings jsxname="button" jsxtext="搜索" jsxmargin="0 8 0 0" jsxfontname="Arial" jsxtextalign="center" jsxborder="1px solid #2D5082" jsxstyleoverride="background-image: url(c:/ecshop/JSXAPPS/shop/image/button_bg.gif);background-repeat:repeat-x;"></strings>
+          <events jsxexecute="alert('hello');"></events>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxfontname="arial" jsxtextalign="left"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13" jsxwidth="240" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="批发商品名称" jsxfontname="Arial" jsxtextalign="right" jsxpadding="5 20 0 0"></strings>
+        </object>
+        <object type="jsx3.gui.Select">
+          <variants jsxwidth="150" jsxheight="20" jsxxmlasync="1"></variants>
+          <strings jsxname="select" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0" jsxtextalign="left" jsxbgcolor="" jsxborder="1px solid #278296"></strings>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxfontname="arial" jsxtextalign="left"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13" jsxwidth="240" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="适用会员等级" jsxfontname="Arial" jsxtextalign="right" jsxpadding="5 20 0 0"></strings>
+        </object>
+        <object type="jsx3.gui.CheckBox">
+          <variants jsxheight="18"></variants>
+          <strings jsxname="checkbox" jsxtext="非会员" jsxmargin="0 4 0 0" jsxfontname="Arial"></strings>
+          <events jsxexecute="jsx3.out('mycheck','the jsxexecute method was fired for checkbox, ' + this.getId());"></events>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxfontname="arial" jsxtextalign="left"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13" jsxwidth="240" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="是否启用" jsxfontname="Arial" jsxtextalign="right" jsxpadding="5 20 0 0"></strings>
+        </object>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="1" jsxrelativeposition="1"></variants>
+          <strings jsxname="radio" jsxtext="否" jsxgroupname="group1" jsxmargin="0 4 0 0"></strings>
+          <events jsxselect=""></events>
+        </object>
+        <object type="jsx3.gui.RadioButton">
+          <variants jsxheight="18" jsxdefaultselected="1" jsxselected="1" jsxrelativeposition="1"></variants>
+          <strings jsxname="radio" jsxtext="是" jsxgroupname="group1" jsxmargin="0 4 0 0"></strings>
+          <events jsxselect=""></events>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="&lt;hr&gt;" jsxfontname="arial" jsxtextalign="left"></strings>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="25" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxtext="" jsxfontname="arial" jsxtextalign="left"></strings>
+        <object type="jsx3.gui.Block">
+          <variants jsxrelativeposition="1" jsxoverflow="3" jsxfontsize="13" jsxwidth="220" jsxheight="20"></variants>
+          <strings jsxname="label" jsxtext="搜索并加入赠品（特惠品）" jsxfontname="Arial" jsxtextalign="right" jsxpadding="5 15 0 0"></strings>
+        </object>
+        <object type="jsx3.gui.TextBox">
+          <variants jsxheight="20" jsxwidth="220"></variants>
+          <strings jsxname="textbox" jsxmargin="0 4 0 0" jsxborder="1px solid #278296" jsxvalue=""></strings>
+        </object>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0" jsxheight="20" jsxwidth="50"></variants>
+          <strings jsxname="button" jsxtext="搜索" jsxmargin="0 8 0 0" jsxfontname="Arial" jsxtextalign="center" jsxborder="1px solid #2D5082" jsxstyleoverride="background-image: url(c:/ecshop/JSXAPPS/shop/image/button_bg.gif);background-repeat:repeat-x;"></strings>
+          <events jsxexecute="alert('hello');"></events>
+        </object>
+        <object type="jsx3.gui.Select">
+          <variants jsxwidth="150" jsxheight="20" jsxxmlasync="1"></variants>
+          <strings jsxname="select" jsxxmlurl="jsx:///xml/sample.xml" jsxmargin="0 4 0 0" jsxtextalign="left" jsxbgcolor="" jsxborder="1px solid #278296"></strings>
+        </object>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0" jsxheight="20" jsxwidth="40"></variants>
+          <strings jsxname="button" jsxtext="+" jsxmargin="0 8 0 0" jsxfontname="Arial" jsxtextalign="center" jsxborder="1px solid #2D5082" jsxstyleoverride="background-image: url(c:/ecshop/JSXAPPS/shop/image/button_bg.gif);background-repeat:repeat-x;"></strings>
+          <events jsxexecute="alert('hello');"></events>
+        </object>
+      </object>
+      <object type="jsx3.gui.Block">
+        <variants jsxheight="30" jsxoverflow="1"></variants>
+        <strings jsxname="block" jsxwidth="100%" jsxrelativeposition="1" jsxpadding="0 0 0 220" jsxtextalign="left" jsxmargin="5 0 0 0"></strings>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0" jsxheight="20" jsxwidth="50"></variants>
+          <strings jsxname="button" jsxtext="确定" jsxmargin="0 8 0 0" jsxfontname="Arial" jsxtextalign="center" jsxborder="1px solid #2D5082" jsxstyleoverride="background-image: url(c:/ecshop/JSXAPPS/shop/image/button_bg.gif);background-repeat:repeat-x;"></strings>
+          <events jsxexecute="alert('hello');"></events>
+        </object>
+        <object type="jsx3.gui.Button">
+          <variants jsxindex="0" jsxheight="20" jsxwidth="50"></variants>
+          <strings jsxname="button" jsxtext="重置" jsxmargin="0 4 0 0" jsxfontname="Arial" jsxtextalign="center" jsxborder="1px solid #2D5082" jsxstyleoverride="background-image: url(c:/ecshop/JSXAPPS/shop/image/button_bg.gif);background-repeat:repeat-x;"></strings>
+          <events jsxexecute="alert('hello');"></events>
+        </object>
+      </object>
+    </object>
+    <object type="jsx3.gui.Block">
+      <variants jsxheight="50" jsxoverflow="1"></variants>
+      <strings jsxname="block" jsxwidth="95%" jsxrelativeposition="1" jsxtext="" jsxbgcolor="#f4fbfb" jsxpadding="9 0 0 3" jsxtextalign="left" jsxmargin="15 0 0" jsxborder="1px solid #278296"></strings>
+    </object>
+  </object>
+</serialization>
