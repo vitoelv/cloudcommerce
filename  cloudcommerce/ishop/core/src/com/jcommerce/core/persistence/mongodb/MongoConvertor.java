@@ -20,11 +20,8 @@ import com.mongodb.BasicDBObjectBuilder;
 public class MongoConvertor implements IDBObjectConvertor {
     
     private static Logger mTrace = LoggerFactory.getLogger(MongoConvertor.class); 
-
-    /* (non-Javadoc)
-     * @see com.jcommerce.core.database.fw.IDBObjectConvertor#convert(java.lang.Object)
-     */
-    public Object convert(Object obj) {
+    
+    public Object convertPojo2DBObject(Object obj) {
         
         BasicDBObjectBuilder builder = BasicDBObjectBuilder.start();
         
@@ -34,7 +31,7 @@ public class MongoConvertor implements IDBObjectConvertor {
                 Object val = BeanUtils.getProperty(obj, key);
                 
                 if(val.getClass().isPrimitive() == false && (val instanceof Timestamp == false)) 
-                    builder.add(key, convert(val));
+                    builder.add(key, convertPojo2DBObject(val));
                 else
                     builder.add(key, val);
             }
@@ -43,6 +40,11 @@ public class MongoConvertor implements IDBObjectConvertor {
         }
         
         return builder.get();
+    }
+
+    public Object convertDBObject2Pojo(Object obj) {
+        
+        return null;
     }
 
 }
