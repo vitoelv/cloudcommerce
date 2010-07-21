@@ -10,6 +10,9 @@ public class Condition {
     public static int LIKE = 2;
     public static int GREATERTHAN = 3;
     public static int LESSTHAN = 4;
+    public static int GREATERTHAN_OR_EQUALS = 5;
+    public static int LESSTHAN_OR_EQUALS = 6;
+    public static int NOT_EQUALS = 7;
     
     private String field;
     private String value;

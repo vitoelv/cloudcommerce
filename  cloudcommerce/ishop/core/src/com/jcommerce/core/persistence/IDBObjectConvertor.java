@@ -8,9 +8,11 @@ package com.jcommerce.core.persistence;
  *
  */
 public interface IDBObjectConvertor {
-
-    public Object convertPojo2DBObject(Object obj);
     
-    public Object convertDBObject2Pojo(Object obj);
+    public Object toObject(Object obj);
+
+    public Object toObject(Object obj, Class<?> ownerClass, Object dbRef);
+    
+    public <T> T fromObject(Object obj, Class<T> clazz);
         
 }
