@@ -14,6 +14,13 @@ import com.jcommerce.core.model.ModelObject;
  *
  */
 public class MongoDAO implements DAO {
+    
+    private MongoTemplate mTemplate = null;
+    private String mCollectionName = null;
+    
+    public MongoDAO (MongoTemplate template) {
+        mTemplate = template;
+    }
 
     public List getList(String hql, int firstRow, int maxRow) {
         return null;
@@ -24,7 +31,7 @@ public class MongoDAO implements DAO {
     }
 
     public int getCount(String hql) {
-        return 0;
+        return mTemplate.getCount(hql);
     }
 
     public List<DAO> getList(String hql) {

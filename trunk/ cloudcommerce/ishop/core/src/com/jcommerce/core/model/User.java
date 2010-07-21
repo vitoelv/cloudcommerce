@@ -24,7 +24,7 @@ public class User extends ModelObject {
     private double frozenMoney;
     private int payPoints;
     private int rankPoints;
-    private UserAddress address;
+    private UserAddress userAddress;
     private Timestamp registerTime;
     private Timestamp lastLogin;
     private Timestamp lastTime;
@@ -32,15 +32,15 @@ public class User extends ModelObject {
     private int visitCount;
     private int rank;   // rank in UserRank table
     /**
-     * 特殊会员
+     * ç‰¹æ®Šä¼šå‘˜
      */
     private boolean special;
     /**
-     * 加密串
+     * åŠ å¯†ä¸²
      */
     private String salt;
     /**
-     * 推荐人
+     * æŽ¨è��äºº
      */
     private User parent;
     private int flag;
@@ -52,7 +52,7 @@ public class User extends ModelObject {
     private String mobilePhone;
     private boolean validated;
     /**
-     * 信用额度
+     * ä¿¡ç”¨é¢�åº¦
      */
     private double creditLine;
 
@@ -152,12 +152,12 @@ public class User extends ModelObject {
         this.rankPoints = rankPoints;
     }
 
-    public UserAddress getAddress() {
-        return address;
+    public UserAddress getUserAddress() {
+        return userAddress;
     }
 
-    public void setAddress(UserAddress address) {
-        this.address = address;
+    public void setUserAddress(UserAddress address) {
+        this.userAddress = address;
     }
 
     public Timestamp getRegisterTime() {
