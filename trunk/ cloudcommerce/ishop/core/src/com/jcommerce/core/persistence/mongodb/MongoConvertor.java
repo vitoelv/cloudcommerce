@@ -41,34 +41,29 @@ public class MongoConvertor implements IDBObjectConvertor {
         
         try {
             dbObject.put("_id", objId);
-            for(Field f : obj.getClass().getDeclaredFields()) {
+            for(Field field : obj.getClass().getDeclaredFields()) {
+                if(Modifier.isPrivate(field.getModifiers()) == false) continue;
                 
-                if(Modifier.isPrivate(f.getModifiers()) == false) continue;
-                
-                String key = f.getName();
-                String methodName = "get" + key.substring(0,1).toUpperCase() + key.substring(1);
-                
+                String key = field.getName();
                 Method method = null;
                 try {
-                    method = obj.getClass().getMethod(methodName, null);
+                    method = obj.getClass().getMethod(MiscUtils.getGetterName(key), (Class[])null);
                 } catch (Exception e) {
                     mTrace.debug("get method exception: " + e.getMessage());
                     continue;
                 }
                 
-                Object val = method.invoke(obj, null);
-                if(val == null) continue;
+                Object value = method.invoke(obj, (Object[])null);
+                if(value == null) continue;
                 
-                if(val != null && method.getReturnType().isPrimitive() == false && 
-                                  method.getReturnType().getSimpleName().equals("String") == false &&
-                                  method.getReturnType().getCanonicalName().contains("java.sql") == false) {
+                if(value != null && MiscUtils.isPrimitive(method.getReturnType()) == false) {
                     if(refClass != null && refClass.getName().equals(method.getReturnType().getName())) {
                         dbObject.put(key, dbRef);
                     } else {
-                        refMap.put(f.getName(), val);
+                        refMap.put(field.getName(), value);
                     }
                 } else {
-                    dbObject.put(key, val);
+                    dbObject.put(key, value);
                 }
                 
                 if(refMap.size() > 0) 
@@ -83,10 +78,10 @@ public class MongoConvertor implements IDBObjectConvertor {
     }
 
     public <T> T fromObject(Object obj, Class<T> clazz) {
-        return fromObject(obj, clazz, false);
+        return fromObject(obj, clazz, null);
     }
     
-    public <T> T fromObject(Object obj, Class<T> clazz, boolean hasLoop) {
+    public <T> T fromObject(Object obj, Class<T> clazz, Map<String, Object> loopMap) {
         
         T bean = null;
         try {
@@ -94,27 +89,24 @@ public class MongoConvertor implements IDBObjectConvertor {
             if(obj instanceof DBObject) {
                 DBObject entry = (DBObject) obj;
                 for(Method method : clazz.getDeclaredMethods()) {
-                    if(method.getName().startsWith("set") && method.getReturnType().equals(void.class)) {
-                        String field = method.getName().substring(3, 4).toLowerCase() + method.getName().substring(4);
+                    if(MiscUtils.isSetterMethod(method)) {
+                        String field = MiscUtils.getFieldNameByMethodName(method);
                         Object value = entry.get(field);
+                        boolean hasLoop = loopMap != null && loopMap.containsKey(method.getParameterTypes()[0].getCanonicalName());
                         if(value != null && value instanceof DBRef && hasLoop == false) {
                             DBObject refObj = ((DBRef)value).fetch();
-                            Method getter = clazz.getMethod(MiscUtils.getGetterName(field), null);
+                            Method getter = clazz.getMethod(MiscUtils.getGetterName(field), (Class[])null);
                             Class<?> getterClass = getter.getReturnType();
-                            boolean loop = false;
+                            Map<String, Object> loop = new HashMap<String, Object>();
                             for(Method m : getterClass.getDeclaredMethods()) {
-                                if(m.getName().startsWith("get") && clazz.getCanonicalName().equals(m.getReturnType().getCanonicalName())) {
-                                    loop = true;
+                                if(MiscUtils.isWantedGetterMethod(m, clazz)) {
+                                    loop.put(clazz.getCanonicalName(), null);
                                     break;
                                 }
                             }
                             value = fromObject(refObj, getter.getReturnType(), loop);
                             Method reverse = null;
-                            try {
-                                reverse = value.getClass().getMethod(MiscUtils.getSetterName(clazz.getSimpleName()), clazz);
-                            } catch (NoSuchMethodException e) {
-                                reverse = null;
-                            }
+                                reverse = MiscUtils.getSetterMethod(value.getClass(), clazz);
                             if(reverse != null)
                                 reverse.invoke(value, new Object[]{bean});
                         }
@@ -125,7 +117,7 @@ public class MongoConvertor implements IDBObjectConvertor {
                 }
             }
         } catch (InvocationTargetException ite) {
-            ite.getTargetException().printStackTrace();
+            mTrace.error("invocation target exception: " + ite.getTargetException().getMessage());
         } catch (Exception e) {
            mTrace.error("convert mongo dbObject to bean error: " + e.getMessage());
            mTrace.debug("convert mongo dbObject to bean error: ", e);

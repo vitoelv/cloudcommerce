@@ -17,7 +17,6 @@ import com.mongodb.BasicDBObjectBuilder;
  */
 public class MongoQueryTranslator implements IQueryTranslator {
 
-    @Override
     public Object translate(Criteria c) {
         
         BasicDBObjectBuilder query = BasicDBObjectBuilder.start();

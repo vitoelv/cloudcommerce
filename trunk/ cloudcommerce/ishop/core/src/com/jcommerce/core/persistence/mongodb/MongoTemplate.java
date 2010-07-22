@@ -184,7 +184,7 @@ public class MongoTemplate {
             mLock.unlock();
         }
 
-        return (ObjectId) dbObject.get("_id");
+        return MiscUtils.getObjectId(dbObject);
 
     }
 
@@ -237,7 +237,7 @@ public class MongoTemplate {
         ua.setAddress("Beijing");
         ua.setName("Beijing");
         ua.setUser(user);
-        user.setUserAddress(ua);
+        user.setAddress(ua);
         mt.save(user);
 
         List<User> users = mt.find(MiscUtils.getCollectionNameByClass(User.class), new BasicDBObject().append("name", "rioliu"), User.class, false, null, 0, 0);
@@ -245,8 +245,8 @@ public class MongoTemplate {
             for(User u : users) {
                 System.out.println(u.getId());
                 System.out.println(u.getName());
-                System.out.println(u.getUserAddress().getAddress());
-                System.out.println(u.getUserAddress().getUser().getName());
+                System.out.println(u.getAddress().getAddress());
+                System.out.println(u.getAddress().getUser().getName());
             }
         }
         
