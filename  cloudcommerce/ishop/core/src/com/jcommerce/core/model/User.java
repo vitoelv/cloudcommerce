@@ -24,7 +24,7 @@ public class User extends ModelObject {
     private double frozenMoney;
     private int payPoints;
     private int rankPoints;
-    private UserAddress userAddress;
+    private UserAddress address;
     private Timestamp registerTime;
     private Timestamp lastLogin;
     private Timestamp lastTime;
@@ -152,12 +152,12 @@ public class User extends ModelObject {
         this.rankPoints = rankPoints;
     }
 
-    public UserAddress getUserAddress() {
-        return userAddress;
+    public UserAddress getAddress() {
+        return address;
     }
 
-    public void setUserAddress(UserAddress address) {
-        this.userAddress = address;
+    public void setAddress(UserAddress address) {
+        this.address = address;
     }
 
     public Timestamp getRegisterTime() {
