@@ -18,6 +18,7 @@ import com.jcommerce.core.model.User;
 import com.jcommerce.core.model.UserAddress;
 import com.jcommerce.core.persistence.MiscUtils;
 import com.jcommerce.core.persistence.IDBObjectConvertor;
+import com.jcommerce.core.persistence.PersistenceException;
 import com.jcommerce.core.service.Order;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
@@ -39,11 +40,11 @@ public class MongoTemplate {
     private IDBObjectConvertor mObjectConvertor = new MongoConvertor();
     private ReentrantLock mLock = new ReentrantLock();
 
-    public MongoTemplate(String host, int port, String dataBaseName, String userName, String passWord) {
+    public MongoTemplate(String host, int port, String dataBaseName, String userName, String passWord) throws PersistenceException {
         initialize(host, port, dataBaseName, userName, passWord);
     }
 
-    private void initialize(String host, int port, String dataBaseName, String userName, String passWord) {
+    private void initialize(String host, int port, String dataBaseName, String userName, String passWord) throws PersistenceException {
 
         if (StringUtils.isBlank(host))
             throw new IllegalArgumentException("argument [host] is not configured ");
@@ -62,7 +63,7 @@ public class MongoTemplate {
         } catch (Exception e) {
             mTrace.error("create mongo database instance error: " + e.getMessage());
             mTrace.error("database instance initialization failed");
-            return;
+            throw new PersistenceException("initialize mongo database connection failed: " + e.getMessage());
         }
 
         mDataBase = mongo.getDB(dataBaseName);
@@ -70,12 +71,14 @@ public class MongoTemplate {
         if (mDataBase != null) { // do usr/pwd authentication
             if (StringUtils.isNotBlank(userName) && StringUtils.isNotBlank(passWord)) {
                 boolean result = mDataBase.authenticate(userName, passWord.toCharArray());
-                if (result == false)
-                    mTrace.error("database authentication failed, user:[" + userName + "]/pwd:[" + passWord + "]");
+                if (result == false) {
+                    String errorMsg = "mongo database authentication failed, user:[" + userName + "]/pwd:[" + passWord + "]";
+                    mTrace.error(errorMsg);
+                    throw new PersistenceException(errorMsg);
+                }
             }
         }
 
-        // TODO: error handling for invalid connection
     }
 
     public int getCount(String collectionName) {
@@ -98,7 +101,7 @@ public class MongoTemplate {
         return 0;
     }
 
-    public <T> List<T> find(String collectionName, DBObject query, Class<T> clazz, boolean sort, List<Order> orders, int skipNum, int limitNum) {
+    public <T> List<T> find(String collectionName, DBObject query, Class<T> clazz, List<Order> orders, int skipNum, int limitNum) {
 
         List<T> result = null;
 
@@ -111,7 +114,7 @@ public class MongoTemplate {
             if (limitNum > 0)
                 cursor = cursor.limit(limitNum);
 
-            if (cursor.hasNext() && sort && orders != null && orders.size() > 0) {
+            if (cursor.hasNext() && orders != null && orders.size() > 0) {
                 BasicDBObject orderBy = new BasicDBObject();
                 for (Order order : orders) {
                     orderBy.append(order.getField(), order.isAscend() ? 1 : -1);
@@ -130,11 +133,11 @@ public class MongoTemplate {
 
     }
     
-    public void save(Object obj) {
+    public void save(Object obj) throws PersistenceException {
         save(obj, null, null);
     }
 
-    public ObjectId save(Object obj, Class<?> ownerClass, DBRef dbRef) {
+    public ObjectId save(Object obj, Class<?> ownerClass, DBRef dbRef) throws PersistenceException {
 
         DBObject dbObject = (DBObject) mObjectConvertor.toObject(obj, ownerClass, dbRef);
         DBCollection collection = getCollection(MiscUtils.getCollectionNameByObject(obj));
@@ -175,11 +178,14 @@ public class MongoTemplate {
                     }
                 }
             }
+            
+            MongoIndexer.ensureIndex(collection); // if the index doesnot exist, create it.
 
             mDataBase.requestDone();
 
         } catch (MongoException e) {
             mTrace.error("save object error: " + e.getMessage());
+            throw new PersistenceException(e);
         } finally {
             mLock.unlock();
         }
@@ -188,7 +194,7 @@ public class MongoTemplate {
 
     }
 
-    public void remove(Object obj) {
+    public void remove(Object obj) throws PersistenceException {
 
         DBObject dbObject = (DBObject) mObjectConvertor.toObject(obj);
         DBCollection collection = getCollection(MiscUtils.getCollectionNameByObject(obj));
@@ -197,13 +203,16 @@ public class MongoTemplate {
         try {
             if (collection != null)
                 collection.remove(dbObject);
+        } catch (MongoException e) {
+            mTrace.error("remove object error: " + e.getMessage());
+            throw new PersistenceException(e);
         } finally {
             mLock.unlock();
         }
 
     }
 
-    public void update(Object obj, DBObject criteria, boolean upsert, boolean multiupdate) {
+    public void update(Object obj, DBObject criteria, boolean upsert, boolean multiupdate) throws PersistenceException {
 
         DBObject dbObject = (DBObject) mObjectConvertor.toObject(obj);
         DBCollection collection = getCollection(MiscUtils.getCollectionNameByObject(obj));
@@ -212,6 +221,9 @@ public class MongoTemplate {
         try {
             if (collection != null)
                 collection.update(criteria, dbObject, upsert, multiupdate);
+        } catch (MongoException e) {
+            mTrace.error("update object error: " + e.getMessage());
+            throw new PersistenceException(e);
         } finally {
             mLock.unlock();
         }
@@ -228,7 +240,13 @@ public class MongoTemplate {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
         
-        MongoTemplate mt = new MongoTemplate("localhost", 0, "test", null, null);
+        MongoTemplate mt = null;
+        try {
+            mt = new MongoTemplate("localhost", 0, "test", null, null);
+        } catch (PersistenceException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
         
         User user = new User();
         user.setName("rioliu");
@@ -238,9 +256,14 @@ public class MongoTemplate {
         ua.setName("Beijing");
         ua.setUser(user);
         user.setAddress(ua);
-        mt.save(user);
+        try {
+            mt.save(user);
+        } catch (PersistenceException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
-        List<User> users = mt.find(MiscUtils.getCollectionNameByClass(User.class), new BasicDBObject().append("name", "rioliu"), User.class, false, null, 0, 0);
+        List<User> users = mt.find(MiscUtils.getCollectionNameByClass(User.class), new BasicDBObject().append("name", "rioliu"), User.class, null, 0, 0);
         if(users != null && users.size() > 0) {
             for(User u : users) {
                 System.out.println(u.getId());
