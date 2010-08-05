@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
 
 import com.jcommerce.core.model.User;
 import com.jcommerce.core.model.UserAddress;
-import com.jcommerce.core.persistence.MiscUtils;
+import com.jcommerce.core.persistence.ReflectionUtils;
 import com.jcommerce.core.persistence.IDBObjectConvertor;
 import com.jcommerce.core.persistence.PersistenceException;
 import com.jcommerce.core.service.Order;
@@ -107,7 +107,7 @@ public class MongoTemplate {
 
         DBCollection collection = getCollection(collectionName);
         if (collection != null) {
-            DBCursor cursor = collection.find(query);
+            DBCursor cursor = query == null ? collection.find() : collection.find(query);
 
             if (skipNum > 0)
                 cursor = cursor.skip(skipNum);
@@ -140,7 +140,7 @@ public class MongoTemplate {
     public ObjectId save(Object obj, Class<?> ownerClass, DBRef dbRef) throws PersistenceException {
 
         DBObject dbObject = (DBObject) mObjectConvertor.toObject(obj, ownerClass, dbRef);
-        DBCollection collection = getCollection(MiscUtils.getCollectionNameByObject(obj));
+        DBCollection collection = getCollection(ReflectionUtils.getCollectionNameByObject(obj));
 
         Map<String, Object> refMap = (Map<String, Object>) dbObject.get("$refMap$");
         Map<String, Object> copyMap = new HashMap<String, Object>();
@@ -162,7 +162,7 @@ public class MongoTemplate {
             Map<String, ObjectId> idMap = new HashMap<String, ObjectId>();
             if (copyMap != null && copyMap.size() > 0) {
                 for (String key : copyMap.keySet()) {
-                    ObjectId id = save(copyMap.get(key), obj.getClass(), new DBRef(mDataBase, MiscUtils.getCollectionNameByObject(obj), dbObject.get("_id")));
+                    ObjectId id = save(copyMap.get(key), obj.getClass(), new DBRef(mDataBase, ReflectionUtils.getCollectionNameByObject(obj), dbObject.get("_id")));
                     if (id != null)
                         idMap.put(key, id);
                 }
@@ -170,10 +170,10 @@ public class MongoTemplate {
                 for (String key : copyMap.keySet()) {
                     ObjectId id = idMap.get(key);
                     if (id != null) {
-                        DBObject updateObj = collection.findOne(MiscUtils.getObjectId(dbObject));
+                        DBObject updateObj = collection.findOne(ReflectionUtils.getObjectId(dbObject));
                         if (updateObj != null) {
-                            updateObj.put(key, new DBRef(mDataBase, MiscUtils.getCollectionNameByObject(copyMap.get(key)), id));
-                            collection.update(new BasicDBObject("_id", MiscUtils.getObjectId(updateObj)), updateObj, false, false);
+                            updateObj.put(key, new DBRef(mDataBase, ReflectionUtils.getCollectionNameByObject(copyMap.get(key)), id));
+                            collection.update(new BasicDBObject("_id", ReflectionUtils.getObjectId(updateObj)), updateObj, false, false);
                         }
                     }
                 }
@@ -190,14 +190,14 @@ public class MongoTemplate {
             mLock.unlock();
         }
 
-        return MiscUtils.getObjectId(dbObject);
+        return ReflectionUtils.getObjectId(dbObject);
 
     }
 
     public void remove(Object obj) throws PersistenceException {
 
         DBObject dbObject = (DBObject) mObjectConvertor.toObject(obj);
-        DBCollection collection = getCollection(MiscUtils.getCollectionNameByObject(obj));
+        DBCollection collection = getCollection(ReflectionUtils.getCollectionNameByObject(obj));
 
         mLock.lock();
         try {
@@ -215,7 +215,7 @@ public class MongoTemplate {
     public void update(Object obj, DBObject criteria, boolean upsert, boolean multiupdate) throws PersistenceException {
 
         DBObject dbObject = (DBObject) mObjectConvertor.toObject(obj);
-        DBCollection collection = getCollection(MiscUtils.getCollectionNameByObject(obj));
+        DBCollection collection = getCollection(ReflectionUtils.getCollectionNameByObject(obj));
 
         mLock.lock();
         try {
@@ -263,7 +263,7 @@ public class MongoTemplate {
             e.printStackTrace();
         }
 
-        List<User> users = mt.find(MiscUtils.getCollectionNameByClass(User.class), new BasicDBObject().append("name", "rioliu"), User.class, null, 0, 0);
+        List<User> users = mt.find(ReflectionUtils.getCollectionNameByClass(User.class), new BasicDBObject().append("name", "rioliu"), User.class, null, 0, 0);
         if(users != null && users.size() > 0) {
             for(User u : users) {
                 System.out.println(u.getId());

@@ -14,7 +14,7 @@ import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.jcommerce.core.persistence.MiscUtils;
+import com.jcommerce.core.persistence.ReflectionUtils;
 import com.jcommerce.core.persistence.IDBObjectConvertor;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
@@ -47,7 +47,7 @@ public class MongoConvertor implements IDBObjectConvertor {
                 String key = field.getName();
                 Method method = null;
                 try {
-                    method = obj.getClass().getMethod(MiscUtils.getGetterName(key), (Class[])null);
+                    method = obj.getClass().getMethod(ReflectionUtils.getGetterName(key), (Class[])null);
                 } catch (Exception e) {
                     mTrace.debug("get method exception: " + e.getMessage());
                     continue;
@@ -56,7 +56,7 @@ public class MongoConvertor implements IDBObjectConvertor {
                 Object value = method.invoke(obj, (Object[])null);
                 if(value == null) continue;
                 
-                if(value != null && MiscUtils.isPrimitive(method.getReturnType()) == false) {
+                if(value != null && ReflectionUtils.isPrimitive(method.getReturnType()) == false) {
                     if(refClass != null && refClass.getName().equals(method.getReturnType().getName())) {
                         dbObject.put(key, dbRef);
                     } else {
@@ -89,24 +89,24 @@ public class MongoConvertor implements IDBObjectConvertor {
             if(obj instanceof DBObject) {
                 DBObject entry = (DBObject) obj;
                 for(Method method : clazz.getDeclaredMethods()) {
-                    if(MiscUtils.isSetterMethod(method)) {
-                        String field = MiscUtils.getFieldNameByMethodName(method);
+                    if(ReflectionUtils.isSetterMethod(method)) {
+                        String field = ReflectionUtils.getFieldNameByMethodName(method);
                         Object value = entry.get(field);
                         boolean hasLoop = loopMap != null && loopMap.containsKey(method.getParameterTypes()[0].getCanonicalName());
                         if(value != null && value instanceof DBRef && hasLoop == false) {
                             DBObject refObj = ((DBRef)value).fetch();
-                            Method getter = clazz.getMethod(MiscUtils.getGetterName(field), (Class[])null);
+                            Method getter = clazz.getMethod(ReflectionUtils.getGetterName(field), (Class[])null);
                             Class<?> getterClass = getter.getReturnType();
                             Map<String, Object> loop = new HashMap<String, Object>();
                             for(Method m : getterClass.getDeclaredMethods()) {
-                                if(MiscUtils.isWantedGetterMethod(m, clazz)) {
+                                if(ReflectionUtils.isWantedGetterMethod(m, clazz)) {
                                     loop.put(clazz.getCanonicalName(), null);
                                     break;
                                 }
                             }
                             value = fromObject(refObj, getter.getReturnType(), loop);
                             Method reverse = null;
-                                reverse = MiscUtils.getSetterMethod(value.getClass(), clazz);
+                                reverse = ReflectionUtils.getSetterMethod(value.getClass(), clazz);
                             if(reverse != null)
                                 reverse.invoke(value, new Object[]{bean});
                         }
