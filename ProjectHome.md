@@ -1,0 +1,3 @@
+e-commerce becomes very popular in China and worldwide, in recent years, www.taobao.com and www.alibaba.com create a myth in the world. So for middle and small enterprise, they hope have a integration e-commerce solution for them, the simplest requirement is: an indepedent web shop which could be integrate with their backend system and third party seller and buyer but has the same funtionality as their Taobao or eBay web shop in the front to act as a facade.
+the extend funtionality could be when update data in this indepedent web shop, the same data like goods info will be update also in their Taobao or eBay web shop.
+cloud commerce is trying to do a real and effective e-commerce system which could meet the above requirement and provide this solution to user.
